@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light"> <!-- Set a default theme -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albert's Homepage</title>
+    
+    <!-- Meta SEO Tags -->
+    <meta name="author" content="Albert Chen">
+    <meta name="description" content="你好，我是Albert。一名数学爱好者和开发者，这里是我的个人主页，用于展示我的项目、笔记和个人链接。">
+    <meta name="keywords" content="Albert, 个人主页, 数学, 编程, 学习笔记">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome (用于图标) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- 主样式表 -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <!-- 网站图标 -->
+    <link rel="icon" href="assets/images/favicon.ico">
+</head>
+<body>
+
+    <!-- =========== Header / Navigation =========== -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">Albert</a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#hero" class="nav__link">首页</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">关于我</a></li>
+                    <li class="nav__item"><a href="#projects" class="nav__link">项目</a></li>
+                    <li class="nav__item"><a href="#socials" class="nav__link">我的频道</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">技能</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">联系我</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav__actions">
+                <!-- Theme change button -->
+                <i class="fas fa-moon theme-switcher" id="theme-button"></i>
+                
+                <!-- Toggle button for mobile -->
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- =========== Hero Section =========== -->
+        <section id="hero" class="hero section">
+            <div class="hero__container container grid">
+                <div class="hero__content">
+                    <!-- MODIFIED: Removed the .highlight span for a clean look -->
+                    <h1>你好, 我是 Albert</h1>
+                    <p class="hero__subtitle">数学爱好者 & 开发者</p>
+                    <p class="hero__description">If I never see you again, good morning, good afternoon and good night.</p>
+                    <div class="hero__buttons">
+                        <a href="#projects" class="button">查看我的项目</a>
+                        <a href="https://github.com/Albert-Chen0405" target="_blank" class="button button--ghost">访问 GitHub</a>
+                    </div>
+                </div>
+                <div class="hero__image">
+                    <img src="assets/images/avatar.jpg" alt="Albert's Avatar">
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== About Me Section (Reconstructed) =========== -->
+        <section id="about" class="about section">
+            <h2 class="section__title">关于我</h2>
+            <div class="about__container container grid">
+                <!-- Left Column: Intro + Musings + Guestbook Idea -->
+                <div class="about__left">
+                    <p>我目前是<strong>五山农专</strong>数学与应用数学专业的准大四学生。</p>
+                    <p>这个网站是我记录学习、分享想法和展示成果的地方。</p>
+                    
+                    <div class="musings">
+                        <h3 class="musings__title">一些碎碎念</h3>
+                        <blockquote>
+                            “建立个人网站的初衷就是能让想认识我的人看看我啥成分。看看github，B站，微博就显而易见了”
+                        </blockquote>
+                    </div>
+                    
+                    <div class="guestbook-idea">
+                        <h3>想和我聊聊？</h3>
+                        <p>静态网站无法实现留言板，但你随时可以通过下方的联系方式找到我，期待与你的交流！</p>
+                        <a href="#contact" class="button">前往联系</a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Timeline + Tags -->
+                <div class="about__right">
+                    <div class="timeline">
+                        <div class="timeline__item">
+                            <div class="timeline__date">2025-08-15</div>
+                            <div class="timeline__content">
+                                <h3>软件开发</h3>
+                                <p>发布自己做的第一款软件 "视频剪辑工具箱"。</p>
+                            </div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__date">2025-07-03</div>
+                            <div class="timeline__content">
+                                <h3>兴趣频道</h3>
+                                <p>创建B站号，发布口袋48、抖音录播及唱歌切片。</p>
+                            </div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__date">2025-06-28</div>
+                            <div class="timeline__content">
+                                <h3>学术分享</h3>
+                                <p>发布偏微分方程讲义和习题卷。</p>
+                            </div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__date">2025-01-03</div>
+                            <div class="timeline__content">
+                                <h3>新的起点</h3>
+                                <p>开始在B站发布数学相关视频。</p>
+                            </div>
+                        </div>
+                        <div class="timeline__item">
+                            <div class="timeline__date">2024-05-01</div>
+                            <div class="timeline__content">
+                                <h3>洗心革面</h3>
+                                <p>下定决心，专注于学习和自我提升。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="about__tags">
+                        <li>塞纳河</li>
+                        <li>港乐</li>
+                        <li>吃喝玩乐</li>
+                        <li>五山农专</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== Projects Section =========== -->
+        <section id="projects" class="projects section">
+            <h2 class="section__title">项目 & 笔记</h2>
+            <div class="projects__container container">
+                <!-- Project Filters -->
+                <div class="projects__filters">
+                    <button class="filter-button active" data-filter="all">全部</button>
+                    <button class="filter-button" data-filter="project">个人项目</button>
+                    <button class="filter-button" data-filter="notes">学习笔记</button>
+                </div>
+
+                <div class="projects__grid grid">
+                    <!-- Project Item 1: Project -->
+                    <div class="project-card" data-category="project">
+                        <img src="assets/images/project_toolkit.png" alt="视频剪辑工具箱" class="project-card__img">
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">视频剪辑工具箱</h3>
+                            <p class="project-card__description">一个集成了语音转文本，批量转码，无损切片，横竖屏字幕视频制作，口袋48录播chatbox弹幕视频制作，导出静帧，视频音频批量合并，视频换背景图,多功能于一体的工具</p>
+                            <a href="https://github.com/Albert-Chen0405/Video-Editing-Toolkit" target="_blank" class="project-card__link">查看详情 &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Project Item 2: Project -->
+                    <div class="project-card" data-category="project">
+                        <img src="assets/images/screenshot.png" alt="个人网站" class="project-card__img">
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">个人网站</h3>
+                            <p class="project-card__description">个人网站，静态网站</p>
+                            <a href="https://github.com/Albert-Chen0405/Personal-website" target="_blank" class="project-card__link">查看详情 &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Project Item 2: Notes -->
+                    <div class="project-card" data-category="notes">
+                        <img src="assets/images/project_pde.jpg" alt="偏微分方程讲义" class="project-card__img">
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">偏微分方程傻瓜式讲义</h3>
+                            <p class="project-card__description">偏微分傻瓜式讲义，作业，习题卷（无适定性，无椭圆型方程）</p>
+                            <a href="https://github.com/Albert-Chen0405/Partial-differential-equation" target="_blank" class="project-card__link">查看详情 &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- NEW Project Item 3: Notes -->
+                    <div class="project-card" data-category="notes">
+                        <img src="assets/images/project_fourier.jpg" alt="傅里叶分析学习笔记" class="project-card__img">
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">傅里叶分析学习笔记</h3>
+                            <p class="project-card__description">傅里叶分析学习笔记（零零碎碎）</p>
+                            <a href="https://github.com/Albert-Chen0405/fourier-analysis-lecture-notes" target="_blank" class="project-card__link">查看详情 &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- =========== Social Links Section =========== -->
+        <section id="socials" class="socials section">
+            <h2 class="section__title">我的频道</h2>
+            <div class="socials__container container grid">
+                <a href="bilibili-study.html"  class="social-card">
+                    <i class="fab fa-bilibili social-card__icon bilibili-learning"></i>
+                    <h3 class="social-card__title">B站学习号</h3>
+                    <p class="social-card__description">分享数学与编程知识</p>
+                </a>
+                <a href="bilibili-idols.html" class="social-card">
+                    <i class="fab fa-bilibili social-card__icon bilibili-star"></i>
+                    <h3 class="social-card__title">口袋48和抖音录播B站号</h3>
+                    <p class="social-card__description">口袋48和抖音录播</p>
+                </a>
+                <a href="https://weibo.com/u/7561320778" target="_blank" class="social-card">
+                    <i class="fab fa-weibo social-card__icon weibo"></i>
+                    <h3 class="social-card__title">微博</h3>
+                    <p class="social-card__description">我的追星日常</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- =========== Skills Section =========== -->
+        <section id="skills" class="skills section">
+            <h2 class="section__title">我的技能</h2>
+            <div class="skills__container container">
+                <div class="skill-item"><i class="fab fa-python"></i><span>Python</span></div>
+                <div class="skill-item"><i class="fas fa-cogs"></i><span>FFmpeg</span></div>
+                <div class="skill-item"><i class="fab fa-java"></i><span>Java</span></div>
+                <div class="skill-item"><i class="fas fa-superscript"></i><span>LaTeX</span></div>
+                <div class="skill-item"><i class="fas fa-cube"></i><span>MATLAB</span></div>
+                <div class="skill-item"><i class="fab fa-docker"></i><span>Docker</span></div>
+                <div class="skill-item"><i class="fas fa-brain"></i><span>Dify</span></div>
+                <div class="skill-item"><i class="fab fa-git-alt"></i><span>Git</span></div>
+            </div>
+        </section>
+
+        <!-- =========== Contact Section =========== -->
+        <section id="contact" class="contact section">
+            <h2 class="section__title">联系我</h2>
+            <div class="contact__container container">
+                <p>如果你想与我交流，可以通过以下方式联系我。</p>
+                <div class="contact__buttons">
+                    <a href="mailto:chenbojun04@gmail.com" class="button"><i class="fas fa-envelope"></i> 发送邮件</a>
+                    <button class="button" id="wechat-btn"><i class="fab fa-weixin"></i> 添加微信</button>
+                    <button class="button" id="qq-btn"><i class="fab fa-qq"></i> 添加QQ</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========== Footer (Simplified) =========== -->
+    <footer class="footer">
+        <div class="footer__container container">
+            <p>&copy; 2025 Albert Chen. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- =========== Modals (Pop-ups) =========== -->
+    <div class="modal" id="wechat-modal">
+        <div class="modal__content">
+            <span class="modal__close">&times;</span>
+            <h3>微信二维码</h3>
+            <img src="assets/images/wechat_qr.png" alt="WeChat QR Code">
+            <p>扫一扫添加我的微信</p>
+        </div>
+    </div>
+    
+    <div class="modal" id="qq-modal">
+        <div class="modal__content">
+            <span class="modal__close">&times;</span>
+            <h3>QQ二维码</h3>
+            <img src="assets/images/qq_qr.png" alt="QQ QR Code">
+            <p>扫一扫添加我的QQ</p>
+        </div>
+    </div>
+
+    <!-- 主脚本文件 -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
