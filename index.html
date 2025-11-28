@@ -18,6 +18,8 @@
 
   <!-- 主样式表 -->
   <link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/components/education.css">
+<link rel="stylesheet" href="assets/css/components/notes.css">
 
   <!-- 网站图标（把你的 favicon 放到 assets/images/ 下并命名 favicon.ico 即可替换） -->
   <link rel="icon" href="assets/images/favicon.ico">
@@ -70,7 +72,8 @@
       </div>
     </section>
 
-    <!-- =========== About Me =========== -->
+ <!-- =========== 第一版的方案 =========== -->
+<!-- =========== About Me =========== -->
     <section id="about" class="about section">
       <h2 class="section__title">关于我</h2>
       <div class="about__container container grid">
@@ -109,6 +112,7 @@
 
   </div>
 
+
   <ul class="about__tags">
     <li>产品设计</li>
     <li>AI/数据</li>
@@ -118,6 +122,7 @@
 </div>
 
     </section>
+<!-- =========== 注释结束：关于我模块代码 =========== -->
  
     
 <!-- =========== Internships Section =========== -->
@@ -127,9 +132,9 @@
   <div class="internships__container container grid">
     <!-- 实习经历 1 -->
     <div class="internship__item">
-      <div class="internship__date">2025.03 – 2025.08</div>
+      <div class="internship__date">2025.04 – 2025.10</div>
       <div class="internship__content">
-        <h3>字节跳动 · 产品经理实习生</h3>
+        <h3>上海敏开科技有限公司 · 互联网产品经理实习生</h3>
         <p>参与智能语音产品的用户研究与功能迭代，负责翻译产品交互逻辑设计与竞品分析。</p>
       </div>
     </div>
@@ -154,6 +159,284 @@
   </div>
 </section>
 
+
+    <!-- =========== Education Section =========== -->
+    <section id="education" class="education section">
+      <h2 class="section__title">学习经历</h2>
+
+      <div class="education__container container">
+
+        <!-- 本科 Panel -->
+        <article class="education-card education-card--ug">
+          <!-- Header -->
+          <header class="education-card__header">
+  <div class="education-card__icon">
+    <!-- 本科学校 logo，占位图，后续自己替换 src -->
+    <img
+      src="assets/images/logo-undergrad-placeholder.png"
+      alt="南京工程学院 校徽"
+      class="education-card__logo"
+    >
+  </div>
+  <div class="education-card__meta">
+    <h3 class="education-card__school">南京工程学院（本科）</h3>
+    <p class="education-card__major">工业设计 Industrial Design</p>
+    <p class="education-card__time">2020 – 2024</p>
+  </div>
+</header>
+
+
+          <!-- Tags -->
+          <section class="education-card__section education-card__section--tags">
+            <h4 class="education-card__section-title">Tags</h4>
+            <ul class="education-card__tags">
+              <li class="education-card__tag">Industrial Design</li>
+              <li class="education-card__tag">Human-computer interaction</li>
+              <li class="education-card__tag">UX design</li>
+              <li class="education-card__tag">Research</li>
+            </ul>
+          </section>
+
+          <!-- Featured Projects -->
+          <section class="education-card__section education-card__section--projects">
+            <h4 class="education-card__section-title">Featured Projects</h4>
+            <ul class="education-card__list">
+              <li class="education-card__list-item">
+                <span class="education-card__project-name">基于 AHP 法和模糊综合评价的全季候城市环卫问题综合治理系统研究</span>
+                <span class="education-card__project-tags">AHP / Environmental protection / System Design</span>
+              </li>
+              <li class="education-card__list-item">
+                <span class="education-card__project-name">面向可持续发展的城市公共设施设计研究</span>
+                <span class="education-card__project-tags">Sustainable Design/ Urban public facilities design / Public service design</span>
+              </li>
+              <li class="education-card__list-item">
+                <span class="education-card__project-name">多健康饮食观念下的智能果蔬存储产品设计</span>
+                <span class="education-card__project-tags">Health-oriented design / Fruit and vegetable storage design / Intelligent Interaction Design</span>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Awards (Collapsible) -->
+          <section class="education-card__section education-card__section--awards">
+            <details class="education-card__awards" >
+              <summary class="education-card__awards-summary">
+                获奖与成果 Awards
+              </summary>
+
+              <!-- Publications -->
+              <div class="education-card__awards-group">
+                <h5 class="education-card__awards-title">论文 Publications</h5>
+                <ul class="education-card__list">
+                  <li class="education-card__list-item">
+                    汪骏，汪群民，闫胜昝。
+                    <span class="education-card__emphasis">基于层次分析法的智能服务机器人设计研究</span>，
+                    <span class="education-card__meta-text">《工业设计》，2023 (07): 152–155.</span>
+                  </li>
+                  <li class="education-card__list-item">
+                    Shengzan Yan, Jun Wang, Guodong Liang.
+                    <span class="education-card__emphasis">The Design of Agricultural UAV System Based on KANO-AHP-QFD</span>,
+                    <span class="education-card__meta-text">Proceedings of ICEB, 2023（EI 会议）</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Patents -->
+              <div class="education-card__awards-group">
+                <h5 class="education-card__awards-title">专利 Patents</h5>
+                <ul class="education-card__list">
+                  <li class="education-card__list-item">
+                    作为<span class="education-card__emphasis">第一发明人</span>，
+                    授权实用新型专利
+                    <span class="education-card__emphasis">“一种全季候模块化城市清洁车”</span>
+                    <span class="education-card__meta-text">（ZL 2023 2 2103123.5）</span>
+                  </li>
+                </ul>
+              </div>
+
+
+              <!-- Research Experience -->
+              <div class="education-card__awards-group">
+                <h5 class="education-card__awards-title">科研经历 Research</h5>
+                <ul class="education-card__list">
+                  <li class="education-card__list-item">
+                    2021–2022 · 校级科创项目
+                    <span class="education-card__emphasis">“基于 stm32 的多足机器人”</span>
+                    <span class="education-card__meta-text">（TB202215040，团队成员，已顺利结项）</span>
+                  </li>
+                  <li class="education-card__list-item">
+                    2022–2024 · 省大创重点项目（第一负责人）
+                    <span class="education-card__emphasis">“基于 AHP 法和模糊综合评价的全季候城市环卫问题综合治理系统研究”</span>
+                    <span class="education-card__meta-text">（202211276046Z，按计划结项）</span>
+                  </li>
+                  <li class="education-card__list-item">
+                    2022–2023 · 校级科研项目（第一负责人）
+                    <span class="education-card__emphasis">“面向可持续发展的城市公共设施设计研究”</span>
+                    <span class="education-card__meta-text">（TB20231010，结项优秀）</span>
+                  </li>
+                  <li class="education-card__list-item">
+                    2022–2023 · 科创项目
+                    <span class="education-card__emphasis">“健康饮食观念下的智能果蔬存储产品设计”</span>
+                    <span class="education-card__meta-text">（TB202310023，团队成员，已顺利结项）</span>
+                  </li>
+                </ul>
+              </div>
+
+
+              <!-- Awards List -->
+              <div class="education-card__awards-group">
+                <h5 class="education-card__awards-title">获奖 Awards</h5>
+                <ul class="education-card__list education-card__list--compact">
+                  <li class="education-card__list-item">中国好创意第十七届全国数字艺术设计大赛 · 国赛二等奖</li>
+                  <li class="education-card__list-item">第 11 届未来设计师 · 全国高校数字艺术设计大赛 · 江苏赛区二等奖</li>
+                  <li class="education-card__list-item">2023 睿抗机器人开发者大赛（RAICOM）全国总决赛 · 智能生活创意设计竞赛 三等奖</li>
+                  <li class="education-card__list-item">2023 睿抗机器人开发者大赛（RAICOM）江苏赛区 · 智能生活创意设计竞赛 一等奖</li>
+                  <li class="education-card__list-item">2022 睿抗机器人开发者大赛（RAICOM）江苏赛区 · 智能生活创意设计竞赛 三等奖</li>
+                  <li class="education-card__list-item">米兰设计周中国高校设计学科师生优秀作品展 · 江苏分赛区 三等奖</li>
+                  <li class="education-card__list-item">第八届“两岸新锐设计竞赛・华灿奖” · 华东赛区 三等奖</li>
+                  <li class="education-card__list-item">安徽省第九届工业设计大赛 “信达杯”宠物家具设计专项赛 · 铜奖</li>
+                  <li class="education-card__list-item">2022 “艺融杯”第十三届江苏艺术设计大赛 · 优秀奖</li>
+                  <li class="education-card__list-item">2023 “艺融杯”第十四届江苏艺术设计大赛 · 银奖</li>
+                  <li class="education-card__list-item">第四届金芦苇工业设计奖 · 入围奖 / 提名奖 / 作品展参展奖</li>
+                  <li class="education-card__list-item">江苏首届中国高等院校设计展活动优秀作品展 · 设计类甲组三等奖</li>
+                  <li class="education-card__list-item">第十届全国大学生艺术展演活动 · 优秀奖</li>
+                  <li class="education-card__list-item">第十届中国高等院校设计作品大赛 · 一等奖</li>
+                </ul>
+              </div>
+            </details>
+          </section>
+        </article>
+
+        <!-- 中间连接 Data Beam -->
+        <div class="education-connector">
+          <div class="education-connector__line">
+            <span class="education-connector__particle"></span>
+            <span class="education-connector__particle"></span>
+            <span class="education-connector__particle"></span>
+          </div>
+        </div>
+
+        <!-- 研究生 Panel -->
+        <article class="education-card education-card--pg">
+          <!-- Header -->
+         <header class="education-card__header">
+  <div class="education-card__icon">
+    <!-- 研究生学校 logo，占位图，后续自己替换 src -->
+    <img
+      src="assets/images/logo-postgrad-placeholder.png"
+      alt="东南大学 校徽"
+      class="education-card__logo"
+    >
+  </div>
+  <div class="education-card__meta">
+    <h3 class="education-card__school">东南大学（研究生）</h3>
+    <p class="education-card__major">工业设计工程 Industrial Design Engineering</p>
+    <p class="education-card__time">2025 – Now</p>
+  </div>
+</header>
+
+
+          <!-- Tags -->
+          <section class="education-card__section education-card__section--tags">
+            <h4 class="education-card__section-title">Tags</h4>
+            <ul class="education-card__tags">
+              <li class="education-card__tag">AI</li>
+              <li class="education-card__tag">Fiber Speckle Sensing</li>
+              <li class="education-card__tag">HMI</li>
+              <li class="education-card__tag">Product Thinking</li>
+            </ul>
+          </section>
+
+          <!-- Featured Projects -->
+          <section class="education-card__section education-card__section--projects">
+            <h4 class="education-card__section-title">Featured Projects</h4>
+            <ul class="education-card__list">
+              <li class="education-card__list-item">
+                <span class="education-card__project-name">智能座舱人机交互（Seat HMI）</span>
+                <span class="education-card__project-tags">FSS / Gesture / Low-distraction</span>
+              </li>
+              <li class="education-card__list-item">
+                <span class="education-card__project-name">实时语音翻译体验</span>
+                <span class="education-card__project-tags">LLM / Latency / UX Flow</span>
+              </li>
+              <li class="education-card__list-item">
+                <span class="education-card__project-name">儿童阅读 App · Share 模块</span>
+                <span class="education-card__project-tags">Growth / Privacy / Social</span>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Awards (Collapsible) -->
+          <section class="education-card__section education-card__section--awards">
+            <details class="education-card__awards" >
+              <summary class="education-card__awards-summary">
+                成果与进展 Awards &amp; Progress
+              </summary>
+
+              <!-- Publications (in preparation) -->
+              <div class="education-card__awards-group">
+                <h5 class="education-card__awards-title">论文 Publications（撰写 / 投稿中）</h5>
+                <ul class="education-card__list">
+                  <li class="education-card__list-item">
+                    <span class="education-card__emphasis">
+                      AI-driven Fiber Speckle Sensing for Intelligent Human–Machine Interfaces
+                    </span>
+                    <span class="education-card__meta-text">
+                      （面向 IEEE Sensors Journal 特刊的综述稿 · 撰写与准备投稿中）
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Research Projects -->
+              <div class="education-card__awards-group">
+                <h5 class="education-card__awards-title">科研方向 Research Projects</h5>
+                <ul class="education-card__list">
+                  <li class="education-card__list-item">
+                    光纤散斑传感 × AI × HMI：
+                    <span class="education-card__meta-text">
+                      面向可穿戴人机接口的多模态感知与低样本学习
+                    </span>
+                  </li>
+                  <li class="education-card__list-item">
+                    工业互联网与数字孪生人因交互：
+                    <span class="education-card__meta-text">
+                      参与“智能制造系统数字孪生人因交互创新中心”相关研究
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Awards Placeholder -->
+              <div class="education-card__awards-group">
+                <h5 class="education-card__awards-title">获奖 Awards（预留）</h5>
+                <p class="education-card__meta-text">
+                  研究生阶段成果与奖项将在后续学习与项目推进中逐步更新。
+                </p>
+              </div>
+            </details>
+          </section>
+        </article>
+
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- =========== Projects =========== -->
     <section id="projects" class="projects section">
       <h2 class="section__title">项目 & 笔记</h2>
@@ -165,30 +448,157 @@
         </div>
 
         <div class="projects__grid grid">
-          <!-- 示例项目 1 -->
-          <div class="project-card" data-category="project">
-            <img src="assets/images/abm48.png" alt="项目示例" class="project-card__img">
-            <div class="project-card__content">
-              <h3 class="project-card__title">个人网站</h3>
-              <p class="project-card__description">静态网站模板，支持 Gitee/GitHub Pages 一键发布。</p>
-              <a href="https://gitee.com/YOUR_GITEE_USERNAME/YOUR_REPO" target="_blank" class="project-card__link">仓库链接 &rarr;</a>
-            </div>
-          </div>
 
-          <!-- 示例项目 2（学习笔记） -->
-          <div class="project-card" data-category="notes">
-            <img src="assets/images/project_pde.jpg" alt="学习笔记" class="project-card__img">
-            <div class="project-card__content">
-              <h3 class="project-card__title">数学/编程笔记</h3>
-              <p class="project-card__description">按主题拆分的零散笔记，会逐步整理为可读文档。</p>
-              <a href="https://gitee.com/YOUR_GITEE_USERNAME/notes" target="_blank" class="project-card__link">查看笔记 &rarr;</a>
-            </div>
-          </div>
+  <!-- 项目 1：智能座舱人机交互 -->
+  <div class="project-card" data-category="project">
+    <a href="projects/seat-hmi.html">
+      <img src="assets/images/seat-hmi-cover.webp" alt="智能座舱人机交互">
+
+    </a>
+    <div class="project-card__content">
+      <h3 class="project-card__title">
+        <a href="projects/seat-hmi.html">智能座舱人机交互</a>
+      </h3>
+      <p class="project-card__description">
+        基于 FSS/触觉反馈的座舱交互探索：信息分层、手势映射、低分心设计与验证。
+      </p>
+      <a href="projects/seat-hmi.html" class="project-card__link">点击查看详情 &rarr;</a>
+    </div>
+  </div>
+
+
+  <!-- 项目 2：实时语音翻译体验 -->
+  <div class="project-card" data-category="project">
+    <a href="projects/voice-translate.html">
+      <img src="assets/images/voice-translate-cover.webp" alt="实时语音翻译体验" class="project-card__img">
+    </a>
+    <div class="project-card__content">
+      <h3 class="project-card__title">
+        <a href="projects/voice-translate.html">实时语音翻译体验</a>
+      </h3>
+      <p class="project-card__description">
+        旅行场景下的端侧/云端翻译方案对比与交互流程：输入延迟、可懂度、容错与隐私。
+      </p>
+      <a href="projects/voice-translate.html" class="project-card__link">查看详情 &rarr;</a>
+    </div>
+  </div>
+
+
+  <!-- 项目 3：儿童阅读 APP（Share 模块） -->
+  <div class="project-card" data-category="project">
+    <a href="projects/kids-reading.html">
+      <img src="assets/images/kids-reading-cover.webp" alt="儿童阅读 App Share 模块" class="project-card__img">
+    </a>
+    <div class="project-card__content">
+      <h3 class="project-card__title">
+        <a href="projects/kids-reading.html">儿童阅读 App · Share 模块</a>
+      </h3>
+      <p class="project-card__description">
+        家长-孩子共读的分享闭环：激励反馈、内容安全、社交平台适配与增长策略。
+      </p>
+      <a href="projects/kids-reading.html" class="project-card__link">查看详情 &rarr;</a>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+<!-- ================= Notes Section ================= -->
+<section id="notes" class="notes section">
+  <h2 class="section__title">NOTES · 笔记与碎片</h2>
+  <p class="section__subtitle">
+    一些研究随笔、产品思考和方法论草稿。点击进入可查看详情。
+  </p>
+
+<!-- ==== MINI NOTES LIST  ==== -->
+<div class="notes-mini-list">
+
+  <a href="notes/fss-ai-note.html" class="notes-mini-item">
+    <span class="notes-mini-title">Fiber Speckle Sensing × AI：从信号到智能感知</span>
+    <span class="notes-mini-status status-active">进行中</span>
+  </a>
+
+  <a href="notes/ux-flow-latency.html" class="notes-mini-item">
+    <span class="notes-mini-title">实时语音翻译体验：延迟与可懂度</span>
+    <span class="notes-mini-status status-draft">草稿</span>
+  </a>
+
+  <a href="notes/seat-gesture-dataflow.html" class="notes-mini-item">
+    <span class="notes-mini-title">座舱手势识别：数据流结构探索</span>
+    <span class="notes-mini-status status-planning">计划中</span>
+  </a>
+
+</div>
+
+
+
+
+  <div class="notes__container container">
+
+    <!-- Notes 01 -->
+    <article class="note-card">
+      <a href="notes/fss-ai-note.html" class="note-card__overlay-link"></a>
+
+      <header class="note-card__header">
+        <h3 class="note-card__title">Fiber Speckle Sensing × AI：从信号到智能感知</h3>
+        <span class="note-card__status">进行中</span>
+      </header>
+
+      <p class="note-card__summary">
+        关于 FSS 高维、随机、非线性 speckle 数据特性的整理，
+        以及与少样本学习、Meta-learning 结合的可能路径。
+      </p>
+
+      <div class="note-card__footer">
+        <span class="note-card__meta">研究笔记 · 进行中</span>
+        <div class="note-card__tags">
+          <span class="note-card__tag">FSS</span>
+          <span class="note-card__tag">AI</span>
         </div>
       </div>
-    </section>
+    </article>
 
-    <!-- =========== Social Links =========== -->
+    <!-- Notes 02（示例） -->
+    <article class="note-card">
+      <a href="notes/ux-flow-latency.html" class="note-card__overlay-link"></a>
+
+      <header class="note-card__header">
+        <h3 class="note-card__title">实时语音翻译体验：延迟、可懂度与用户心智模型</h3>
+        <span class="note-card__status status--draft">草稿</span>
+      </header>
+
+      <p class="note-card__summary">
+        对 Google / Apple / 禾赛 等实时翻译方案的延迟表现进行拆解，
+        并结合旅行场景用户链路构建体验指标体系。
+      </p>
+
+      <div class="note-card__footer">
+        <span class="note-card__meta">翻译体验 · 草稿</span>
+        <div class="note-card__tags">
+          <span class="note-card__tag">HCI</span>
+          <span class="note-card__tag">Latency</span>
+          <span class="note-card__tag">LLM</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- 进入 Notes 列表按钮 -->
+    <a href="notes/index.html" class="notes__more">查看所有 Notes →</a>
+
+  </div>
+</section>
+
+
+
+
+    
+<!-- =========== 注释开始：社交频道模块代码 =========== -->
+<!-- =========== Social Links =========== -->
     <section id="socials" class="socials section">
       <h2 class="section__title">我的频道</h2>
       <div class="socials__container container grid">
@@ -209,6 +619,7 @@
         </a>
       </div>
     </section>
+<!-- =========== 注释结束：社交频道模块代码 =========== -->
 
     <!-- =========== Skills =========== -->
     <section id="skills" class="skills section">

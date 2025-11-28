@@ -1,11 +1,12 @@
 /* ===============================================
    ALBERT'S HOMEPAGE - MAIN STYLESHEET V3 (ELEGANT BLUE + PHOTO BG)
+   CLEAN VERSION (Education & Notes REMOVED)
    ===============================================
    1. IMPORTS
-   2. CSS VARIABLES (NEW ELEGANT BLUE THEME)
-   3. BASE & RESET STYLES
-   4. REUSABLE COMPONENTS & UTILITIES
-   5. MODAL STYLES
+   2. CSS VARIABLES (THEME)
+   3. BASE & RESET
+   4. REUSABLE COMPONENTS
+   5. MODAL
    =============================================== */
 
 /* ===============================================
@@ -20,25 +21,22 @@
 @import url('components/_contact.css');
 @import url('components/_footer.css');
 
-
 /* ===============================================
    2. CSS VARIABLES (NEW ELEGANT BLUE THEME)
    =============================================== */
 :root, [data-theme='light'] {
-    /* NEW Colors: Elegant Blue Palette */
-    --primary-color: #007bff;      /* A classic, vibrant blue */
-    --primary-color-alt: #0056b3;  /* A darker blue for hover effects */
-    --highlight-color: #56aeff;     /* A lighter blue for highlights */
-    --title-color: #212529;         /* A very dark grey, almost black */
-    --text-color: #495057;          /* A softer grey for body text */
-    --text-color-light: #6c757d;    /* A lighter grey for subtitles */
-    --body-bg-color: #ffffff;         /* Base color, will be covered by image */
-    --container-bg-color: rgba(255, 255, 255, 0.85); /* Frosted glass effect */
+    --primary-color: #007bff;
+    --primary-color-alt: #0056b3;
+    --highlight-color: #56aeff;
+    --title-color: #212529;
+    --text-color: #495057;
+    --text-color-light: #6c757d;
+    --body-bg-color: #ffffff;
+    --container-bg-color: rgba(255, 255, 255, 0.85);
     --border-color: #dee2e6;
     --box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
-    --bg-overlay-color: rgba(255, 255, 255, 0.5); /* Light overlay for the background image */
+    --bg-overlay-color: rgba(255, 255, 255, 0.5);
 
-    /* Typography, Spacing, Other */
     --font-primary: 'Poppins', 'Noto Sans SC', sans-serif;
     --h1-font-size: 3.2rem;
     --h2-font-size: 2.25rem;
@@ -52,20 +50,18 @@
 }
 
 [data-theme='dark'] {
-    /* Dark Theme Colors */
-    --primary-color: #56aeff;      /* Lighter blue for dark background */
+    --primary-color: #56aeff;
     --primary-color-alt: #80bfff;
     --highlight-color: #007bff;
-    --title-color: #f8f9fa;         /* Almost white */
-    --text-color: #adb5bd;          /* Light grey */
+    --title-color: #f8f9fa;
+    --text-color: #adb5bd;
     --text-color-light: #6c757d;
     --body-bg-color: #121212;
-    --container-bg-color: rgba(23, 29, 41, 0.8); /* Dark frosted glass */
+    --container-bg-color: rgba(23, 29, 41, 0.8);
     --border-color: #343a40;
     --box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-    --bg-overlay-color: rgba(0, 0, 0, 0.6); /* Dark overlay for the background image */
+    --bg-overlay-color: rgba(0, 0, 0, 0.6);
 }
-
 
 /* ===============================================
    3. BASE & RESET STYLES
@@ -91,25 +87,21 @@ body {
     padding-top: var(--header-height);
     transition: background-color 0.3s, color 0.3s;
 
-    /* === NEW: FIXED PHOTO BACKGROUND === */
     background-image: url('../images/background.jpg');
     background-size: cover;
     background-position: center center;
-    background-attachment: fixed; /* This is the magic property! */
+    background-attachment: fixed;
     position: relative;
     z-index: 0;
 }
 
-/* This pseudo-element creates the light/dark overlay on top of the image */
 body::before {
     content: '';
-    position: fixed; /* Also fixed to cover the entire viewport */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     background-color: var(--bg-overlay-color);
-    z-index: -1; /* Place it between the body content and the background image */
+    z-index: -1;
     transition: var(--transition);
 }
 
@@ -118,19 +110,14 @@ h1, h2, h3 {
     font-weight: 700;
 }
 
-ul {
-    list-style: none;
-}
+ul { list-style: none; }
 
 a {
     text-decoration: none;
     color: var(--primary-color);
     transition: var(--transition);
 }
-
-a:hover {
-    color: var(--primary-color-alt);
-}
+a:hover { color: var(--primary-color-alt); }
 
 img {
     max-width: 100%;
@@ -184,11 +171,10 @@ img {
     transition: var(--transition);
     cursor: pointer;
 }
-
 .button:hover {
     background: var(--primary-color-alt);
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .button--ghost {
@@ -196,23 +182,19 @@ img {
     color: var(--primary-color);
     border-color: var(--primary-color);
 }
-
 .button--ghost:hover {
     background: var(--primary-color);
     color: #fff;
 }
-
 
 /* ===============================================
    5. MODAL STYLES
    =============================================== */
 .modal {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -221,7 +203,6 @@ img {
     visibility: hidden;
     transition: var(--transition);
 }
-
 .modal.active {
     opacity: 1;
     visibility: visible;
@@ -239,7 +220,6 @@ img {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
-
 .modal.active .modal__content {
     transform: scale(1);
 }

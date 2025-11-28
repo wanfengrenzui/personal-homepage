@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asta · Homepage</title>
+
+  <!-- Meta SEO Tags -->
+  <meta name="description" content="你好，我是 Asta 。东南大学工业设计工程在读，关注 AI、产品设计与人机交互。这是我的个人主页，用于展示项目、笔记和个人链接。">
+  <meta name="keywords" content="Asta, 个人主页, 工业设计工程, 产品经理, AI, 人机交互, 学习笔记">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Asta · Homepage">
+  <meta property="og:description" content="Asta 的个人网站：AI × 产品设计 × 人机交互。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://your-domain.com">
+  <meta property="og:image" content="assets/images/og-preview.webp">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome (可选，用于社交图标) -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+  <style>
+    :root {
+      /* 基础色板：科技冷色系 */
+      --color-bg: #070a10;
+      --color-bg-alt: #0d1117;
+      --color-surface: rgba(13, 17, 23, 0.85);
+      --color-surface-soft: rgba(19, 25, 34, 0.9);
+      --color-border-subtle: rgba(148, 163, 184, 0.18);
+      --color-primary: #4c82ff;
+      --color-primary-soft: rgba(76, 130, 255, 0.16);
+      --color-primary-strong: #7b5cff; /* 辅助紫色 */
+      --color-text-main: #e5e7eb;
+      --color-text-muted: #9ca3af;
+      --color-text-soft: #6b7280;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.55);
+      --radius-card: 18px;
+      --radius-pill: 999px;
+      --container-max-width: 1120px;
+      --transition-fast: 0.18s ease-out;
+      --transition-normal: 0.25s ease-out;
+      --blur-strong: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: "Noto Sans SC", system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(76,130,255,0.22) 0, transparent 55%),
+        radial-gradient(circle at 90% 100%, rgba(123,92,255,0.18) 0, transparent 55%),
+        radial-gradient(circle at 50% 0%, rgba(15,23,42,0.95) 0, #020617 55%);
+      color: var(--color-text-main);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .site-shell {
+      max-width: var(--container-max-width);
+      margin: 0 auto;
+      padding: 20px 20px 80px;
+    }
+
+    /* 顶部导航 */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(
+        to bottom,
+        rgba(2, 6, 23, 0.92),
+        rgba(2, 6, 23, 0.65),
+        transparent
+      );
+      border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+    }
+
+    .site-header__inner {
+      max-width: var(--container-max-width);
+      margin: 0 auto;
+      padding: 14px 20px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand__logo {
+      width: 32px;
+      height: 32px;
+      border-radius: 12px;
+      background:
+        conic-gradient(from 210deg,
+        #4c82ff,
+        #7b5cff,
+        #22c1c3,
+        #4c82ff);
+      position: relative;
+      box-shadow: 0 10px 30px rgba(37, 99, 235, 0.55);
+      isolation: isolate;
+    }
+
+    .brand__logo::after {
+      content: "";
+      position: absolute;
+      inset: 3px;
+      border-radius: inherit;
+      background: radial-gradient(circle at 30% 20%, #e5e7eb 0, #020617 70%);
+      mix-blend-mode: screen;
+      opacity: 0.8;
+    }
+
+    .brand__text-main {
+      font-family: "Poppins", system-ui, sans-serif;
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .brand__text-sub {
+      font-size: 12px;
+      color: var(--color-text-soft);
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 13px;
+    }
+
+    .site-nav__link {
+      padding: 6px 10px;
+      border-radius: 999px;
+      color: var(--color-text-muted);
+      position: relative;
+      transition: color var(--transition-fast), background var(--transition-fast);
+    }
+
+    .site-nav__link::after {
+      content: "";
+      position: absolute;
+      inset: auto 16px -4px;
+      height: 1px;
+      border-radius: 999px;
+      background: linear-gradient(to right, #4c82ff, #7b5cff);
+      opacity: 0;
+      transform: scaleX(0.5);
+      transform-origin: center;
+      transition: opacity var(--transition-fast), transform var(--transition-fast);
+    }
+
+    .site-nav__link:hover {
+      color: var(--color-text-main);
+      background: rgba(15, 23, 42, 0.5);
+    }
+
+    .site-nav__link:hover::after {
+      opacity: 1;
+      transform: scaleX(1);
+    }
+
+    .site-nav__pill {
+      padding: 7px 14px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      font-size: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--color-text-muted);
+      cursor: pointer;
+      background: radial-gradient(circle at 0 0, rgba(76, 130, 255, 0.42), rgba(15, 23, 42, 0.9));
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.8);
+      transition: border var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    .site-nav__pill i {
+      font-size: 11px;
+    }
+
+    .site-nav__pill:hover {
+      border-color: rgba(96, 165, 250, 0.8);
+      transform: translateY(-1px);
+      box-shadow: 0 14px 40px rgba(15, 23, 42, 0.95);
+    }
+
+    /* 主体布局 */
+
+    main {
+      margin-top: 28px;
+    }
+
+    .section {
+      margin-bottom: 60px;
+    }
+
+    .section__head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .section__title {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-family: "Poppins", system-ui, sans-serif;
+    }
+
+    .section__title span {
+      background: linear-gradient(120deg, #4c82ff, #7b5cff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .section__subtitle {
+      font-size: 13px;
+      color: var(--color-text-soft);
+    }
+
+    /* Hero 区域 */
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.6fr);
+      gap: 26px;
+      align-items: center;
+      margin-bottom: 52px;
+    }
+
+    .hero__text {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      background: radial-gradient(circle at 0 0, rgba(76, 130, 255, 0.3), rgba(15, 23, 42, 0.95));
+      font-size: 11px;
+      color: var(--color-text-muted);
+      margin-bottom: 12px;
+    }
+
+    .hero__eyebrow-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 12px #22c55e;
+    }
+
+    .hero__title {
+      font-family: "Poppins", system-ui, sans-serif;
+      font-size: clamp(32px, 4vw, 40px);
+      line-height: 1.15;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      margin: 0 0 10px;
+    }
+
+    .hero__title-highlight {
+      background: linear-gradient(120deg, #4c82ff, #7b5cff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero__subtitle {
+      font-size: 14px;
+      color: var(--color-text-muted);
+      max-width: 480px;
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    .hero__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 22px;
+    }
+
+    .chip {
+      border-radius: var(--radius-pill);
+      padding: 4px 10px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      background: rgba(15, 23, 42, 0.85);
+      font-size: 11px;
+      color: var(--color-text-soft);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .chip__dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #4c82ff;
+    }
+
+    .hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn {
+      border-radius: var(--radius-pill);
+      padding: 8px 14px;
+      font-size: 13px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: none;
+      color: inherit;
+      transition: background var(--transition-normal), border var(--transition-normal),
+      transform var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    .btn--primary {
+      background: radial-gradient(circle at 10% 0, #4c82ff, #7b5cff 55%, #22c1c3 100%);
+      border-color: rgba(148, 163, 184, 0.32);
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.9);
+    }
+
+    .btn--primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 20px 50px rgba(15, 23, 42, 1);
+    }
+
+    .btn--ghost {
+      border-color: rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.7);
+      color: var(--color-text-muted);
+    }
+
+    .btn--ghost:hover {
+      background: rgba(15, 23, 42, 0.95);
+      border-color: rgba(148, 163, 184, 0.8);
+    }
+
+    .btn i {
+      font-size: 12px;
+    }
+
+    .hero__meta {
+      display: flex;
+      gap: 18px;
+      margin-top: 16px;
+      font-size: 11px;
+      color: var(--color-text-soft);
+    }
+
+    .hero__meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .hero__meta-label {
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 10px;
+      color: var(--color-text-soft);
+    }
+
+    .hero__meta-value {
+      color: var(--color-text-muted);
+    }
+
+    /* 右侧视觉卡片 */
+
+    .hero__visual-wrapper {
+      position: relative;
+    }
+
+    .hero__glow {
+      position: absolute;
+      inset: -20%;
+      background:
+        radial-gradient(circle at 0 0, rgba(76, 130, 255, 0.25), transparent 60%),
+        radial-gradient(circle at 100% 100%, rgba(123, 92, 255, 0.35), transparent 65%);
+      filter: blur(22px);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .hero-card {
+      position: relative;
+      border-radius: 24px;
+      background: radial-gradient(circle at 0 0, rgba(15, 23, 42, 0.9), rgba(2, 6, 23, 0.98));
+      border: 1px solid rgba(148, 163, 184, 0.32);
+      box-shadow: var(--shadow-soft);
+      padding: 16px 16px 14px;
+      overflow: hidden;
+      backdrop-filter: blur(var(--blur-strong));
+      isolation: isolate;
+    }
+
+    .hero-card__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .hero-card__title {
+      font-size: 13px;
+      color: var(--color-text-muted);
+    }
+
+    .hero-card__tag {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      background: rgba(22, 101, 52, 0.25);
+      border: 1px solid rgba(34, 197, 94, 0.6);
+      color: #bbf7d0;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero-card__tag-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 12px #22c55e;
+    }
+
+    .hero-card__body {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 12px;
+      align-items: center;
+    }
+
+    .hero-avatar {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      background:
+        radial-gradient(circle at 30% 0, rgba(148, 163, 184, 0.35), transparent 60%),
+        radial-gradient(circle at 50% 100%, rgba(15, 23, 42, 1), rgba(2, 6, 23, 1));
+      aspect-ratio: 4 / 5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-avatar__placeholder {
+      font-size: 12px;
+      color: var(--color-text-soft);
+      text-align: center;
+      padding: 0 10px;
+    }
+
+    /* 如果你有头像图，替换为 img 即可 */
+    /*
+    .hero-avatar {
+      background: none;
+    }
+    .hero-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    */
+
+    .hero-card__metrics {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 11px;
+      color: var(--color-text-soft);
+    }
+
+    .metric-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .metric-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .metric-label i {
+      font-size: 11px;
+      color: var(--color-primary);
+    }
+
+    .metric-badge {
+      padding: 3px 9px;
+      border-radius: var(--radius-pill);
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      color: var(--color-text-muted);
+    }
+
+    .hero-card__footer {
+      margin-top: 10px;
+      padding-top: 8px;
+      border-top: 1px dashed rgba(148, 163, 184, 0.35);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      color: var(--color-text-soft);
+    }
+
+    .hero-card__stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .pill-mini {
+      padding: 3px 8px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.85);
+      font-size: 10px;
+    }
+
+    .hero-card__status {
+      text-align: right;
+      color: var(--color-text-muted);
+    }
+
+    /* 项目卡片 */
+
+    .grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .grid--projects {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    @media (max-width: 1024px) {
+      .grid--projects {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .grid--projects {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .project-card {
+      position: relative;
+      border-radius: var(--radius-card);
+      background: radial-gradient(circle at 0 0, rgba(15, 23, 42, 0.95), rgba(2, 6, 23, 0.98));
+      border: 1px solid rgba(148, 163, 184, 0.32);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.9);
+      transform: translateY(0);
+      transition: transform var(--transition-normal), box-shadow var(--transition-normal),
+      border-color var(--transition-normal), background var(--transition-normal);
+      cursor: pointer;
+    }
+
+    .project-card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: radial-gradient(circle at 0 0, rgba(76, 130, 255, 0.23), transparent 55%);
+      opacity: 0;
+      transition: opacity var(--transition-normal);
+      pointer-events: none;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 22px 55px rgba(15, 23, 42, 1);
+      border-color: rgba(129, 140, 248, 0.7);
+      background: radial-gradient(circle at 0 0, rgba(15, 23, 42, 0.98), rgba(2, 6, 23, 1));
+    }
+
+    .project-card:hover::before {
+      opacity: 1;
+    }
+
+    .project-card__image {
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(30, 64, 175, 0.45);
+      aspect-ratio: 16 / 10;
+      background: radial-gradient(circle at 50% 0, rgba(30, 64, 175, 0.55), rgba(15, 23, 42, 1));
+    }
+
+    .project-card__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-normal);
+    }
+
+    .project-card:hover .project-card__image img {
+      transform: scale(1.04);
+    }
+
+    .project-card__label {
+      position: absolute;
+      inset: 10px 12px auto auto;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      background: rgba(15, 23, 42, 0.78);
+      border: 1px solid rgba(148, 163, 184, 0.42);
+      font-size: 10px;
+      color: var(--color-text-muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .project-card__label-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #4c82ff;
+    }
+
+    .project-card__content {
+      padding: 14px 14px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .project-card__title {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .project-card__description {
+      font-size: 12px;
+      color: var(--color-text-muted);
+      line-height: 1.7;
+    }
+
+    .project-card__meta {
+      margin-top: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      color: var(--color-text-soft);
+    }
+
+    .project-card__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .project-tag {
+      padding: 3px 8px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.85);
+      font-size: 10px;
+    }
+
+    .project-card__link {
+      font-size: 11px;
+      color: var(--color-primary);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .project-card__link i {
+      font-size: 10px;
+    }
+
+    /* 笔记/文章卡片 */
+
+    .note-card {
+      border-radius: var(--radius-card);
+      border: 1px solid rgba(148, 163, 184, 0.26);
+      background: rgba(15, 23, 42, 0.9);
+      padding: 12px 14px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 12px;
+      transition: border var(--transition-fast), transform var(--transition-fast), background var(--transition-fast);
+    }
+
+    .note-card:hover {
+      border-color: rgba(148, 163, 184, 0.7);
+      transform: translateY(-2px);
+      background: rgba(15, 23, 42, 0.98);
+    }
+
+    .note-card__title {
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .note-card__meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 11px;
+      color: var(--color-text-soft);
+    }
+
+    .note-card__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .note-tag {
+      padding: 2px 7px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148, 163, 184, 0.38);
+      font-size: 10px;
+    }
+
+    /* 页脚 */
+
+    .site-footer {
+      margin-top: 32px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(30, 64, 175, 0.45);
+      font-size: 11px;
+      color: var(--color-text-soft);
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .site-footer__links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .site-footer a {
+      color: var(--color-text-muted);
+    }
+
+    .site-footer a:hover {
+      color: var(--color-primary);
+    }
+
+    /* Reveal 动效 */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* 响应式 */
+
+    @media (max-width: 960px) {
+      .hero {
+        grid-template-columns: minmax(0, 1.2fr);
+      }
+
+      .hero__visual-wrapper {
+        order: -1;
+      }
+
+      .hero-card {
+        max-width: 420px;
+        margin: 0 auto;
+      }
+
+      .hero__subtitle {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .site-header__inner {
+        padding-inline: 16px;
+      }
+
+      .site-shell {
+        padding-inline: 16px;
+      }
+
+      .site-nav {
+        display: none;
+      }
+
+      .hero {
+        margin-bottom: 40px;
+      }
+
+      .section {
+        margin-bottom: 40px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<header class="site-header">
+  <div class="site-header__inner">
+    <div class="brand">
+      <div class="brand__logo" aria-hidden="true"></div>
+      <div>
+        <div class="brand__text-main">ASTA</div>
+        <div class="brand__text-sub">Industrial Design · AI Product</div>
+      </div>
+    </div>
+    <nav class="site-nav">
+      <a href="#projects" class="site-nav__link">项目 Projects</a>
+      <a href="#notes" class="site-nav__link">笔记 Notes</a>
+      <a href="#about" class="site-nav__link">关于 About</a>
+      <button class="site-nav__pill" type="button"
+              onclick="window.location.href='mailto:your_email@example.com'">
+        <i class="fa-regular fa-paper-plane"></i>
+        Contact
+      </button>
+    </nav>
+  </div>
+</header>
+
+<div class="site-shell">
+  <main>
+    <!-- Hero 区域 -->
+    <section class="hero reveal" id="about">
+      <div class="hero__text">
+        <div class="hero__eyebrow">
+          <span class="hero__eyebrow-dot"></span>
+          <span>东南大学 · 工业设计工程 / 向 AI 产品靠拢中</span>
+        </div>
+        <h1 class="hero__title">
+          你好，我是 <span class="hero__title-highlight">Asta</span>，  
+          在 <span class="hero__title-highlight">设计 × AI</span> 的交界处折腾。
+        </h1>
+        <p class="hero__subtitle">
+          目前在做智能座舱人机交互、光纤散斑传感与 AI 结合、儿童阅读产品等方向。
+          这个网站主要用于记录项目、思考和实验性的 side projects。
+        </p>
+
+        <div class="hero__tags">
+          <div class="chip">
+            <span class="chip__dot"></span>
+            <span>智能座舱 HMI</span>
+          </div>
+          <div class="chip">
+            <span class="chip__dot"></span>
+            <span>Fiber Speckle Sensing × AI</span>
+          </div>
+          <div class="chip">
+            <span class="chip__dot"></span>
+            <span>AI 产品思维</span>
+          </div>
+        </div>
+
+        <div class="hero__actions">
+          <button class="btn btn--primary" type="button" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">
+            <i class="fa-solid fa-diagram-project"></i>
+            查看项目
+          </button>
+          <button class="btn btn--ghost" type="button" onclick="document.getElementById('notes').scrollIntoView({behavior: 'smooth'})">
+            <i class="fa-regular fa-note-sticky"></i>
+            最近在想什么
+          </button>
+        </div>
+
+        <div class="hero__meta">
+          <div class="hero__meta-item">
+            <div class="hero__meta-label">Current Focus</div>
+            <div class="hero__meta-value">AI 驱动传感 &amp; HMI · 儿童阅读产品</div>
+          </div>
+          <div class="hero__meta-item">
+            <div class="hero__meta-label">Location</div>
+            <div class="hero__meta-value">Nanjing / Singapore time zone</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__visual-wrapper">
+        <div class="hero__glow" aria-hidden="true"></div>
+        <article class="hero-card">
+          <div class="hero-card__header">
+            <div class="hero-card__title">个人状态 Monitor</div>
+            <div class="hero-card__tag">
+              <span class="hero-card__tag-dot"></span>
+              <span>Online · Building</span>
+            </div>
+          </div>
+
+          <div class="hero-card__body">
+            <div class="hero-avatar">
+              <!-- 这里可以替换为你的真实头像 -->
+              <!-- <img src="assets/images/avatar-asta.webp" alt="Asta 头像"> -->
+              <div class="hero-avatar__placeholder">
+                这里放你的头像或一张带科技感的插画。<br>
+                建议使用 .webp，统一光影方向。
+              </div>
+            </div>
+
+            <div class="hero-card__metrics">
+              <div class="metric-row">
+                <div class="metric-label">
+                  <i class="fa-solid fa-brain"></i>
+                  研究主线
+                </div>
+                <span class="metric-badge">FSS × AI × HMI</span>
+              </div>
+              <div class="metric-row">
+                <div class="metric-label">
+                  <i class="fa-solid fa-book-open-reader"></i>
+                  产品方向
+                </div>
+                <span class="metric-badge">儿童阅读 · 实时翻译</span>
+              </div>
+              <div class="metric-row">
+                <div class="metric-label">
+                  <i class="fa-solid fa-code"></i>
+                  工具栈
+                </div>
+                <span class="metric-badge">HTML/CSS · LaTeX · Python</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-card__footer">
+            <div class="hero-card__stack">
+              <span class="pill-mini">Research</span>
+              <span class="pill-mini">Product Thinking</span>
+              <span class="pill-mini">UX / HMI</span>
+            </div>
+            <div class="hero-card__status">
+              <div>Site framework: <strong>v0.1</strong></div>
+              <div>内容将逐步填充中…</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 项目区 -->
+    <section class="section reveal" id="projects">
+      <div class="section__head">
+        <h2 class="section__title"><span>Projects</span> · 项目</h2>
+        <p class="section__subtitle">
+          一部分是科研相关，一部分是产品/交互实验。后续会继续补充细节页面。
+        </p>
+      </div>
+
+      <div class="grid grid--projects">
+        <!-- 项目 1：智能座舱人机交互 -->
+        <article class="project-card" data-category="project">
+          <div class="project-card__image">
+            <span class="project-card__label">
+              <span class="project-card__label-dot"></span>
+              智能座舱 · HMI
+            </span>
+            <img src="assets/images/seat-hmi-cover.webp" alt="智能座舱人机交互">
+          </div>
+          <div class="project-card__content">
+            <h3 class="project-card__title">
+              <a href="projects/seat-hmi.html">智能座舱人机交互</a>
+            </h3>
+            <p class="project-card__description">
+              基于 FSS / 触觉反馈的座舱交互探索：信息分层、手势映射、低分心设计与验证。
+            </p>
+            <div class="project-card__meta">
+              <div class="project-card__tags">
+                <span class="project-tag">FSS</span>
+                <span class="project-tag">HMI</span>
+                <span class="project-tag">汽车交互</span>
+              </div>
+              <a href="projects/seat-hmi.html" class="project-card__link">
+                查看详情
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 项目 2：实时语音翻译体验 -->
+        <article class="project-card" data-category="project">
+          <div class="project-card__image">
+            <span class="project-card__label">
+              <span class="project-card__label-dot"></span>
+              AI · 实时翻译
+            </span>
+            <img src="assets/images/voice-translate-cover.webp" alt="实时语音翻译体验">
+          </div>
+          <div class="project-card__content">
+            <h3 class="project-card__title">
+              <a href="projects/voice-translate.html">实时语音翻译体验</a>
+            </h3>
+            <p class="project-card__description">
+              针对美国旅行用户的实时语音翻译产品研究，从 Google / Apple / 讯飞等竞品分析，到关键使用场景与体验路径设计。
+            </p>
+            <div class="project-card__meta">
+              <div class="project-card__tags">
+                <span class="project-tag">AI Translation</span>
+                <span class="project-tag">体验设计</span>
+                <span class="project-tag">PM 思维</span>
+              </div>
+              <a href="projects/voice-translate.html" class="project-card__link">
+                查看详情
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 项目 3：儿童阅读产品 · Read Together -->
+        <article class="project-card" data-category="project">
+          <div class="project-card__image">
+            <span class="project-card__label">
+              <span class="project-card__label-dot"></span>
+              儿童阅读 · 产品
+            </span>
+            <img src="assets/images/read-together-cover.webp" alt="儿童阅读 App 体验设计">
+          </div>
+          <div class="project-card__content">
+            <h3 class="project-card__title">
+              <a href="projects/read-together.html">儿童阅读 App · Read Together</a>
+            </h3>
+            <p class="project-card__description">
+              面向美国家长与儿童的阅读 App 分享系统设计，从成就/作品到跨平台分享路径与隐私分层。
+            </p>
+            <div class="project-card__meta">
+              <div class="project-card__tags">
+                <span class="project-tag">儿童产品</span>
+                <span class="project-tag">Growth / 分享</span>
+                <span class="project-tag">UX 体系</span>
+              </div>
+              <a href="projects/read-together.html" class="project-card__link">
+                查看详情
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 笔记 / 文章区 -->
+    <section class="section reveal" id="notes">
+      <div class="section__head">
+        <h2 class="section__title"><span>Notes</span> · 笔记与碎片</h2>
+        <p class="section__subtitle">
+          一些还没成型的想法：论文摘要、方法论、产品思考、踩坑记录等，会抽时间慢慢搬到这里。
+        </p>
+      </div>
+
+      <div class="grid">
+        <article class="note-card">
+          <h3 class="note-card__title">
+            Fiber Speckle Sensing × AI：从信号到智能感知
+          </h3>
+          <p>
+            关于 FSS 高维、随机、非线性耦合数据特性的整理，以及与少样本学习、Meta-learning 结合的可能路径。
+          </p>
+          <div class="note-card__meta">
+            <span>研究笔记 · 进行中</span>
+            <div class="note-card__tags">
+              <span class="note-tag">FSS</span>
+              <span class="note-tag">AI</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="note-card">
+          <h3 class="note-card__title">
+            AI 产品学习路径：从工业设计到 AI PM
+          </h3>
+          <p>
+            对自己转向 AI 产品方向的学习路径拆解：基础技术认知、模型能力边界、案例拆解与项目实践。
+          </p>
+          <div class="note-card__meta">
+            <span>个人规划</span>
+            <div class="note-card__tags">
+              <span class="note-tag">Product</span>
+              <span class="note-tag">Learning Path</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="note-card">
+          <h3 class="note-card__title">
+            车内人机交互：注意力、负荷与“温柔打扰”
+          </h3>
+          <p>
+            从驾驶任务负荷出发，思考哪些交互是“必要打扰”，以及如何利用 FSS/触觉降低视觉占用。
+          </p>
+          <div class="note-card__meta">
+            <span>HMI 思考</span>
+            <div class="note-card__tags">
+              <span class="note-tag">HMI</span>
+              <span class="note-tag">Cognitive Load</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      © <span id="year"></span> Asta · 仍在施工的个人网站。
+    </div>
+    <div class="site-footer__links">
+      <a href="https://github.com/wanfengrenzui" target="_blank" rel="noreferrer">
+        <i class="fa-brands fa-github"></i> GitHub
+      </a>
+      <a href="https://scholar.google.com" target="_blank" rel="noreferrer">
+        <i class="fa-solid fa-flask"></i> Google Scholar
+      </a>
+      <a href="mailto:your_email@example.com">
+        <i class="fa-regular fa-envelope"></i> Email
+      </a>
+    </div>
+  </footer>
+</div>
+
+<script>
+  // 年份自动更新
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // 简单的滚动 reveal 动效
+  const revealEls = document.querySelectorAll('.reveal');
+
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.15
+    }
+  );
+
+  revealEls.forEach((el) => revealObserver.observe(el));
+</script>
+</body>
+</html>

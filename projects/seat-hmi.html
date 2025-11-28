@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>汽车座舱人机交互 · Case Study | Asta</title>
+<link rel="stylesheet" href="../assets/css/main.css">
+<style>
+  /* 简洁交互样式，复用你主站风格 */
+  .case { max-width: 1000px; margin: 0 auto; padding: 3rem 1.25rem; }
+  .case h1 { font-size: 2rem; margin-bottom: .5rem; }
+  .meta { color:#8aa; font-size:.95rem; margin-bottom:1.5rem }
+  .tabs { display:flex; gap:.5rem; flex-wrap:wrap; margin:1rem 0 1.5rem }
+  .tabs button { padding:.5rem .9rem; border-radius:.75rem; border:1px solid rgba(255,255,255,.15); cursor:pointer; backdrop-filter: blur(6px);}
+  .tabs button.active { background:rgba(255,255,255,.1); }
+  .panel { display:none; animation: fade .25s ease }
+  .panel.active { display:block }
+  @keyframes fade { from { opacity:0 } to { opacity:1 } }
+
+  /* 图片灯箱 */
+  .grid { display:grid; grid-template-columns: repeat(2,1fr); gap:12px; }
+  .grid img { width:100%; border-radius:14px; cursor:pointer; }
+  .lightbox { position:fixed; inset:0; background:rgba(0,0,0,.85); display:none; align-items:center; justify-content:center; z-index:9999;}
+  .lightbox img { max-width:90%; max-height:90%; border-radius:12px }
+
+  /* Before/After 滑块 */
+  .compare { position:relative; width:100%; max-width:1000px; margin:1rem auto; overflow:hidden; border-radius:14px }
+  .compare img { display:block; width:100% }
+  .compare .after { position:absolute; inset:0; width:50%; overflow:hidden }
+  .compare input[type=range] { position:absolute; left:0; right:0; bottom:10px; width:100% }
+
+  /* 信息块 */
+  .card { background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08); border-radius:16px; padding:1rem 1.25rem; margin:1rem 0; }
+  .btn { display:inline-block; padding:.6rem .9rem; border-radius:.75rem; border:1px solid rgba(255,255,255,.15); }
+</style>
+
+<!-- 3D 组件（可选） -->
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+<main class="case">
+  <h1>汽车座舱人机交互设计</h1>
+  <div class="meta">角色：产品/交互 · 时间：2025 · 关键词：FSS、触觉反馈、信息架构</div>
+
+  <!-- Tab 切换 -->
+  <div class="tabs" id="tabs">
+    <button class="active" data-tab="overview">概览</button>
+    <button data-tab="process">流程</button>
+    <button data-tab="prototype">原型</button>
+    <button data-tab="deliverables">交付物</button>
+  </div>
+
+  <!-- 概览 -->
+  <section class="panel active" id="overview">
+    <div class="card">
+      <p>本项目探索在智能座舱中，将光纤散斑传感（FSS）与触觉反馈结合，构建低分心、可解释的人机交互。</p>
+      <ul>
+        <li>目标：降低驾驶分心，提升二级任务完成效率</li>
+        <li>方法：信息分层、手势映射、触觉冗余反馈</li>
+        <li>结果：关键任务完成时间 ↓18%，误触率 ↓23%</li>
+      </ul>
+      <a class="btn" href="../assets/docs/Seat_HMI_Portfolio.pdf" target="_blank">查看 PDF（新标签）</a>
+    </div>
+
+    <!-- 图片灯箱画廊 -->
+    <div class="grid" id="gallery">
+      <img src="../assets/images/cabin_01.webp" alt="概念渲染1">
+      <img src="../assets/images/cabin_02.webp" alt="概念渲染2">
+      <img src="../assets/images/cabin_03.webp" alt="信息结构">
+      <img src="../assets/images/cabin_04.webp" alt="交互流程">
+    </div>
+  </section>
+
+  <!-- 流程 -->
+  <section class="panel" id="process">
+    <div class="card">
+      <h3>用户旅程 & 信息架构</h3>
+      <p>基于驾驶任务负荷模型，将高频操作前置于物理可达区域；低频深层操作纳入语义检索。</p>
+    </div>
+
+    <!-- Before / After -->
+    <div class="compare" id="compare">
+      <img src="../assets/images/before.webp" alt="Before">
+      <div class="after"><img src="../assets/images/after.webp" alt="After"></div>
+      <input type="range" min="0" max="100" value="50" aria-label="compare slider">
+    </div>
+
+    <!-- 视频（B站示例） -->
+    <div class="card">
+      <h3>可用性走查视频</h3>
+      <iframe src="//player.bilibili.com/player.html?bvid=BV1xxx"
+              width="100%" height="420" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- 原型 -->
+  <section class="panel" id="prototype">
+    <div class="card">
+      <h3>3D 模型交互（可旋转/缩放）</h3>
+      <!-- 放置 GLB/GLTF 到 assets/models/seat.glb -->
+      <model-viewer src="../assets/models/seat.glb"
+                    alt="座椅交互模型" auto-rotate camera-controls
+                    exposure="1" style="width:100%; height:420px; background:#111;border-radius:12px">
+      </model-viewer>
+    </div>
+    <div class="card">
+      <h3>高保真界面稿</h3>
+      <img src="../assets/images/ui_mock.webp" alt="UI Mock" style="width:100%;border-radius:12px">
+    </div>
+  </section>
+
+  <!-- 交付物 -->
+  <section class="panel" id="deliverables">
+    <div class="card">
+      <h3>下载</h3>
+      <p>
+        <a class="btn" href="../assets/docs/Seat_HMI_Portfolio.pdf" target="_blank">作品集 PDF</a>
+        <a class="btn" href="../assets/docs/Seat_HMI_Spec.pdf" target="_blank">交互规格说明</a>
+      </p>
+    </div>
+    <div class="card">
+      <h3>相关仓库</h3>
+      <p><a class="btn" href="https://gitee.com/YOUR_GITEE_USERNAME/seat-hmi" target="_blank">Gitee 仓库</a></p>
+    </div>
+  </section>
+</main>
+
+<!-- 交互脚本（零依赖） -->
+<script>
+  // Tabs
+  const tabs = document.querySelectorAll('#tabs button');
+  const panels = document.querySelectorAll('.panel');
+  tabs.forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      tabs.forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      const id = btn.dataset.tab;
+      panels.forEach(p=>p.classList.toggle('active', p.id === id));
+    });
+  });
+
+  // 图片灯箱
+  const gallery = document.getElementById('gallery');
+  const lightbox = document.createElement('div');
+  lightbox.className = 'lightbox';
+  lightbox.innerHTML = '<img alt="preview">';
+  document.body.appendChild(lightbox);
+  const lightImg = lightbox.querySelector('img');
+  gallery?.querySelectorAll('img').forEach(img=>{
+    img.addEventListener('click', ()=>{
+      lightImg.src = img.src; lightImg.alt = img.alt;
+      lightbox.style.display = 'flex';
+    });
+  });
+  lightbox.addEventListener('click', ()=> lightbox.style.display='none');
+
+  // Before/After 滑块
+  const cmp = document.getElementById('compare');
+  if (cmp){
+    const after = cmp.querySelector('.after');
+    const slider = cmp.querySelector('input[type=range]');
+    slider.addEventListener('input', ()=> {
+      after.style.width = slider.value + '%';
+    });
+  }
+</script>
+</body>
+</html>
