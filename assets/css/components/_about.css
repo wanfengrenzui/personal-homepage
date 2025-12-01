@@ -1,4 +1,12 @@
 /* About Section Styles */
+
+
+/* 关键能力高亮 */
+.about__highlight {
+  font-weight: 700;
+  color: var(--primary-color-alt); /* 深一点的蓝 */
+}
+
 .about__container {
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
@@ -16,17 +24,37 @@
     margin-top: 2rem;
 }
 
+/* 标签基础样式 + 交互动画 */
 .about__tags li {
-    background-color: var(--container-bg-color);
-    color: var(--primary-color);
-    padding: 0.25rem 0.75rem;
-    border-radius: 2rem;
-    font-size: var(--small-font-size);
-    font-weight: 600;
-    border: 1px solid var(--primary-color);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+  background-color: var(--container-bg-color);
+  color: var(--primary-color);
+  padding: 0.28rem 0.9rem;
+  border-radius: 999px;
+  font-size: var(--small-font-size);
+  font-weight: 600;
+  border: 1px solid var(--primary-color);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor: default;
+
+  transition:
+    background-color .18s ease,
+    color .18s ease,
+    box-shadow .25s ease,
+    transform .15s ease,
+    border-color .18s ease;
 }
+
+.about__tags li:hover {
+  background: rgba(56, 132, 255, 0.18);   /* 柔和蓝，不亮 */
+  color: rgba(226, 232, 240, 0.95);       /* 微亮字体 */
+  border-color: rgba(56, 132, 255, 0.5);  /* 半透明蓝 */
+  
+  box-shadow: 0 4px 14px rgba(56, 132, 255, 0.25); /* 柔光，不刺眼 */
+  transform: translateY(-1px);             /* 微微浮起 */
+}
+
+
 
 .timeline {
     position: relative;
@@ -117,4 +145,18 @@
 .guestbook-idea p {
     margin-bottom: 1rem;
     color: var(--text-color); /* Changed to text-color for better contrast */
+}
+
+
+
+
+
+/* 学校名称高亮 */
+.timeline__school {
+  color: var(--primary-color-alt);
+  font-weight: 650;
+}
+
+.timeline__school:hover {
+  color: var(--primary-color);
 }

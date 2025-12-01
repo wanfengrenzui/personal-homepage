@@ -50,6 +50,9 @@
     </nav>
   </header>
 
+
+
+
   <!-- 在这里就开始写body了，首先先写hero section 内容开场白
     -->
   <main>
@@ -79,7 +82,14 @@
       <h2 class="section__title">关于我</h2>
       <div class="about__container container grid">
         <div class="about__left">
-          <p>我是一名<strong>产品经理</strong>，对产品、 AI、数据分析与人机交互有持续兴趣。</p>
+          <p>
+  我是一名 <span class="about__highlight">产品经理</span>，
+  对 <span class="about__highlight">产品</span>、
+  <span class="about__highlight">AI</span>、
+  <span class="about__highlight">数据分析</span>
+  与 <span class="about__highlight">人机交互</span> 有持续兴趣。
+</p>
+
           <p>此网站用于求职、记录实践项目、文献阅读、日记。</p>
 
           <div class="musings">
@@ -93,23 +103,24 @@
         <div class="about__right">
   <div class="timeline">
     
-    <!-- 东南大学 -->
-    <div class="timeline__item">
-      <div class="timeline__date">2025-08 研究生阶段</div>
-      <div class="timeline__content">
-        <h3>东南大学（985）</h3>
-        <p>东南大学 机械工程学院 工业设计工程专业</p>
-      </div>
-    </div>
+<!-- 东南大学 -->
+<div class="timeline__item">
+  <div class="timeline__date">2025-08 研究生阶段</div>
+  <div class="timeline__content">
+    <h3 class="timeline__school">东南大学（985）</h3>
+    <p>东南大学机械工程学院工业设计工程专业</p>
+  </div>
+</div>
 
-    <!-- 南京工程学院 -->
-    <div class="timeline__item">
-      <div class="timeline__date">2020.09 – 2024.06 本科阶段</div>
-      <div class="timeline__content">
-        <h3>南京工程学院（一本）</h3>
-        <p>南京工程学院 艺术与设计学院 工业设计专业</p>
-      </div>
-    </div>
+<!-- 南京工程学院 -->
+<div class="timeline__item">
+  <div class="timeline__date">2020.09 – 2024.06 本科阶段</div>
+  <div class="timeline__content">
+    <h3 class="timeline__school">南京工程学院（一本）</h3>
+    <p>南京工程学院 艺术与设计学院 工业设计专业</p>
+  </div>
+</div>
+
 
   </div>
 
@@ -477,16 +488,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
     <!-- =========== Projects =========== -->
     <section id="projects" class="projects section">
       <h2 class="section__title">项目 & 笔记</h2>
@@ -498,6 +499,10 @@
         </div>
 
         <div class="projects__grid grid">
+
+
+
+
 
   <!-- 项目 1：智能座舱人机交互 -->
   <div class="project-card" data-category="project">
@@ -515,6 +520,8 @@
       <a href="projects/seat-hmi.html" class="project-card__link">点击查看详情 &rarr;</a>
     </div>
   </div>
+
+
 
 
   <!-- 项目 2：实时语音翻译体验 -->
@@ -588,30 +595,39 @@
 
 
 
+
   <div class="notes__container container">
 
+
+
+
     <!-- Notes 01 -->
-    <article class="note-card">
-      <a href="notes/fss-ai-note.html" class="note-card__overlay-link"></a>
+<article class="note-card">
+  <!-- ✅ 加这一行，把整张卡片变成可点击区域 -->
+  <a href="notes/ga4-demo.html" class="note-card__overlay-link"></a>
 
-      <header class="note-card__header">
-        <h3 class="note-card__title">Fiber Speckle Sensing × AI：从信号到智能感知</h3>
-        <span class="note-card__status">进行中</span>
-      </header>
+  <header class="note-card__header">
+    <h3 class="note-card__title">GA4调研和实操demo</h3>
+    <span class="note-card__status status--done">已完成</span>
+  </header>
 
-      <p class="note-card__summary">
-        关于 FSS 高维、随机、非线性 speckle 数据特性的整理，
-        以及与少样本学习、Meta-learning 结合的可能路径。
-      </p>
+  <p class="note-card__summary">
+    GA4 以事件模型统一 Web/App 数据，提供更灵活的追踪、归因与预测能力；Demo 汇总关键概念与常用实操方法。
+  </p>
 
-      <div class="note-card__footer">
-        <span class="note-card__meta">研究笔记 · 进行中</span>
-        <div class="note-card__tags">
-          <span class="note-card__tag">FSS</span>
-          <span class="note-card__tag">AI</span>
-        </div>
-      </div>
-    </article>
+  <div class="note-card__footer">
+    <span class="note-card__meta">产品经理实习笔记 · 已完成</span>
+    <div class="note-card__tags">
+      <span class="note-card__tag">GA4</span>
+      <span class="note-card__tag">Demo</span>
+    </div>
+  </div>
+</article>
+
+
+
+
+
 
     <!-- Notes 02（示例） -->
     <article class="note-card">
@@ -645,6 +661,7 @@
 
 
 
+
     <!-- =========== Skills =========== -->
     <section id="skills" class="skills section">
       <h2 class="section__title">我的技能</h2>
@@ -659,6 +676,9 @@
         <div class="skill-item"><i class="fab fa-git-alt"></i><span>Git</span></div>
       </div>
     </section>
+
+
+
 
     <!-- =========== Contact =========== -->
     <section id="contact" class="contact section">

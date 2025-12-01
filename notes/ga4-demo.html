@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GA4 调研和实操 demo · Notes</title>
+
+  <!-- 字体 & 图标 & 全局样式 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="icon" href="../assets/images/favicon.ico" />
+</head>
+
+<body>
+  <!-- =========== Header（跟首页统一） =========== -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="../index.html" class="nav__logo">Asta</a>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="../index.html#hero" class="nav__link">首页</a></li>
+          <li class="nav__item"><a href="../index.html#about" class="nav__link">关于我</a></li>
+          <li class="nav__item"><a href="../index.html#projects" class="nav__link">项目</a></li>
+          <li class="nav__item"><a href="../index.html#socials" class="nav__link">频道</a></li>
+          <li class="nav__item"><a href="../index.html#skills" class="nav__link">技能</a></li>
+          <li class="nav__item"><a href="../index.html#contact" class="nav__link">联系</a></li>
+        </ul>
+      </div>
+
+      <div class="nav__actions">
+        <i class="fas fa-moon theme-switcher" id="theme-button"></i>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- =========== 主内容 =========== -->
+  <main>
+    <section class="note-detail section">
+      <div class="note-detail__container container">
+
+        <!-- 顶部返回按钮（你要的那个） -->
+        <a href="../index.html#notes" class="note-detail__back">← 返回 Notes 列表</a>
+
+        <!-- 主卡片 -->
+        <article class="note-detail__card">
+
+          <!-- Header -->
+          <header class="note-detail__header">
+            <div class="note-detail__title-block">
+              <h1 class="note-detail__title">
+                GA4 调研和实操 demo
+              </h1>
+              <p class="note-detail__subtitle">
+                关于 GA4 追踪原理、事件模型和实操过程的一份阶段性笔记。
+              </p>
+            </div>
+
+            <span class="note-detail__status">已完成</span>
+          </header>
+
+          <!-- Meta 信息 -->
+          <section class="note-detail__meta">
+            <div class="note-detail__meta-group">
+              <span class="note-detail__meta-label">笔记类型</span>
+              <span class="note-detail__meta-value">研究笔记 · GA4 / Tracking</span>
+            </div>
+
+            <div class="note-detail__meta-group">
+              <span class="note-detail__meta-label">创建时间</span>
+              <span class="note-detail__meta-value">2025-01-XX</span>
+            </div>
+
+            <div class="note-detail__meta-group">
+              <span class="note-detail__meta-label">最后更新</span>
+              <span class="note-detail__meta-value">2025-01-XX</span>
+            </div>
+
+            <div class="note-detail__tags">
+              <span class="note-detail__tag">GA4</span>
+              <span class="note-detail__tag">Analytics</span>
+              <span class="note-detail__tag">Tracking</span>
+              <span class="note-detail__tag">FSS / AI 关联</span>
+            </div>
+          </section>
+
+          <!-- 正文：上半部分说明 + 下半部分 PDF 阅读 -->
+          <section class="note-detail__content">
+            <h2>概要说明</h2>
+            <p>
+              本页主要用于集中存放《GA 调研和实操 demo》这份 PDF，方便随时在线浏览；
+              后续如果有新的追踪方案、事件设计或实验记录，也可以继续在这里补充文字小结。
+            </p>
+
+            <h2>PDF 在线阅读</h2>
+            <p>下面内嵌的是完整 PDF，可以直接滚动阅读，不需要下载：</p>
+
+            <div class="note-detail__pdf">
+              <iframe
+                src="../assets/pdf/ga4-research-demo.pdf#toolbar=0"
+                width="100%"
+                height="900"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </section>
+
+          <!-- 关联信息（可先占位） -->
+          <section class="note-detail__related">
+            <div class="note-detail__related-block">
+              <h3>关联项目</h3>
+              <ul>
+                <li>实时语音翻译体验 · 数据埋点设计</li>
+                <li>个人网站 GA4 / GTM 实操</li>
+              </ul>
+            </div>
+
+            <div class="note-detail__related-block">
+              <h3>后续可能补充</h3>
+              <ul>
+                <li>关键事件命名规范</li>
+                <li>与 BigQuery 导出 / Looker Studio 看板设计</li>
+              </ul>
+            </div>
+          </section>
+
+        </article>
+
+        <!-- 底部导航条 -->
+        <div class="note-detail__nav">
+          <a href="../index.html#notes" class="note-detail__nav-link">← 返回 Notes 列表</a>
+          <span class="note-detail__nav-placeholder">下一篇：待整理的 GA4 实验记录</span>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__container container">
+      <p>&copy; 2025 Asta. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Main JS -->
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,7 +1,6 @@
 /* ============================================================
    NOTES SECTION · CLEAN REBUILD
-   Glass Card Notes + Mini Notes List + Detail Page
-   VisionOS Glow + Hover Light + Responsive
+   Glass Card Notes + Mini Notes List + Detail Page + PDF Viewer
    ============================================================ */
 
 
@@ -99,7 +98,6 @@
 
   filter: blur(38px);
   opacity: 0;
-
   transition: opacity .35s ease, transform .75s ease;
   pointer-events: none;
 }
@@ -447,7 +445,7 @@
   margin-bottom: 0.25rem;
 }
 
-/* Bottom nav */
+/* Bottom nav（如果只保留“返回 Notes”，样式也依然适用） */
 .note-detail__nav {
   margin-top: 1.4rem;
   display: flex;
@@ -490,5 +488,94 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 0.4rem;
+  }
+}
+
+
+
+/* ============================================================
+   4) NOTE DETAIL · 内嵌 PDF（备用，不用可以不写 HTML）
+   ============================================================ */
+
+.note-detail__pdf-wrapper {
+  margin-top: 1.6rem;
+}
+
+.note-detail__pdf-frame {
+  width: 100%;
+  max-width: 1400px;
+  height: min(1100px, 95vh);
+  border: none;
+  display: block;
+  margin: 0 auto;
+
+  border-radius: 18px;
+  background: #020617;
+  box-shadow:
+    0 24px 48px rgba(15, 23, 42, 0.95),
+    0 0 0 1px rgba(41, 51, 75, 0.9);
+}
+
+.note-detail__pdf iframe {
+  border: none;
+  border-radius: 18px;
+  background: #020617;
+  box-shadow:
+    0 20px 40px rgba(15, 23, 42, 0.9),
+    0 0 0 1px rgba(15, 23, 42, 0.9);
+  width: 100%;
+}
+
+.note-detail__hint {
+  font-size: 0.86rem;
+  color: rgba(148, 163, 184, 0.9);
+  margin-bottom: 0.8rem;
+}
+
+/* 小屏适配 */
+@media screen and (max-width: 768px) {
+  .note-detail__pdf-frame {
+    height: 85vh;
+    max-width: 100%;
+    border-radius: 14px;
+  }
+}
+
+
+
+/* ============================================================
+   5) 全局 PDF VIEWER SECTION（GA4 等使用）
+   ============================================================ */
+
+.pdf-viewer .container {
+  max-width: 1800px;       /* 扩宽容器，让 PDF 真正变大 */
+}
+
+.pdf-viewer__frame {
+  width: 100%;
+  max-width: 1600px;       /* 拉宽 PDF 本体 */
+  height: 1400px;          /* 拉高 PDF 高度 */
+
+  border: none;
+  margin: 0 auto;
+  display: block;
+
+  border-radius: 14px;
+  background: #000;
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.45),
+    0 0 0 1px rgba(255,255,255,0.07);
+}
+
+/* 移动端适配 */
+@media screen and (max-width: 768px) {
+  .pdf-viewer .container {
+    max-width: 100%;
+  }
+
+  .pdf-viewer__frame {
+    height: 90vh;
+    max-width: 100%;
   }
 }
