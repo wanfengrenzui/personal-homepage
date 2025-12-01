@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>美国社交 App 分享机制拆解 · Notes</title>
+
+  <!-- 字体 & 图标 & 全局样式 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="icon" href="../assets/images/favicon.ico" />
+</head>
+
+<body>
+  <!-- =========== Header（跟首页统一） =========== -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="../index.html" class="nav__logo">Asta</a>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="../index.html#hero" class="nav__link">首页</a></li>
+          <li class="nav__item"><a href="../index.html#about" class="nav__link">关于我</a></li>
+          <li class="nav__item"><a href="../index.html#projects" class="nav__link">项目</a></li>
+          <li class="nav__item"><a href="../index.html#socials" class="nav__link">频道</a></li>
+          <li class="nav__item"><a href="../index.html#skills" class="nav__link">技能</a></li>
+          <li class="nav__item"><a href="../index.html#contact" class="nav__link">联系</a></li>
+        </ul>
+      </div>
+
+      <div class="nav__actions">
+        <i class="fas fa-moon theme-switcher" id="theme-button"></i>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- =========== 主内容 =========== -->
+  <main>
+    <section class="note-detail section">
+      <div class="note-detail__container container">
+
+        <!-- 顶部返回按钮 -->
+        <a href="../index.html#notes" class="note-detail__back">← 返回 Notes 列表</a>
+
+        <!-- 主卡片 -->
+        <article class="note-detail__card">
+
+          <!-- Header -->
+          <header class="note-detail__header">
+            <div class="note-detail__title-block">
+              <h1 class="note-detail__title">
+                美国社交 App 分享机制拆解
+              </h1>
+              <p class="note-detail__subtitle">
+                拆解 Facebook、Instagram、Messenger、X、WhatsApp、TikTok、Pinterest 等主流平台的分享入口、
+                卡片样式、落地路径与能力差异，为后续产品内分享模块设计提供结构化参考。
+              </p>
+            </div>
+
+            <span class="note-detail__status">草稿</span>
+          </header>
+
+          <!-- Meta 信息 -->
+          <section class="note-detail__meta">
+            <div class="note-detail__meta-group">
+              <span class="note-detail__meta-label">笔记类型</span>
+              <span class="note-detail__meta-value">分享机制调研 · Social / Growth</span>
+            </div>
+
+            <div class="note-detail__meta-group">
+              <span class="note-detail__meta-label">创建时间</span>
+              <span class="note-detail__meta-value">2025-01-XX</span>
+            </div>
+
+            <div class="note-detail__meta-group">
+              <span class="note-detail__meta-label">最后更新</span>
+              <span class="note-detail__meta-value">2025-01-XX</span>
+            </div>
+
+            <div class="note-detail__tags">
+              <span class="note-detail__tag">Social</span>
+              <span class="note-detail__tag">Share Flow</span>
+              <span class="note-detail__tag">US Market</span>
+            </div>
+          </section>
+
+          <!-- 正文：上半部分说明 + 下半部分 PDF 阅读 -->
+          <section class="note-detail__content">
+            <h2>概要说明</h2>
+            <p>
+              这份笔记聚焦于美国主流社交 App 的“分享链路”，包括：
+              分享入口在产品中的位置、分享流程中每一步的用户动作、
+              Web / App 不同端的行为差异，以及分享卡片（预览图、标题、描述、Deep Link）的生成逻辑。
+            </p>
+            <p>
+              同时记录各平台在 URL 解析、OG 标签支持、schema / intent、跳转落地页以及 API / SDK
+              限制方面的差异，用来反推「在自己的产品里，怎样设计一套兼容性较好的分享模块」。
+            </p>
+
+            <h2>PDF 在线阅读</h2>
+            <p>下面内嵌的是《美国社交 App 分享机制拆解》完整 PDF，可以直接滚动阅读，无需下载：</p>
+
+            <div class="note-detail__pdf">
+              <iframe
+                src="../assets/pdf/us-social-share.pdf#toolbar=0"
+                width="100%"
+                height="900"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </section>
+
+          <!-- 关联信息 -->
+          <section class="note-detail__related">
+            <div class="note-detail__related-block">
+              <h3>关联项目</h3>
+              <ul>
+                <li>实时语音翻译体验 · 分享路径与口碑传播设计</li>
+                <li>儿童阅读 App · 家长分享卡片与落地页方案</li>
+              </ul>
+            </div>
+
+            <div class="note-detail__related-block">
+              
+            </div>
+          </section>
+
+        </article>
+
+        <!-- 底部导航条 -->
+        <div class="note-detail__nav">
+          <a href="../index.html#notes" class="note-detail__nav-link">← 返回 Notes 列表</a>
+          
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__container container">
+      <p>&copy; 2025 Asta. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Main JS -->
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
