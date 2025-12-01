@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-theme="light">
+<html lang="zh-CN" data-theme="dark" id="root">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,7 +42,7 @@
       </div>
 
       <div class="nav__actions">
-        <i class="fas fa-moon theme-switcher" id="theme-button"></i>
+        
         <div class="nav__toggle" id="nav-toggle">
           <i class="fas fa-bars"></i>
         </div>
@@ -79,7 +80,7 @@
       <div class="about__container container grid">
         <div class="about__left">
           <p>我是一名<strong>产品经理</strong>，对产品、 AI、数据分析与人机交互有持续兴趣。</p>
-          <p>这个网站用于记录实践项目、论文阅读、日记。</p>
+          <p>此网站用于求职、记录实践项目、文献阅读、日记。</p>
 
           <div class="musings">
             <h3 class="musings__title">一些碎碎念</h3>
@@ -94,19 +95,19 @@
     
     <!-- 东南大学 -->
     <div class="timeline__item">
-      <div class="timeline__date">2025-08</div>
+      <div class="timeline__date">2025-08 研究生阶段</div>
       <div class="timeline__content">
         <h3>东南大学（985）</h3>
-        <p>东南大学机械工程学院工业设计工程专业</p>
+        <p>东南大学 机械工程学院 工业设计工程专业</p>
       </div>
     </div>
 
     <!-- 南京工程学院 -->
     <div class="timeline__item">
-      <div class="timeline__date">2020.09 – 2024.06</div>
+      <div class="timeline__date">2020.09 – 2024.06 本科阶段</div>
       <div class="timeline__content">
         <h3>南京工程学院（一本）</h3>
-        <p>南京工程学院艺术与设计学院工业设计专业</p>
+        <p>南京工程学院 艺术与设计学院 工业设计专业</p>
       </div>
     </div>
 
@@ -115,9 +116,9 @@
 
   <ul class="about__tags">
     <li>产品设计</li>
-    <li>AI/数据</li>
+    <li>AI/数据分析</li>
     <li>人机交互</li>
-    <li>可视化</li>
+    <li>UI设计</li>
   </ul>
 </div>
 
@@ -129,35 +130,84 @@
 <section id="internships" class="internships section">
   <h2 class="section__title">实习经历</h2>
 
-  <div class="internships__container container grid">
-    <!-- 实习经历 1 -->
-    <div class="internship__item">
-      <div class="internship__date">2025.04 – 2025.10</div>
-      <div class="internship__content">
-        <h3>上海敏开科技有限公司 · 互联网产品经理实习生</h3>
-        <p>参与智能语音产品的用户研究与功能迭代，负责翻译产品交互逻辑设计与竞品分析。</p>
-      </div>
-    </div>
+  <div class="internships__timeline container">
+    <!-- 垂直时间轴主线 -->
+    <div class="internships__line"></div>
 
-    <!-- 实习经历 2 -->
-    <div class="internship__item">
-      <div class="internship__date">2024.07 – 2024.09</div>
-      <div class="internship__content">
-        <h3>吉利汽车 · 交互设计实习生</h3>
-        <p>参与智能座舱人机界面设计，优化座椅交互与可视化信息呈现，探索 FSS 传感数据应用。</p>
-      </div>
-    </div>
+    <!-- 卡片 1 -->
+    <article class="internship-card reveal">
+      <div class="internship-card__dot"></div>
 
-    <!-- 实习经历 3 -->
-    <div class="internship__item">
-      <div class="internship__date">2023.07 – 2023.09</div>
-      <div class="internship__content">
-        <h3>某科技初创公司 · 数据分析助理</h3>
-        <p>负责用户行为数据分析与可视化，支持产品增长决策。</p>
+      <div class="internship-card__inner">
+        <header class="internship-card__header">
+          <span class="internship-card__date">2025.04 – 2025.10</span>
+          <span class="internship-card__badge">产品经理实习</span>
+        </header>
+
+        <h3 class="internship-card__title">上海敏开科技有限公司 · 产品经理</h3>
+        <p class="internship-card__summary">
+          用一两句话写你做了什么，例如：负责 XXX 功能的用户研究与版本迭代，参与竞品分析与需求文档撰写。
+
+        </p>
+
+        <ul class="internship-card__tags">
+          <li class="internship-card__tag">用户研究</li>
+          <li class="internship-card__tag">需求分析</li>
+          <li class="internship-card__tag">数据驱动</li>
+        </ul>
       </div>
-    </div>
+    </article>
+
+    <!-- 卡片 2 -->
+    <article class="internship-card reveal">
+      <div class="internship-card__dot"></div>
+
+      <div class="internship-card__inner">
+        <header class="internship-card__header">
+          <span class="internship-card__date">2024.07 – 2024.09</span>
+          <span class="internship-card__badge">交互设计实习</span>
+        </header>
+
+        <h3 class="internship-card__title">公司名称 · 岗位名称</h3>
+        <p class="internship-card__summary">
+          这里写智能座舱 / FSS / 可视化相关的内容，后面你自己补。
+        </p>
+
+        <ul class="internship-card__tags">
+          <li class="internship-card__tag">HMI</li>
+          <li class="internship-card__tag">可视化</li>
+          <li class="internship-card__tag">原型设计</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 卡片 3 -->
+    <article class="internship-card reveal">
+      <div class="internship-card__dot"></div>
+
+      <div class="internship-card__inner">
+        <header class="internship-card__header">
+          <span class="internship-card__date">2023.07 – 2023.09</span>
+          <span class="internship-card__badge">数据分析实习</span>
+        </header>
+
+        <h3 class="internship-card__title">公司名称 · 岗位名称</h3>
+        <p class="internship-card__summary">
+          这里写数据分析、可视化和支持增长决策的内容。
+        </p>
+
+        <ul class="internship-card__tags">
+          <li class="internship-card__tag">数据分析</li>
+          <li class="internship-card__tag">可视化</li>
+          <li class="internship-card__tag">增长</li>
+        </ul>
+      </div>
+    </article>
   </div>
 </section>
+
+
+
 
 
     <!-- =========== Education Section =========== -->
@@ -594,32 +644,6 @@
 </section>
 
 
-
-
-    
-<!-- =========== 注释开始：社交频道模块代码 =========== -->
-<!-- =========== Social Links =========== -->
-    <section id="socials" class="socials section">
-      <h2 class="section__title">我的频道</h2>
-      <div class="socials__container container grid">
-        <a href="https://space.bilibili.com/YOUR_BILIBILI_ID" target="_blank" class="social-card">
-          <i class="fab fa-bilibili social-card__icon bilibili-learning"></i>
-          <h3 class="social-card__title">B站学习号</h3>
-          <p class="social-card__description">数学 / 编程 / 产品方法</p>
-        </a>
-        <a href="https://weibo.com/YOUR_WEIBO" target="_blank" class="social-card">
-          <i class="fab fa-weibo social-card__icon weibo"></i>
-          <h3 class="social-card__title">微博</h3>
-          <p class="social-card__description">日常与随想</p>
-        </a>
-        <a href="https://gitee.com/YOUR_GITEE_USERNAME" target="_blank" class="social-card">
-          <i class="fab fa-git-alt social-card__icon"></i>
-          <h3 class="social-card__title">Gitee</h3>
-          <p class="social-card__description">代码与项目</p>
-        </a>
-      </div>
-    </section>
-<!-- =========== 注释结束：社交频道模块代码 =========== -->
 
     <!-- =========== Skills =========== -->
     <section id="skills" class="skills section">

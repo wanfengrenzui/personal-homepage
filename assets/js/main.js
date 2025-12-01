@@ -131,35 +131,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     /* ===============================================
-       5. DUAL THEME (LIGHT/DARK) LOGIC
+       6. Scroll Reveal for Internship Cards
        =============================================== */
-    const themeButton = document.getElementById('theme-button');
-    const darkThemeIcon = 'fa-sun';
-    const lightThemeIcon = 'fa-moon';
-    const htmlTag = document.documentElement;
+    const revealEls = document.querySelectorAll('.reveal');
 
-    const getSavedTheme = () => localStorage.getItem('selected-theme');
-    const getSystemPreference = () => window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    
-    const savedTheme = getSavedTheme();
-    const systemTheme = getSystemPreference();
-    const themeToApply = savedTheme || systemTheme;
-
-    htmlTag.setAttribute('data-theme', themeToApply);
-    if (themeToApply === 'dark') {
-        themeButton.classList.add(darkThemeIcon);
-        themeButton.classList.remove(lightThemeIcon);
-    }
-
-    themeButton.addEventListener('click', () => {
-        const currentTheme = htmlTag.getAttribute('data-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-
-        htmlTag.setAttribute('data-theme', newTheme);
-        localStorage.setItem('selected-theme', newTheme);
-
-        themeButton.classList.toggle(darkThemeIcon);
-        themeButton.classList.toggle(lightThemeIcon);
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.2
     });
 
+    revealEls.forEach(el => revealObserver.observe(el));
+
 }); // End of DOMContentLoaded
+

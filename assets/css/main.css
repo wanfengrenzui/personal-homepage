@@ -15,6 +15,7 @@
 @import url('components/_header.css');
 @import url('components/_hero.css');
 @import url('components/_about.css');
+@import url('components/_internships.css');
 @import url('components/_projects.css');
 @import url('components/_socials.css');
 @import url('components/_skills.css');
@@ -24,32 +25,8 @@
 /* ===============================================
    2. CSS VARIABLES (NEW ELEGANT BLUE THEME)
    =============================================== */
-:root, [data-theme='light'] {
-    --primary-color: #007bff;
-    --primary-color-alt: #0056b3;
-    --highlight-color: #56aeff;
-    --title-color: #212529;
-    --text-color: #495057;
-    --text-color-light: #6c757d;
-    --body-bg-color: #ffffff;
-    --container-bg-color: rgba(255, 255, 255, 0.85);
-    --border-color: #dee2e6;
-    --box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
-    --bg-overlay-color: rgba(255, 255, 255, 0.5);
-
-    --font-primary: 'Poppins', 'Noto Sans SC', sans-serif;
-    --h1-font-size: 3.2rem;
-    --h2-font-size: 2.25rem;
-    --h3-font-size: 1.5rem;
-    --normal-font-size: 1rem;
-    --small-font-size: 0.875rem;
-    --header-height: 4.5rem;
-    --section-padding: 5rem 0;
-    --border-radius: 0.75rem;
-    --transition: all 0.3s ease-in-out;
-}
-
-[data-theme='dark'] {
+:root {
+    /* 直接复制 dark 的变量进来 */
     --primary-color: #56aeff;
     --primary-color-alt: #80bfff;
     --highlight-color: #007bff;
@@ -61,7 +38,9 @@
     --border-color: #343a40;
     --box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
     --bg-overlay-color: rgba(0, 0, 0, 0.6);
+    
 }
+
 
 /* ===============================================
    3. BASE & RESET STYLES
@@ -241,4 +220,11 @@ img {
     font-size: 1.5rem;
     color: var(--text-color-light);
     cursor: pointer;
+}
+
+
+/* === 全局 Section 间距加大，使排版更呼吸 === */
+.section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
 }

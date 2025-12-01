@@ -61,3 +61,162 @@
         font-size: calc(var(--h1-font-size) * 0.8);
     }
 }
+.hero.section {
+    padding-top: 3rem;
+}
+
+/* ==== Hero 强化版排版（恢复类似图1效果） ==== */
+
+/* 整块往下拉一点，避免顶到导航栏 */
+#hero.section {
+  padding-top: 6rem;   /* 可以在 5rem～7rem 之间微调 */
+  padding-bottom: 4rem;
+}
+
+/* 标题更大、更重 */
+.hero__content h1 {
+  font-size: 4rem;   /* 原来 3.2rem，按你图1的观感给了接近值 */
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* 副标题也稍微放大一点 */
+.hero__subtitle {
+  font-size: 1.6rem;   /* 原来是 var(--h3-font-size)=1.5rem，略放大 */
+  font-weight: 500;
+}
+
+/* 下面这句只是保险：让整块内容居中一点，看起来更像“主视觉” */
+.hero__container {
+  align-items: center;
+}
+
+/* ==== Hero 专用按钮样式：胶囊 + 光晕 ==== */
+
+.hero__buttons .button {
+  border-radius: 999px;                 /* 胶囊圆角 */
+  padding: 1rem 2.8rem;                 /* 略高一点，看起来更饱满 */
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+
+  box-shadow:
+    0 16px 35px rgba(0, 0, 0, 0.55),    /* 底部阴影 */
+    0 0 0 1px rgba(86, 174, 255, 0.5);  /* 外轮廓发光 */
+}
+
+/* 线框按钮（Gitee / GitHub） */
+.hero__buttons .button.button--ghost {
+  background: rgba(0, 0, 0, 0.35);
+  border-color: rgba(86, 174, 255, 0.8);
+  color: #dbeafe;
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(86, 174, 255, 0.8);
+}
+
+/* 光晕层 */
+.hero__buttons .button::after {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(
+    circle at 20% 0%,
+    rgba(255, 255, 255, 0.42),
+    rgba(86, 174, 255, 0.5),
+    transparent 70%
+  );
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.28s ease, transform 0.35s ease;
+  pointer-events: none;
+}
+
+/* Hover：轻微上浮 + 光晕显现 */
+.hero__buttons .button:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.65),
+    0 0 12px rgba(86, 174, 255, 0.8);
+}
+
+.hero__buttons .button:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* 点击时稍微压下去一点，手感更真实 */
+.hero__buttons .button:active {
+  transform: translateY(-1px) scale(0.98);
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.6),
+    0 0 6px rgba(86, 174, 255, 0.6);
+}
+
+
+/* ==== Hero 按钮：科技圆角 + 光晕（不夸张） ==== */
+
+.hero__buttons .button {
+  border-radius: 16px;                       /* 中度圆角，更高级 */
+  padding: 1rem 2.4rem;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(86, 174, 255, 0.45);       /* 低调科技边框 */
+}
+
+/* 线框按钮（Gitee / GitHub） */
+.hero__buttons .button.button--ghost {
+  background: rgba(0, 0, 0, 0.35);
+  border-color: rgba(86, 174, 255, 0.55);
+  color: #dbeafe;
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(86, 174, 255, 0.55);
+}
+
+/* 光晕（低调版） */
+.hero__buttons .button::after {
+  content: "";
+  position: absolute;
+  inset: -35%;
+  background: radial-gradient(
+    circle at 30% 20%,
+    rgba(255, 255, 255, 0.25),
+    rgba(86, 174, 255, 0.35),
+    transparent 70%
+  );
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.28s ease, transform 0.35s ease;
+  pointer-events: none;
+}
+
+/* Hover：轻浮起，细光晕 */
+.hero__buttons .button:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 14px 32px rgba(0, 0, 0, 0.6),
+    0 0 8px rgba(86, 174, 255, 0.65);
+}
+
+.hero__buttons .button:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* 点击反馈 */
+.hero__buttons .button:active {
+  transform: translateY(-1px) scale(0.98);
+  box-shadow:
+    0 8px 18px rgba(0, 0, 0, 0.5),
+    0 0 4px rgba(86, 174, 255, 0.45);
+}
+
+.hero__buttons .button {
+    white-space: nowrap;     /* 禁止换行 */
+    min-width: 180px;        /* 保证足够宽度，避免文字被挤 */
+}
