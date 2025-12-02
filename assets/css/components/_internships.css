@@ -368,3 +368,74 @@
   line-height: 1.7;
   color: var(--text-color-light);
 }
+/* ===== 公司 + 职位强化层级 ===== */
+.internship-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.internship-card__date {
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-color-light);
+}
+
+.internship-card__badge {
+  padding: 0.25rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(124, 192, 255, 0.5);
+  background: rgba(124, 192, 255, 0.08);
+  color: #7cc0ff;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* 公司名称标题更大、更重 */
+.internship-card__title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+/* ===== 项目背景 / 我的工作 标签块 ===== */
+.internship-section {
+  margin-top: 0.6rem;
+  margin-bottom: 1.1rem;
+}
+
+.internship-section__label {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(124, 192, 255, 0.1);   /* 浅浅蓝底 */
+  color: #7cc0ff;
+  margin-bottom: 0.35rem;
+}
+
+.internship-card__summary,
+.internship-project__summary {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-color-light);
+}
+
+/* 步骤标题再强调一点（和你想要的“重点句”对齐） */
+.internship-step__title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #e5f1ff;
+}
+
+/* 有序列表数字已经是蓝色，如果想更亮 */
+.internship-steps li::marker {
+  color: #7cc0ff;
+  font-weight: 600;
+}
