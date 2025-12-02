@@ -251,3 +251,120 @@
     0 0 0 1px rgba(129, 140, 248, 1);
   transform: translateY(-1px);
 }
+
+/* ===============================
+   Internships – Sub Project Cards
+   小项目卡片（ReadTogether / Gensmo / 优势星球）
+   =============================== */
+
+.internship-card__projects {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* 平板：两列 */
+@media (min-width: 768px) {
+  .internship-card__projects {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* 桌面：三列 */
+@media (min-width: 1024px) {
+  .internship-card__projects {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.internship-project {
+  background: var(--container-bg-color);
+  border-radius: 0.9rem;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--box-shadow);
+  padding: 1.25rem 1.4rem;
+  transition: 0.25s ease;
+}
+
+.internship-project:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.internship-project__title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.internship-project__summary {
+  font-size: 0.9rem;
+  color: var(--text-color-light);
+  line-height: 1.6;
+  margin-bottom: 0.6rem;
+}
+
+.internship-project__list {
+  padding-left: 1.1rem;
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.internship-project__list li + li {
+  margin-top: 0.2rem;
+}
+/* ===== Internships – 子项目改为纵向排列 ===== */
+
+.internship-card__projects {
+  display: flex;
+  flex-direction: column;   /* 一列往下排 */
+  gap: 1.75rem;
+  margin-top: 1.5rem;
+}
+
+/* ===== 每个子项目卡片维持之前样式（如果你已有就不用重复） ===== */
+/* 这里只是确保有基础外观，没有的话可以补上 */
+
+.internship-project {
+  background: var(--container-bg-color);
+  border-radius: 0.9rem;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--box-shadow);
+  padding: 1.25rem 1.4rem;
+}
+
+/* ===== 有序步骤列表：1. 标题 + 下面解释 ===== */
+
+.internship-steps {
+  margin: 0;
+  padding-left: 1.6rem;    /* 给数字留一点空间 */
+  list-style: decimal;
+}
+
+.internship-step {
+  margin-bottom: 0.9rem;
+}
+
+/* 把“1.”这个序号染成蓝色、加粗 */
+.internship-steps li::marker {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+/* 上面一行：标题（重点） */
+.internship-step__title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--title-color);
+}
+
+/* 下面一行：解释（略浅一点） */
+.internship-step__desc {
+  margin-top: 0.2rem;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-color-light);
+}
