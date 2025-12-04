@@ -12,17 +12,24 @@
 /* ===============================================
    1. IMPORTS
    =============================================== */
+
+/* 组件级样式（都在 assets/css/components/ 下面） */
 @import url('components/_header.css');
 @import url('components/_hero.css');
 @import url('components/_about.css');
-@import url('components/_internships.css');
-@import url('components/_project-detail.css');
-
 @import url('components/_projects.css');
 @import url('components/_socials.css');
 @import url('components/_skills.css');
 @import url('components/_contact.css');
 @import url('components/_footer.css');
+@import url('components/_internships.css');
+@import url('components/_project-detail.css');
+
+/* 独立 section 样式（在 assets/css 根目录） */
+@import url('education.css');
+@import url('notes.css');
+
+
 
 /* ===============================================
    2. CSS VARIABLES (NEW ELEGANT BLUE THEME)
