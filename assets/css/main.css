@@ -14,6 +14,8 @@
    =============================================== */
 
 /* 组件级样式（都在 assets/css/components/ 下面） */
+/* 1. IMPORTS */
+
 @import url('components/_header.css');
 @import url('components/_hero.css');
 @import url('components/_about.css');
@@ -25,9 +27,9 @@
 @import url('components/_internships.css');
 @import url('components/_project-detail.css');
 
-/* 独立 section 样式（在 assets/css 根目录） */
-@import url('education.css');
-@import url('notes.css');
+/* 这两行现在要改成这样 ↓ */
+@import url('components/education.css');
+@import url('components/notes.css');
 
 
 
