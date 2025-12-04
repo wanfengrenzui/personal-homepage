@@ -3,17 +3,18 @@
 
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WTQBRTVQCV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WTQBRTVQCV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-WTQBRTVQCV');
+  </script>
 
-  gtag('config', 'G-WTQBRTVQCV');
-</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Asta · Homepage</title>
+
   <!-- Meta SEO Tags -->
   <meta name="description" content="你好，我是 Asta 。一名东南大学工业设计工程的研究生，热爱产品设计与编程。这是我的个人主页，用于展示项目、笔记和个人链接。">
   <meta name="keywords" content="Asta, 个人主页, 工业设计工程, 产品经理, AI, 学习笔记">
@@ -26,13 +27,13 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-  <!-- 主样式表 -->
-<link rel="stylesheet" href="assets/css/main.css">
+  <!-- 主样式表：所有组件样式都通过 main.css 内部的 @import 引入 -->
+  <link rel="stylesheet" href="assets/css/main.css">
 
-
-  <!-- 网站图标（把你的 favicon 放到 assets/images/ 下并命名 favicon.ico 即可替换） -->
+  <!-- 网站图标 -->
   <link rel="icon" href="assets/images/favicon.ico">
 </head>
+
 <body>
   <!-- =========== Header / Navigation =========== -->
   <header class="header">
@@ -43,14 +44,12 @@
           <li class="nav__item"><a href="#hero" class="nav__link">首页</a></li>
           <li class="nav__item"><a href="#about" class="nav__link">关于我</a></li>
           <li class="nav__item"><a href="#projects" class="nav__link">项目</a></li>
-          
           <li class="nav__item"><a href="#skills" class="nav__link">技能</a></li>
           <li class="nav__item"><a href="#contact" class="nav__link">联系我</a></li>
         </ul>
       </div>
 
       <div class="nav__actions">
-        
         <div class="nav__toggle" id="nav-toggle">
           <i class="fas fa-bars"></i>
         </div>
@@ -58,11 +57,7 @@
     </nav>
   </header>
 
-
-
-
-  <!-- 在这里就开始写body了，首先先写hero section 内容开场白
-    -->
+  <!-- 在这里就开始写body了 -->
   <main>
     <!-- =========== Hero Section =========== -->
     <section id="hero" class="hero section">
@@ -73,7 +68,6 @@
           <p class="hero__description">Noise is data, silence is signal.</p>
           <div class="hero__buttons">
             <a href="#projects" class="button">查看我的项目</a>
-        
             <a href="https://github.com/wanfengrenzui/personal-homepage" target="_blank" class="button button--ghost">我的 GitHub</a>
           </div>
         </div>
@@ -84,21 +78,18 @@
       </div>
     </section>
 
-
-
- <!-- =========== 第一版的方案 =========== -->
-<!-- =========== About Me =========== -->
+    <!-- =========== About Me =========== -->
     <section id="about" class="about section">
       <h2 class="section__title">关于我</h2>
       <div class="about__container container grid">
         <div class="about__left">
           <p>
-  我是一名 <span class="about__highlight">产品经理</span>，
-  对 <span class="about__highlight">产品</span>、
-  <span class="about__highlight">AI</span>、
-  <span class="about__highlight">数据分析</span>
-  与 <span class="about__highlight">人机交互</span> 有持续兴趣。
-</p>
+            我是一名 <span class="about__highlight">产品经理</span>，
+            对 <span class="about__highlight">产品</span>、
+            <span class="about__highlight">AI</span>、
+            <span class="about__highlight">数据分析</span>
+            与 <span class="about__highlight">人机交互</span> 有持续兴趣。
+          </p>
 
           <p>此网站用于求职、记录实践项目、文献阅读、日记。</p>
 
@@ -106,90 +97,272 @@
             <h3 class="musings__title">一些碎碎念</h3>
             <blockquote>“搭建个人主页，是给好奇的人一张名片，也是给自己的一面镜子。”</blockquote>
           </div>
-
-          
         </div>
 
         <div class="about__right">
-  <div class="timeline">
-    
-<!-- 东南大学 -->
-<div class="timeline__item">
-  <div class="timeline__date">2025-08 研究生阶段</div>
-  <div class="timeline__content">
-    <h3 class="timeline__school">东南大学（985）</h3>
-    <p>东南大学机械工程学院工业设计工程专业</p>
-  </div>
-</div>
+          <div class="timeline">
+            <!-- 东南大学 -->
+            <div class="timeline__item">
+              <div class="timeline__date">2025-08 研究生阶段</div>
+              <div class="timeline__content">
+                <h3 class="timeline__school">东南大学（985）</h3>
+                <p>东南大学机械工程学院工业设计工程专业</p>
+              </div>
+            </div>
 
-<!-- 南京工程学院 -->
-<div class="timeline__item">
-  <div class="timeline__date">2020.09 – 2024.06 本科阶段</div>
-  <div class="timeline__content">
-    <h3 class="timeline__school">南京工程学院（一本）</h3>
-    <p>南京工程学院 艺术与设计学院 工业设计专业</p>
-  </div>
-</div>
+            <!-- 南京工程学院 -->
+            <div class="timeline__item">
+              <div class="timeline__date">2020.09 – 2024.06 本科阶段</div>
+              <div class="timeline__content">
+                <h3 class="timeline__school">南京工程学院（一本）</h3>
+                <p>南京工程学院 艺术与设计学院 工业设计专业</p>
+              </div>
+            </div>
+          </div>
 
-
-  </div>
-
-
-  <ul class="about__tags">
-    <li>产品设计</li>
-    <li>AI/数据分析</li>
-    <li>人机交互</li>
-    <li>UI设计</li>
-  </ul>
-</div>
-
+          <ul class="about__tags">
+            <li>产品设计</li>
+            <li>AI/数据分析</li>
+            <li>人机交互</li>
+            <li>UI设计</li>
+          </ul>
+        </div>
+      </div>
     </section>
-<!-- =========== 注释结束：关于我模块代码 =========== -->
- 
-    
-<!-- =========== Internships Section =========== -->
-<section id="internships" class="internships section">
-  <h2 class="section__title">实习经历</h2>
 
-  <div class="internships__timeline container">
-    <div class="internships__line"></div>
+    <!-- =========== Internships Section =========== -->
+    <section id="internships" class="internships section">
+      <h2 class="section__title">实习经历</h2>
 
-    <!-- ========== Card 1：上海敏开科技（包含三个项目） ========== -->
-    <article class="internship-card reveal">
-      <div class="internship-card__dot"></div>
-      <div class="internship-card__inner">
+      <div class="internships__timeline container">
+        <div class="internships__line"></div>
 
-        <!-- 顶部：时间 + 岗位 Badge -->
-        <header class="internship-card__header">
-          <span class="internship-card__date">2025.03 – 2025.10</span>
-          <span class="internship-card__badge">产品经理</span>
-        </header>
+        <!-- ========== Card 1：上海敏开科技（包含三个项目） ========== -->
+        <article class="internship-card reveal">
+          <div class="internship-card__dot"></div>
+          <div class="internship-card__inner">
 
-        <!-- 公司名称 -->
-        <h3 class="internship-card__title">上海敏开科技有限公司 · 产品经理实习</h3>
+            <!-- 顶部：时间 + 岗位 Badge -->
+            <header class="internship-card__header">
+              <span class="internship-card__date">2025.03 – 2025.10</span>
+              <span class="internship-card__badge">产品经理</span>
+            </header>
 
-        <!-- 项目背景 -->
-        <div class="internship-section">
-          <div class="internship-section__label">项目背景</div>
-          <p class="internship-card__summary">
-            期间参与公司多个 AI 与教育相关项目，包括 Read Together 儿童阅读 App 的 Share / Login 模块设计，
-            Gensmo AI 试穿产品的多端质量验证，以及优势星球项目的企业级用户访谈与服务蓝图梳理，
-            完成从需求分析、方案设计、测试验证到用户研究的完整方法链路。
-          </p>
-        </div>
+            <!-- 公司名称 -->
+            <h3 class="internship-card__title">上海敏开科技有限公司 · 产品经理实习</h3>
 
-        <!-- ====== 三个子项目（竖向排列） ====== -->
-        <div class="internship-card__projects">
+            <!-- 项目背景 -->
+            <div class="internship-section">
+              <div class="internship-section__label">项目背景</div>
+              <p class="internship-card__summary">
+                期间参与公司多个 AI 与教育相关项目，包括 Read Together 儿童阅读 App 的 Share / Login 模块设计，
+                Gensmo AI 试穿产品的多端质量验证，以及优势星球项目的企业级用户访谈与服务蓝图梳理，
+                完成从需求分析、方案设计、测试验证到用户研究的完整方法链路。
+              </p>
+            </div>
 
-          <!-- ========== 子项目 1：Read Together ========== -->
-          <div class="internship-project">
-            <h4 class="internship-project__title">📘 Read Together · Share & Login 模块</h4>
+            <!-- ====== 三个子项目（竖向排列） ====== -->
+            <div class="internship-card__projects">
+
+              <!-- ========== 子项目 1：Read Together ========== -->
+              <div class="internship-project">
+                <h4 class="internship-project__title">📘 Read Together · Share & Login 模块</h4>
+
+                <div class="internship-section">
+                  <div class="internship-section__label">项目背景</div>
+                  <p class="internship-project__summary">
+                    面向家长 × 儿童的阅读场景，设计分享与登录两大核心模块，在 COPPA / CCPA 约束下
+                    同时兼顾孩子成就反馈、家长记录成长与产品增长路径。
+                  </p>
+                </div>
+
+                <div class="internship-section">
+                  <div class="internship-section__label">我的工作</div>
+
+                  <ol class="internship-steps">
+                    <li class="internship-step">
+                      <p class="internship-step__title">重新定义儿童阅读场景下的分享问题框架：</p>
+                      <p class="internship-step__desc">
+                        解决“孩子需要成就反馈”“家长需要记录成长”“App 需要自然增长路径”三重需求冲突，
+                        同时应对 COPPA 隐私限制。提出“孩子成就 → 家长记录 → 产品增长”的家庭闭环。
+                      </p>
+                    </li>
+
+                    <li class="internship-step">
+                      <p class="internship-step__title">构建 Parent–Child–Platform 三方心理模型：</p>
+                      <p class="internship-step__desc">
+                        明确分享主操作者为家长、孩子只接受激励反馈，建立 Family-tech 产品的目标心智模型。
+                      </p>
+                    </li>
+
+                    <li class="internship-step">
+                      <p class="internship-step__title">设计儿童阅读场景下的分享触发体系：</p>
+                      <p class="internship-step__desc">
+                        按阅读完成、章节、连续天数、奖章等行为设计触发规则，使分享发生在“正向反馈时刻”。
+                      </p>
+                    </li>
+
+                    <li class="internship-step">
+                      <p class="internship-step__title">构建内容抽取规则与自动化卡片模板体系：</p>
+                      <p class="internship-step__desc">
+                        定义阅读时长、封面、成就类型等抽取规则，建立一键生成分享卡片的模板体系，
+                        满足 COPPA 对儿童隐私的要求。
+                      </p>
+                    </li>
+
+                    <li class="internship-step">
+                      <p class="internship-step__title">设计多平台分享策略（美区生态）：</p>
+                      <p class="internship-step__desc">
+                        构建 Export-only → Private family → Public-safe 的分层路径，适配 FB / IG / Messenger / WhatsApp。
+                      </p>
+                    </li>
+
+                    <li class="internship-step">
+                      <p class="internship-step__title">设计三种认证方式并完成登录底层交互逻辑：</p>
+                      <p class="internship-step__desc">
+                        Apple / Email / SMS 统一为两步极简流程，补充验证码校验、倒计时、异常恢复、
+                        会话管理、Token 策略与 KPI 指标体系。
+                      </p>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+
+              <!-- ========== 子项目 2：Gensmo AI 试穿 ========== -->
+              <div class="internship-project">
+                <h4 class="internship-project__title">👗 Gensmo · AI 试穿产品（QA 测试）</h4>
+
+                <div class="internship-section">
+                  <div class="internship-section__label">项目背景</div>
+                  <p class="internship-project__summary">
+                    围绕 avatar 生成、AI 换装、穿搭推荐与内容浏览流程，进行质量验证，确保模型与交互在真实场景下稳定。
+                  </p>
+                </div>
+
+                <div class="internship-section">
+                  <div class="internship-section__label">我的工作</div>
+
+                  <ol class="internship-steps">
+                    <li class="internship-step">
+                      <p class="internship-step__title">设计并构建多模块测试用例体系：</p>
+                      <p class="internship-step__desc">
+                        覆盖 Avatar、Try-On、Feed、Share、Remix 模块，实现路径覆盖与可复用性。
+                      </p>
+                    </li>
+
+                    <li class="internship-step">
+                      <p class="internship-step__title">执行跨端功能测试与回归测试：</p>
+                      <p class="internship-step__desc">
+                        验证上传、生成、渲染、交互流程在 iOS / Android 下的稳定性，跟进修复闭环。
+                      </p>
+                    </li>
+
+                    <li class="internship-step">
+                      <p class="internship-step__title">设计异常与边界场景测试：</p>
+                      <p class="internship-step__desc">
+                        包含网络弱、上传失败、生成超时、权限拒绝、用户中断等，补充 fallback 策略。
+                      </p>
+                    </li>
+
+                    <li class="internship-step">
+                      <p class="internship-step__title">多端一致性验证：</p>
+                      <p class="internship-step__desc">
+                        对比 UI、生成速度、渲染质量、权限差异，形成优化建议。
+                      </p>
+                    </li>
+
+                    <li class="internship-step">
+                      <p class="internship-step__title">输出测试报告与版本发布质量评估：</p>
+                      <p class="internship-step__desc">
+                        包含 BUG 分类、严重等级、复现路径，作为版本上线依据。
+                      </p>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+
+              <!-- ========== 子项目 3：优势星球 ========== -->
+              <div class="internship-project">
+                <h4 class="internship-project__title">🧭 优势星球 · 用户访谈与需求洞察</h4>
+
+                <div class="internship-section">
+                  <div class="internship-section__label">项目背景</div>
+                  <p class="internship-project__summary">
+                    面向“引流 → 测评 → 咨询 → 升级”的长链路服务体系，通过访谈理解真实业务流程与关键痛点。
+                  </p>
+                </div>
+
+                <div class="internship-section">
+                  <div class="internship-section__label">我的工作</div>
+
+                  <ol class="internship-steps">
+                    <li class="internship-step">
+                      <p class="internship-step__title">设计访谈方案与样本结构：</p>
+                      <p class="internship-step__desc">
+                        覆盖运营、销售、教练、用户多角色，补全链路关键节点。
+                      </p>
+                    </li>
+
+                    <li class="internship-step">
+                      <p class="internship-step__title">参与深度访谈并记录真实流程：</p>
+                      <p class="internship-step__desc">
+                        还原现实操作中的等待点、阻断点与用户情绪节点。
+                      </p>
+                    </li>
+
+                    <li class="internship-step">
+                      <p class="internship-step__title">结构化整理访谈内容并沉淀用户旅程：</p>
+                      <p class="internship-step__desc">
+                        形成行为路径、情绪曲线与决策点分析。
+                      </p>
+                    </li>
+
+                    <li class="internship-step">
+                      <p class="internship-step__title">绘制服务蓝图（Service Blueprint）：</p>
+                      <p class="internship-step__desc">
+                        区分前台行为、后台支撑与系统依赖，定位影响效率的关键触点。
+                      </p>
+                    </li>
+
+                    <li class="internship-step">
+                      <p class="internship-step__title">协助判断真实需求与伪需求：</p>
+                      <p class="internship-step__desc">
+                        用用户动机与业务目标筛选高价值需求，支持方案方向决策。
+                      </p>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tags -->
+            <ul class="internship-card__tags">
+              <li class="internship-card__tag">产品设计</li>
+              <li class="internship-card__tag">用户研究</li>
+              <li class="internship-card__tag">AI 产品</li>
+              <li class="internship-card__tag">质量保障</li>
+              <li class="internship-card__tag">服务设计</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- ========== Card 2：南京宜家 ========== -->
+        <article class="internship-card reveal">
+          <div class="internship-card__dot"></div>
+          <div class="internship-card__inner">
+
+            <header class="internship-card__header">
+              <span class="internship-card__date">2022.09 – 2022.11</span>
+              <span class="internship-card__badge">市场部实习</span>
+            </header>
+
+            <h3 class="internship-card__title">南京宜家 · 市场部实习生</h3>
 
             <div class="internship-section">
               <div class="internship-section__label">项目背景</div>
-              <p class="internship-project__summary">
-                面向家长 × 儿童的阅读场景，设计分享与登录两大核心模块，在 COPPA / CCPA 约束下
-                同时兼顾孩子成就反馈、家长记录成长与产品增长路径。
+              <p class="internship-card__summary">
+                在高客流零售环境中负责商品陈列巡检、补货记录、顾客动线观察与缺货分析，
+                支持市场部保持货架完整性与商场运营效率。
               </p>
             </div>
 
@@ -197,263 +370,53 @@
               <div class="internship-section__label">我的工作</div>
 
               <ol class="internship-steps">
-
                 <li class="internship-step">
-                  <p class="internship-step__title">重新定义儿童阅读场景下的分享问题框架：</p>
+                  <p class="internship-step__title">商品陈列检查与补货记录：</p>
                   <p class="internship-step__desc">
-                    解决“孩子需要成就反馈”“家长需要记录成长”“App 需要自然增长路径”三重需求冲突，
-                    同时应对 COPPA 隐私限制。提出“孩子成就 → 家长记录 → 产品增长”的家庭闭环。
+                    定期巡检高流转区域、促销区与样板间，记录缺货与低库存商品，确保陈列完整性与销售连续性。
                   </p>
                 </li>
 
                 <li class="internship-step">
-                  <p class="internship-step__title">构建 Parent–Child–Platform 三方心理模型：</p>
+                  <p class="internship-step__title">建立补货清单并对接仓库：</p>
                   <p class="internship-step__desc">
-                    明确分享主操作者为家长、孩子只接受激励反馈，建立 Family-tech 产品的目标心智模型。
+                    根据巡检结果整理补货清单，标注商品编号、变化量与优先级，协助仓库制定补货计划。
                   </p>
                 </li>
 
                 <li class="internship-step">
-                  <p class="internship-step__title">设计儿童阅读场景下的分享触发体系：</p>
+                  <p class="internship-step__title">缺货原因分类分析：</p>
                   <p class="internship-step__desc">
-                    按阅读完成、章节、连续天数、奖章等行为设计触发规则，使分享发生在“正向反馈时刻”。
+                    按消耗量、后台补货滞后、展示损耗等分类，帮助市场团队理解库存波动原因。
                   </p>
                 </li>
 
                 <li class="internship-step">
-                  <p class="internship-step__title">构建内容抽取规则与自动化卡片模板体系：</p>
+                  <p class="internship-step__title">监测顾客动线与商品暴露度：</p>
                   <p class="internship-step__desc">
-                    定义阅读时长、封面、成就类型等抽取规则，建立一键生成分享卡片的模板体系，
-                    满足 COPPA 对儿童隐私的要求。
+                    观察顾客在重点区域的停留点与拿取频次，评估陈列位置对购买率的影响。
                   </p>
                 </li>
 
                 <li class="internship-step">
-                  <p class="internship-step__title">设计多平台分享策略（美区生态）：</p>
+                  <p class="internship-step__title">每日记录与例会同步：</p>
                   <p class="internship-step__desc">
-                    构建 Export-only → Private family → Public-safe 的分层路径，适配 FB / IG / Messenger / WhatsApp。
+                    整理巡检数据并输出日报，支持陈列团队及时调整策略与补货节奏。
                   </p>
                 </li>
-
-                <li class="internship-step">
-                  <p class="internship-step__title">设计三种认证方式并完成登录底层交互逻辑：</p>
-                  <p class="internship-step__desc">
-                    Apple / Email / SMS 统一为两步极简流程，补充验证码校验、倒计时、异常恢复、
-                    会话管理、Token 策略与 KPI 指标体系。
-                  </p>
-                </li>
-
               </ol>
             </div>
+
+            <ul class="internship-card__tags">
+              <li class="internship-card__tag">零售运营</li>
+              <li class="internship-card__tag">商品陈列</li>
+              <li class="internship-card__tag">用户观察</li>
+              <li class="internship-card__tag">库存管理</li>
+            </ul>
           </div>
-
-          <!-- ========== 子项目 2：Gensmo AI 试穿 ========== -->
-          <div class="internship-project">
-            <h4 class="internship-project__title">👗 Gensmo · AI 试穿产品（QA 测试）</h4>
-
-            <div class="internship-section">
-              <div class="internship-section__label">项目背景</div>
-              <p class="internship-project__summary">
-                围绕 avatar 生成、AI 换装、穿搭推荐与内容浏览流程，进行质量验证，确保模型与交互在真实场景下稳定。
-              </p>
-            </div>
-
-            <div class="internship-section">
-              <div class="internship-section__label">我的工作</div>
-
-              <ol class="internship-steps">
-
-                <li class="internship-step">
-                  <p class="internship-step__title">设计并构建多模块测试用例体系：</p>
-                  <p class="internship-step__desc">
-                    覆盖 Avatar、Try-On、Feed、Share、Remix 模块，实现路径覆盖与可复用性。
-                  </p>
-                </li>
-
-                <li class="internship-step">
-                  <p class="internship-step__title">执行跨端功能测试与回归测试：</p>
-                  <p class="internship-step__desc">
-                    验证上传、生成、渲染、交互流程在 iOS / Android 下的稳定性，跟进修复闭环。
-                  </p>
-                </li>
-
-                <li class="internship-step">
-                  <p class="internship-step__title">设计异常与边界场景测试：</p>
-                  <p class="internship-step__desc">
-                    包含网络弱、上传失败、生成超时、权限拒绝、用户中断等，补充 fallback 策略。
-                  </p>
-                </li>
-
-                <li class="internship-step">
-                  <p class="internship-step__title">多端一致性验证：</p>
-                  <p class="internship-step__desc">
-                    对比 UI、生成速度、渲染质量、权限差异，形成优化建议。
-                  </p>
-                </li>
-
-                <li class="internship-step">
-                  <p class="internship-step__title">输出测试报告与版本发布质量评估：</p>
-                  <p class="internship-step__desc">
-                    包含BUG 分类、严重等级、复现路径，作为版本上线依据。
-                  </p>
-                </li>
-
-              </ol>
-            </div>
-          </div>
-
-          <!-- ========== 子项目 3：优势星球 ========== -->
-          <div class="internship-project">
-            <h4 class="internship-project__title">🧭 优势星球 · 用户访谈与需求洞察</h4>
-
-            <div class="internship-section">
-              <div class="internship-section__label">项目背景</div>
-              <p class="internship-project__summary">
-                面向“引流 → 测评 → 咨询 → 升级”的长链路服务体系，通过访谈理解真实业务流程与关键痛点。
-              </p>
-            </div>
-
-            <div class="internship-section">
-              <div class="internship-section__label">我的工作</div>
-
-              <ol class="internship-steps">
-
-                <li class="internship-step">
-                  <p class="internship-step__title">设计访谈方案与样本结构：</p>
-                  <p class="internship-step__desc">
-                    覆盖运营、销售、教练、用户多角色，补全链路关键节点。
-                  </p>
-                </li>
-
-                <li class="internship-step">
-                  <p class="internship-step__title">参与深度访谈并记录真实流程：</p>
-                  <p class="internship-step__desc">
-                    还原现实操作中的等待点、阻断点与用户情绪节点。
-                  </p>
-                </li>
-
-                <li class="internship-step">
-                  <p class="internship-step__title">结构化整理访谈内容并沉淀用户旅程：</p>
-                  <p class="internship-step__desc">
-                    形成行为路径、情绪曲线与决策点分析。
-                  </p>
-                </li>
-
-                <li class="internship-step">
-                  <p class="internship-step__title">绘制服务蓝图（Service Blueprint）：</p>
-                  <p class="internship-step__desc">
-                    区分前台行为、后台支撑与系统依赖，定位影响效率的关键触点。
-                  </p>
-                </li>
-
-                <li class="internship-step">
-                  <p class="internship-step__title">协助判断真实需求与伪需求：</p>
-                  <p class="internship-step__desc">
-                    用用户动机与业务目标筛选高价值需求，支持方案方向决策。
-                  </p>
-                </li>
-
-              </ol>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Tags -->
-        <ul class="internship-card__tags">
-          <li class="internship-card__tag">产品设计</li>
-          <li class="internship-card__tag">用户研究</li>
-          <li class="internship-card__tag">AI 产品</li>
-          <li class="internship-card__tag">质量保障</li>
-          <li class="internship-card__tag">服务设计</li>
-        </ul>
-
+        </article>
       </div>
-    </article>
-
-    <!-- ========== Card 2：南京宜家 ========== -->
-    <article class="internship-card reveal">
-      <div class="internship-card__dot"></div>
-      <div class="internship-card__inner">
-
-        <header class="internship-card__header">
-          <span class="internship-card__date">2022.09 – 2022.11</span>
-          <span class="internship-card__badge">市场部实习</span>
-        </header>
-
-        <h3 class="internship-card__title">南京宜家 · 市场部实习生</h3>
-
-        <div class="internship-section">
-          <div class="internship-section__label">项目背景</div>
-          <p class="internship-card__summary">
-            在高客流零售环境中负责商品陈列巡检、补货记录、顾客动线观察与缺货分析，
-            支持市场部保持货架完整性与商场运营效率。
-          </p>
-        </div>
-
-        <div class="internship-section">
-          <div class="internship-section__label">我的工作</div>
-
-          <ol class="internship-steps">
-
-            <li class="internship-step">
-              <p class="internship-step__title">商品陈列检查与补货记录：</p>
-              <p class="internship-step__desc">
-                定期巡检高流转区域、促销区与样板间，记录缺货与低库存商品，确保陈列完整性与销售连续性。
-              </p>
-            </li>
-
-            <li class="internship-step">
-              <p class="internship-step__title">建立补货清单并对接仓库：</p>
-              <p class="internship-step__desc">
-                根据巡检结果整理补货清单，标注商品编号、变化量与优先级，协助仓库制定补货计划。
-              </p>
-            </li>
-
-            <li class="internship-step">
-              <p class="internship-step__title">缺货原因分类分析：</p>
-              <p class="internship-step__desc">
-                按消耗量、后台补货滞后、展示损耗等分类，帮助市场团队理解库存波动原因。
-              </p>
-            </li>
-
-            <li class="internship-step">
-              <p class="internship-step__title">监测顾客动线与商品暴露度：</p>
-              <p class="internship-step__desc">
-                观察顾客在重点区域的停留点与拿取频次，评估陈列位置对购买率的影响。
-              </p>
-            </li>
-
-            <li class="internship-step">
-              <p class="internship-step__title">每日记录与例会同步：</p>
-              <p class="internship-step__desc">
-                整理巡检数据并输出日报，支持陈列团队及时调整策略与补货节奏。
-              </p>
-            </li>
-
-          </ol>
-        </div>
-
-        <ul class="internship-card__tags">
-          <li class="internship-card__tag">零售运营</li>
-          <li class="internship-card__tag">商品陈列</li>
-          <li class="internship-card__tag">用户观察</li>
-          <li class="internship-card__tag">库存管理</li>
-        </ul>
-
-      </div>
-    </article>
-
-  </div>
-</section>
-
-
-
-
-
-
-
-
+    </section>
 
     <!-- =========== Education Section =========== -->
     <section id="education" class="education section">
@@ -465,21 +428,18 @@
         <article class="education-card education-card--ug">
           <!-- Header -->
           <header class="education-card__header">
-  <div class="education-card__icon">
-    <!-- 本科学校 logo，占位图，后续自己替换 src -->
-    <img
-      src="assets/images/logo-undergrad-placeholder.png"
-      alt="南京工程学院 校徽"
-      class="education-card__logo"
-    >
-  </div>
-  <div class="education-card__meta">
-    <h3 class="education-card__school">南京工程学院（本科）</h3>
-    <p class="education-card__major">工业设计 Industrial Design</p>
-    <p class="education-card__time">2020 – 2024</p>
-  </div>
-</header>
-
+            <div class="education-card__icon">
+              <img
+                src="assets/images/logo-undergrad-placeholder.png"
+                alt="南京工程学院 校徽"
+                class="education-card__logo">
+            </div>
+            <div class="education-card__meta">
+              <h3 class="education-card__school">南京工程学院（本科）</h3>
+              <p class="education-card__major">工业设计 Industrial Design</p>
+              <p class="education-card__time">2020 – 2024</p>
+            </div>
+          </header>
 
           <!-- Tags -->
           <section class="education-card__section education-card__section--tags">
@@ -513,7 +473,7 @@
 
           <!-- Awards (Collapsible) -->
           <section class="education-card__section education-card__section--awards">
-            <details class="education-card__awards" >
+            <details class="education-card__awards">
               <summary class="education-card__awards-summary">
                 获奖与成果 Awards
               </summary>
@@ -548,7 +508,6 @@
                 </ul>
               </div>
 
-
               <!-- Research Experience -->
               <div class="education-card__awards-group">
                 <h5 class="education-card__awards-title">科研经历 Research</h5>
@@ -575,7 +534,6 @@
                   </li>
                 </ul>
               </div>
-
 
               <!-- Awards List -->
               <div class="education-card__awards-group">
@@ -613,22 +571,19 @@
         <!-- 研究生 Panel -->
         <article class="education-card education-card--pg">
           <!-- Header -->
-         <header class="education-card__header">
-  <div class="education-card__icon">
-    <!-- 研究生学校 logo，占位图，后续自己替换 src -->
-    <img
-      src="assets/images/logo-postgrad-placeholder.png"
-      alt="东南大学 校徽"
-      class="education-card__logo"
-    >
-  </div>
-  <div class="education-card__meta">
-    <h3 class="education-card__school">东南大学（研究生）</h3>
-    <p class="education-card__major">工业设计工程 Industrial Design Engineering</p>
-    <p class="education-card__time">2025 – Now</p>
-  </div>
-</header>
-
+          <header class="education-card__header">
+            <div class="education-card__icon">
+              <img
+                src="assets/images/logo-postgrad-placeholder.png"
+                alt="东南大学 校徽"
+                class="education-card__logo">
+            </div>
+            <div class="education-card__meta">
+              <h3 class="education-card__school">东南大学（研究生）</h3>
+              <p class="education-card__major">工业设计工程 Industrial Design Engineering</p>
+              <p class="education-card__time">2025 – Now</p>
+            </div>
+          </header>
 
           <!-- Tags -->
           <section class="education-card__section education-card__section--tags">
@@ -649,13 +604,12 @@
                 <span class="education-card__project-name">光纤传感器 * AI</span>
                 <span class="education-card__project-tags">FSS / Gesture / AI</span>
               </li>
-           
             </ul>
           </section>
 
           <!-- Awards (Collapsible) -->
           <section class="education-card__section education-card__section--awards">
-            <details class="education-card__awards" >
+            <details class="education-card__awards">
               <summary class="education-card__awards-summary">
                 成果与进展 Awards &amp; Progress
               </summary>
@@ -685,7 +639,6 @@
                       面向可穿戴人机接口的多模态感知与低样本学习
                     </span>
                   </li>
-              
                 </ul>
               </div>
 
@@ -699,16 +652,8 @@
             </details>
           </section>
         </article>
-
       </div>
     </section>
-
-
-
-
-
-
-
 
     <!-- =========== Projects =========== -->
     <section id="projects" class="projects section">
@@ -721,386 +666,337 @@
         </div>
 
         <div class="projects__grid grid">
-
-<!-- 项目：Starry Sleep Project -->
-<div class="project-card" data-category="project">
-  <a href="projects/starry-sleep-project.html">
-    <img src="assets/images/starry-sleep-project.png"
-         alt="Starry Sleep Project"
-         class="project-card__img">
-  </a>
-
-  <div class="project-card__content">
-    <h3 class="project-card__title">
-      <a href="projects/starry-sleep-project.html">Starry Sleep Project</a>
-    </h3>
-
-    <p class="project-card__description">
-      Let Darkness No Longer Be Alone —— 围绕夜间黑暗与睡眠体验的情绪光环境设计实验。
-    </p>
-
-    <a href="projects/starry-sleep-project.html" class="project-card__link">
-      查看详情 &rarr;
-    </a>
-  </div>
-</div>
-
-
-
-
-<!-- 项目：Three-Player Chess -->
-<div class="project-card" data-category="project">
-  <a href="projects/chess.html">
-    <img src="assets/images/chess.png"
-         alt="Three-player battle chess"
-         class="project-card__img">
-  </a>
-
-  <div class="project-card__content">
-    <h3 class="project-card__title">
-      <a href="projects/chess.html">三方对弈棋局 · Chess</a>
-    </h3>
-
-    <p class="project-card__description">
-      Three-player battle —— 一款探索多方策略与博弈机制的三人棋局设计实验。
-    </p>
-
-    <a href="projects/chess.html" class="project-card__link">
-      查看详情 &rarr;
-    </a>
-  </div>
-</div>
-
-
-<!-- 项目：全季候模块清洁车 -->
-<div class="project-card" data-category="project">
-  <a href="projects/all-weather-cleaning-vehicle.html">
-    <img src="assets/images/all-weather-cleaning-vehicle.jpg"
-         alt="全季候模块清洁车" class="project-card__img">
-  </a>
-
-  <div class="project-card__content">
-    <h3 class="project-card__title">
-      <a href="projects/all-weather-cleaning-vehicle.html">全季候模块清洁车</a>
-    </h3>
-
-    <p class="project-card__description">
-      基于 AHP 法和模糊综合评价的全季候城市环卫问题综合治理系统研究。
-    </p>
-
-    <a href="projects/all-weather-cleaning-vehicle.html" class="project-card__link">
-      查看详情 &rarr;
-    </a>
-  </div>
-</div>
-
-<!-- 项目：火星基地设计 -->
-<div class="project-card" data-category="project">
-  <a href="projects/mars-base.html">
-    <img src="assets/images/mars-base.jpg"
-         alt="火星基地设计 - 重黎号"
-         class="project-card__img">
-  </a>
-
-  <div class="project-card__content">
-    <h3 class="project-card__title">
-      <a href="projects/mars-base.html">火星基地设计 · 重黎号</a>
-    </h3>
-
-    <p class="project-card__description">
-      重黎号——基于 4D 打印技术的火星基地设计，探索极端环境下可重构栖居单元与任务支持系统。
-    </p>
-
-    <a href="projects/mars-base.html" class="project-card__link">
-      查看详情 &rarr;
-    </a>
-  </div>
-</div>
-
-<!-- 项目：模块化宜家机器人 -->
-<div class="project-card" data-category="project">
-  <a href="projects/ikea-robots.html">
-    <img src="assets/images/IKEA-robots.jpg"
-         alt="模块化宜家机器人"
-         class="project-card__img">
-  </a>
-
-  <div class="project-card__content">
-    <h3 class="project-card__title">
-      <a href="projects/ikea-robots.html">模块化宜家机器人</a>
-    </h3>
-
-    <p class="project-card__description">
-      模块化宜家机器人：面向生活场景与家具生态的创新设计系统研究。
-    </p>
-
-    <a href="projects/ikea-robots.html" class="project-card__link">
-      查看详情 &rarr;
-    </a>
-  </div>
-</div>
-
-
-<!-- 项目：Glasses -->
-<div class="project-card" data-category="project">
-  <a href="projects/glasses.html">
-    <img src="assets/images/glasses.png"
-         alt="SwiftView Versatile Module Glasses"
-         class="project-card__img">
-  </a>
-
-  <div class="project-card__content">
-    <h3 class="project-card__title">
-      <a href="projects/glasses.html">Glasses · 模块化眼镜</a>
-    </h3>
-
-    <p class="project-card__description">
-      SwiftView —— Versatile Module Glasses，探索模块化镜片与智能视野扩展交互。
-    </p>
-
-    <a href="projects/glasses.html" class="project-card__link">
-      查看详情 &rarr;
-    </a>
-  </div>
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- ================= Notes Section ================= -->
-<section id="notes" class="notes section">
-  <h2 class="section__title">NOTES · 笔记与碎片</h2>
-  <p class="section__subtitle">
-    一些研究随笔、产品思考和方法论草稿。点击进入可查看详情。
-  </p>
-
-<!-- ==== MINI NOTES LIST  ==== -->
-<!-- ==== MINI NOTES LIST  ==== -->
-<div class="notes-mini-list">
-
-  <!-- Note 01：GA4 调研和实操 demo -->
-  <a href="notes/ga4-demo.html" class="notes-mini-item">
-    <span class="notes-mini-title">GA4 调研和实操 demo</span>
-    <span class="notes-mini-status status-active">已完成</span>
-  </a>
-
-  <!-- Note 02：美国社交 App 分享机制拆解 -->
-  <a href="notes/us-social-share.html" class="notes-mini-item">
-    <span class="notes-mini-title">美国社交 App 分享机制拆解</span>
-    <span class="notes-mini-status status-active">已完成</span>
-  </a>
-
-  <!-- Note 03：实时语音翻译体验（延迟 × 可懂度 × 用户心智） -->
-  <a href="notes/voice-translate-experience.html" class="notes-mini-item">
-    <span class="notes-mini-title">实时语音翻译体验：延迟、可懂度与用户心智模型</span>
-    <span class="notes-mini-status status-active">已完成</span>
-  </a>
-
-</div>
-
-
-
-
-
-
-  <div class="notes__container container">
-
-
-
-
-    <!-- Notes 01 -->
-<article class="note-card">
-  <!-- ✅ 加这一行，把整张卡片变成可点击区域 -->
-  <a href="notes/ga4-demo.html" class="note-card__overlay-link"></a>
-
-  <header class="note-card__header">
-    <h3 class="note-card__title">GA4调研和实操demo</h3>
-    <span class="note-card__status status--done">已完成</span>
-  </header>
-
-  <p class="note-card__summary">
-    GA4 以事件模型统一 Web/App 数据，提供更灵活的追踪、归因与预测能力；Demo 汇总关键概念与常用实操方法。
-  </p>
-
-  <div class="note-card__footer">
-    <span class="note-card__meta">产品经理实习笔记 · 已完成</span>
-    <div class="note-card__tags">
-      <span class="note-card__tag">GA4</span>
-      <span class="note-card__tag">Demo</span>
-    </div>
-  </div>
-</article>
-
-
-<!-- Note 2：美国社交 App 分享机制拆解 -->
-<article class="note-card">
-  <!-- 整卡可点击 -->
-  <a
-    href="notes/us-social-share.html"
-    class="note-card__overlay-link"
-    aria-label="查看《美国社交 App 分享机制拆解》笔记"
-  ></a>
-
-  <header class="note-card__header">
-    <h3 class="note-card__title">美国社交 App 分享机制拆解</h3>
-    <span class="note-card__status status--done">已完成</span>
-    <!-- 如果你觉得已经完善，可以改成 已完成，并去掉 status--draft -->
-    <!-- <span class="note-card__status">已完成</span> -->
-  </header>
-
-  <p class="note-card__summary">
-    梳理 Facebook、Instagram、Messenger、X、WhatsApp、TikTok、Pinterest 等平台的分享入口、
-    链路、卡片样式与深度链接 / API 限制，用于后续产品分享模块的设计参考。
-  </p>
-
-  <footer class="note-card__footer">
-    <div class="note-card__meta">
-      分享机制调研 · 已完成
-    </div>
-    <div class="note-card__tags">
-      <span class="note-card__tag">Social</span>
-      <span class="note-card__tag">Share</span>
-      <span class="note-card__tag">US</span>
-    </div>
-  </footer>
-</article>
-
-
-
-
-    <!-- Notes 02（示例） -->
-    <article class="note-card">
-      <a href="notes/us-social-share.html" class="note-card__overlay-link"></a>
-
-      <header class="note-card__header">
-        <h3 class="note-card__title">实时语音翻译体验：延迟、可懂度与用户心智模型</h3>
-        <span class="note-card__status status--done">已完成</span>
-      </header>
-
-      <p class="note-card__summary">
-        对 Google / Apple / 禾赛 等实时翻译方案的延迟表现进行拆解，
-        并结合旅行场景用户链路构建体验指标体系。
-      </p>
-
-      <div class="note-card__footer">
-        <span class="note-card__meta">翻译体验 · 草稿</span>
-        <div class="note-card__tags">
-          <span class="note-card__tag">HCI</span>
-          <span class="note-card__tag">Latency</span>
-          <span class="note-card__tag">LLM</span>
+          <!-- 项目：Starry Sleep Project -->
+          <div class="project-card" data-category="project">
+            <a href="projects/starry-sleep-project.html">
+              <img src="assets/images/starry-sleep-project.png"
+                   alt="Starry Sleep Project"
+                   class="project-card__img">
+            </a>
+
+            <div class="project-card__content">
+              <h3 class="project-card__title">
+                <a href="projects/starry-sleep-project.html">Starry Sleep Project</a>
+              </h3>
+
+              <p class="project-card__description">
+                Let Darkness No Longer Be Alone —— 围绕夜间黑暗与睡眠体验的情绪光环境设计实验。
+              </p>
+
+              <a href="projects/starry-sleep-project.html" class="project-card__link">
+                查看详情 &rarr;
+              </a>
+            </div>
+          </div>
+
+          <!-- 项目：Three-Player Chess -->
+          <div class="project-card" data-category="project">
+            <a href="projects/chess.html">
+              <img src="assets/images/chess.png"
+                   alt="Three-player battle chess"
+                   class="project-card__img">
+            </a>
+
+            <div class="project-card__content">
+              <h3 class="project-card__title">
+                <a href="projects/chess.html">三方对弈棋局 · Chess</a>
+              </h3>
+
+              <p class="project-card__description">
+                Three-player battle —— 一款探索多方策略与博弈机制的三人棋局设计实验。
+              </p>
+
+              <a href="projects/chess.html" class="project-card__link">
+                查看详情 &rarr;
+              </a>
+            </div>
+          </div>
+
+          <!-- 项目：全季候模块清洁车 -->
+          <div class="project-card" data-category="project">
+            <a href="projects/all-weather-cleaning-vehicle.html">
+              <img src="assets/images/all-weather-cleaning-vehicle.jpg"
+                   alt="全季候模块清洁车" class="project-card__img">
+            </a>
+
+            <div class="project-card__content">
+              <h3 class="project-card__title">
+                <a href="projects/all-weather-cleaning-vehicle.html">全季候模块清洁车</a>
+              </h3>
+
+              <p class="project-card__description">
+                基于 AHP 法和模糊综合评价的全季候城市环卫问题综合治理系统研究。
+              </p>
+
+              <a href="projects/all-weather-cleaning-vehicle.html" class="project-card__link">
+                查看详情 &rarr;
+              </a>
+            </div>
+          </div>
+
+          <!-- 项目：火星基地设计 -->
+          <div class="project-card" data-category="project">
+            <a href="projects/mars-base.html">
+              <img src="assets/images/mars-base.jpg"
+                   alt="火星基地设计 - 重黎号"
+                   class="project-card__img">
+            </a>
+
+            <div class="project-card__content">
+              <h3 class="project-card__title">
+                <a href="projects/mars-base.html">火星基地设计 · 重黎号</a>
+              </h3>
+
+              <p class="project-card__description">
+                重黎号——基于 4D 打印技术的火星基地设计，探索极端环境下可重构栖居单元与任务支持系统。
+              </p>
+
+              <a href="projects/mars-base.html" class="project-card__link">
+                查看详情 &rarr;
+              </a>
+            </div>
+          </div>
+
+          <!-- 项目：模块化宜家机器人 -->
+          <div class="project-card" data-category="project">
+            <a href="projects/ikea-robots.html">
+              <img src="assets/images/IKEA-robots.jpg"
+                   alt="模块化宜家机器人"
+                   class="project-card__img">
+            </a>
+
+            <div class="project-card__content">
+              <h3 class="project-card__title">
+                <a href="projects/ikea-robots.html">模块化宜家机器人</a>
+              </h3>
+
+              <p class="project-card__description">
+                模块化宜家机器人：面向生活场景与家具生态的创新设计系统研究。
+              </p>
+
+              <a href="projects/ikea-robots.html" class="project-card__link">
+                查看详情 &rarr;
+              </a>
+            </div>
+          </div>
+
+          <!-- 项目：Glasses -->
+          <div class="project-card" data-category="project">
+            <a href="projects/glasses.html">
+              <img src="assets/images/glasses.png"
+                   alt="SwiftView Versatile Module Glasses"
+                   class="project-card__img">
+            </a>
+
+            <div class="project-card__content">
+              <h3 class="project-card__title">
+                <a href="projects/glasses.html">Glasses · 模块化眼镜</a>
+              </h3>
+
+              <p class="project-card__description">
+                SwiftView —— Versatile Module Glasses，探索模块化镜片与智能视野扩展交互。
+              </p>
+
+              <a href="projects/glasses.html" class="project-card__link">
+                查看详情 &rarr;
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-    </article>
+    </section>
 
-    <!-- 进入 Notes 列表按钮 -->
-    <a href="notes/index.html" class="notes__more">查看所有 Notes →</a>
+    <!-- ================= Notes Section ================= -->
+    <section id="notes" class="notes section">
+      <h2 class="section__title">NOTES · 笔记与碎片</h2>
+      <p class="section__subtitle">
+        一些研究随笔、产品思考和方法论草稿。点击进入可查看详情。
+      </p>
 
-  </div>
-</section>
+      <!-- MINI NOTES LIST -->
+      <div class="notes-mini-list">
+        <!-- Note 01：GA4 调研和实操 demo -->
+        <a href="notes/ga4-demo.html" class="notes-mini-item">
+          <span class="notes-mini-title">GA4 调研和实操 demo</span>
+          <span class="notes-mini-status status-active">已完成</span>
+        </a>
 
+        <!-- Note 02：美国社交 App 分享机制拆解 -->
+        <a href="notes/us-social-share.html" class="notes-mini-item">
+          <span class="notes-mini-title">美国社交 App 分享机制拆解</span>
+          <span class="notes-mini-status status-active">已完成</span>
+        </a>
 
+        <!-- Note 03：实时语音翻译体验 -->
+        <a href="notes/voice-translate-experience.html" class="notes-mini-item">
+          <span class="notes-mini-title">实时语音翻译体验：延迟、可懂度与用户心智模型</span>
+          <span class="notes-mini-status status-active">已完成</span>
+        </a>
+      </div>
 
+      <div class="notes__container container">
+        <!-- Notes 01 -->
+        <article class="note-card">
+          <a href="notes/ga4-demo.html" class="note-card__overlay-link"></a>
 
-<!-- =========== Skills =========== -->
-<section id="skills" class="skills section">
-  <h2 class="section__title">我的技能</h2>
+          <header class="note-card__header">
+            <h3 class="note-card__title">GA4调研和实操demo</h3>
+            <span class="note-card__status status--done">已完成</span>
+          </header>
 
-  <div class="skills__container container">
+          <p class="note-card__summary">
+            GA4 以事件模型统一 Web/App 数据，提供更灵活的追踪、归因与预测能力；Demo 汇总关键概念与常用实操方法。
+          </p>
 
-    <div class="skill-item"><i class="fab fa-python"></i><span>Python</span></div>
-    <div class="skill-item"><i class="fab fa-html5"></i><span>HTML</span></div>
-    <div class="skill-item"><i class="fas fa-square-root-alt"></i><span>LaTeX</span></div>
-    <div class="skill-item"><i class="fas fa-database"></i><span>MySQL</span></div>
+          <div class="note-card__footer">
+            <span class="note-card__meta">产品经理实习笔记 · 已完成</span>
+            <div class="note-card__tags">
+              <span class="note-card__tag">GA4</span>
+              <span class="note-card__tag">Demo</span>
+            </div>
+          </div>
+        </article>
 
-    <div class="skill-item"><i class="fab fa-figma"></i><span>Figma</span></div>
-    <div class="skill-item"><i class="fas fa-cube"></i><span>Rhino</span></div>
-    <div class="skill-item"><i class="fas fa-camera"></i><span>KeyShot</span></div>
+        <!-- Note 2：美国社交 App 分享机制拆解 -->
+        <article class="note-card">
+          <a
+            href="notes/us-social-share.html"
+            class="note-card__overlay-link"
+            aria-label="查看《美国社交 App 分享机制拆解》笔记"
+          ></a>
 
-    <div class="skill-item"><i class="fas fa-image"></i><span>PS</span></div>
-    <div class="skill-item"><i class="fas fa-pen-nib"></i><span>AI</span></div>
-    <div class="skill-item"><i class="fab fa-github"></i><span>GitHub</span></div>
+          <header class="note-card__header">
+            <h3 class="note-card__title">美国社交 App 分享机制拆解</h3>
+            <span class="note-card__status status--done">已完成</span>
+          </header>
 
-  </div>
-</section>
+          <p class="note-card__summary">
+            梳理 Facebook、Instagram、Messenger、X、WhatsApp、TikTok、Pinterest 等平台的分享入口、
+            链路、卡片样式与深度链接 / API 限制，用于后续产品分享模块的设计参考。
+          </p>
 
+          <footer class="note-card__footer">
+            <div class="note-card__meta">
+              分享机制调研 · 已完成
+            </div>
+            <div class="note-card__tags">
+              <span class="note-card__tag">Social</span>
+              <span class="note-card__tag">Share</span>
+              <span class="note-card__tag">US</span>
+            </div>
+          </footer>
+        </article>
 
+        <!-- Note 3：实时语音翻译体验 -->
+        <article class="note-card">
+          <a href="notes/voice-translate-experience.html" class="note-card__overlay-link"></a>
 
+          <header class="note-card__header">
+            <h3 class="note-card__title">实时语音翻译体验：延迟、可懂度与用户心智模型</h3>
+            <span class="note-card__status status--done">已完成</span>
+          </header>
 
+          <p class="note-card__summary">
+            对 Google / Apple / 禾赛 等实时翻译方案的延迟表现进行拆解，
+            并结合旅行场景用户链路构建体验指标体系。
+          </p>
 
-<!-- =========== Contact =========== -->
-<section id="contact" class="contact section">
-  <h2 class="section__title">联系我</h2>
+          <div class="note-card__footer">
+            <span class="note-card__meta">翻译体验 · 草稿</span>
+            <div class="note-card__tags">
+              <span class="note-card__tag">HCI</span>
+              <span class="note-card__tag">Latency</span>
+              <span class="note-card__tag">LLM</span>
+            </div>
+          </div>
+        </article>
 
-  <div class="contact__container container">
-    <p class="contact__subtitle">
-      欢迎交流产品、设计与AI相关话题。
-    </p>
+        <!-- 进入 Notes 列表按钮 -->
+        <a href="notes/index.html" class="notes__more">查看所有 Notes →</a>
+      </div>
+    </section>
 
-    <div class="contact__buttons">
-      <!-- 邮件 -->
-      <a href="mailto:2044186078@qq.com" class="button contact-btn">
-        <i class="fas fa-envelope"></i>
-        <span>发送邮件</span>
-      </a>
+    <!-- =========== Skills =========== -->
+    <section id="skills" class="skills section">
+      <h2 class="section__title">我的技能</h2>
 
-      <!-- 微信 -->
-      <button class="button contact-btn" id="wechat-btn" type="button">
-        <i class="fab fa-weixin"></i>
-        <span>添加微信</span>
-      </button>
+      <div class="skills__container container">
+        <div class="skill-item"><i class="fab fa-python"></i><span>Python</span></div>
+        <div class="skill-item"><i class="fab fa-html5"></i><span>HTML</span></div>
+        <div class="skill-item"><i class="fas fa-square-root-alt"></i><span>LaTeX</span></div>
+        <div class="skill-item"><i class="fas fa-database"></i><span>MySQL</span></div>
 
-      <!-- QQ -->
-      <button class="button contact-btn" id="qq-btn" type="button">
-        <i class="fab fa-qq"></i>
-        <span>添加QQ</span>
-      </button>
+        <div class="skill-item"><i class="fab fa-figma"></i><span>Figma</span></div>
+        <div class="skill-item"><i class="fas fa-cube"></i><span>Rhino</span></div>
+        <div class="skill-item"><i class="fas fa-camera"></i><span>KeyShot</span></div>
+
+        <div class="skill-item"><i class="fas fa-image"></i><span>PS</span></div>
+        <div class="skill-item"><i class="fas fa-pen-nib"></i><span>AI</span></div>
+        <div class="skill-item"><i class="fab fa-github"></i><span>GitHub</span></div>
+      </div>
+    </section>
+
+    <!-- =========== Contact =========== -->
+    <section id="contact" class="contact section">
+      <h2 class="section__title">联系我</h2>
+
+      <div class="contact__container container">
+        <p class="contact__subtitle">
+          欢迎交流产品、设计与AI相关话题。
+        </p>
+
+        <div class="contact__buttons">
+          <!-- 邮件 -->
+          <a href="mailto:2044186078@qq.com" class="button contact-btn">
+            <i class="fas fa-envelope"></i>
+            <span>发送邮件</span>
+          </a>
+
+          <!-- 微信 -->
+          <button class="button contact-btn" id="wechat-btn" type="button">
+            <i class="fab fa-weixin"></i>
+            <span>添加微信</span>
+          </button>
+
+          <!-- QQ -->
+          <button class="button contact-btn" id="qq-btn" type="button">
+            <i class="fab fa-qq"></i>
+            <span>添加QQ</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========== Footer =========== -->
+  <footer class="footer">
+    <div class="footer__container container">
+      <p>&copy; 2025 Asta. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- =========== Modals =========== -->
+  <!-- 微信二维码弹窗 -->
+  <div class="modal" id="wechat-modal">
+    <div class="modal__content">
+      <span class="modal__close">&times;</span>
+      <h3>微信二维码</h3>
+      <img src="assets/images/wechat_qr.png" alt="WeChat QR Code">
+      <p>扫一扫添加我的微信</p>
     </div>
   </div>
-</section>
 
-<!-- =========== Footer =========== -->
-<footer class="footer">
-  <div class="footer__container container">
-    <p>&copy; 2025 Asta. All Rights Reserved.</p>
+  <!-- QQ 二维码弹窗 -->
+  <div class="modal" id="qq-modal">
+    <div class="modal__content">
+      <span class="modal__close">&times;</span>
+      <h3>QQ 二维码</h3>
+      <img src="assets/images/qq_qr.png" alt="QQ QR Code">
+      <p>扫一扫添加我的 QQ</p>
+    </div>
   </div>
-</footer>
 
-<!-- =========== Modals =========== -->
-
-<!-- 微信二维码弹窗 -->
-<div class="modal" id="wechat-modal">
-  <div class="modal__content">
-    <span class="modal__close">&times;</span>
-    <h3>微信二维码</h3>
-    <img src="assets/images/wechat_qr.png" alt="WeChat QR Code">
-    <p>扫一扫添加我的微信</p>
-  </div>
-</div>
-
-<!-- QQ 二维码弹窗 -->
-<div class="modal" id="qq-modal">
-  <div class="modal__content">
-    <span class="modal__close">&times;</span>
-    <h3>QQ 二维码</h3>
-    <img src="assets/images/qq_qr.png" alt="QQ QR Code">
-    <p>扫一扫添加我的 QQ</p>
-  </div>
-</div>
-
-<!-- 主脚本文件 -->
-<script src="assets/js/main.js"></script>
+  <!-- 主脚本文件 -->
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
-
