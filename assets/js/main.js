@@ -150,3 +150,78 @@ document.addEventListener('DOMContentLoaded', () => {
 
 }); // End of DOMContentLoaded
 
+/* ===============================================
+   GA4 - Scroll Depth Tracking
+   =============================================== */
+let scrollTracked = {25: false, 50: false, 75: false, 100: false};
+
+window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.body.scrollHeight - window.innerHeight;
+    const scrolled = (scrollTop / docHeight) * 100;
+
+    [25, 50, 75, 100].forEach(depth => {
+        if (!scrollTracked[depth] && scrolled >= depth) {
+            scrollTracked[depth] = true;
+            gtag('event', 'scroll_depth', {
+                depth: depth,
+                page: window.location.pathname
+            });
+        }
+    });
+});
+
+
+/* ===============================================
+   GA4 - Project Card Click
+   =============================================== */
+document.querySelectorAll('.project-card a').forEach(link => {
+    link.addEventListener('click', () => {
+        gtag('event', 'project_click', {
+            project_url: link.getAttribute('href'),
+            project_title: link.innerText.trim()
+        });
+    });
+});
+
+/* ===============================================
+   GA4 - Notes Click Tracking
+   =============================================== */
+document.querySelectorAll('.note-card__overlay-link, .notes-mini-item').forEach(link => {
+    link.addEventListener('click', () => {
+        gtag('event', 'notes_click', {
+            note_url: link.getAttribute('href'),
+            note_title: link.innerText.trim()
+        });
+    });
+});
+
+/* ===============================================
+   GA4 - Contact Click Tracking
+   =============================================== */
+const emailBtn = document.querySelector('a[href^="mailto:"]');
+if (emailBtn) {
+    emailBtn.addEventListener('click', () => {
+        gtag('event', 'contact_click', {
+            method: 'email'
+        });
+    });
+}
+
+const wechatBtn = document.getElementById('wechat-btn');
+if (wechatBtn) {
+    wechatBtn.addEventListener('click', () => {
+        gtag('event', 'contact_click', {
+            method: 'wechat'
+        });
+    });
+}
+
+const qqBtn = document.getElementById('qq-btn');
+if (qqBtn) {
+    qqBtn.addEventListener('click', () => {
+        gtag('event', 'contact_click', {
+            method: 'qq'
+        });
+    });
+}
