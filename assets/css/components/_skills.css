@@ -33,3 +33,53 @@
 .skill-item span {
     font-weight: 600;
 }
+
+/* Skills section layout */
+.skills__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.8rem;
+  justify-items: center;
+  margin-top: 2.5rem;
+}
+
+/* Card style */
+.skill-item {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  padding: 1.8rem 1.4rem;
+  text-align: center;
+
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  transition: 0.35s ease;
+  width: 130px;
+}
+
+/* Icon style */
+.skill-item i {
+  font-size: 2rem;
+  color: #9ac7ff; /* 柔和蓝色 */
+  margin-bottom: 0.8rem;
+  transition: 0.3s ease;
+}
+
+/* Text */
+.skill-item span {
+  font-size: 0.95rem;
+  color: #dbe9ff;
+  letter-spacing: 0.5px;
+}
+
+/* Hover 动效：光晕 + 上浮 */
+.skill-item:hover {
+  transform: translateY(-6px);
+  border-color: rgba(120, 180, 255, 0.5);
+  box-shadow: 0 0 18px rgba(120, 180, 255, 0.25);
+}
+
+.skill-item:hover i {
+  color: #b9d8ff;
+}

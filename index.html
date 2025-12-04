@@ -35,7 +35,7 @@
           <li class="nav__item"><a href="#hero" class="nav__link">首页</a></li>
           <li class="nav__item"><a href="#about" class="nav__link">关于我</a></li>
           <li class="nav__item"><a href="#projects" class="nav__link">项目</a></li>
-          <li class="nav__item"><a href="#socials" class="nav__link">我的频道</a></li>
+          
           <li class="nav__item"><a href="#skills" class="nav__link">技能</a></li>
           <li class="nav__item"><a href="#contact" class="nav__link">联系我</a></li>
         </ul>
@@ -65,8 +65,8 @@
           <p class="hero__description">Noise is data, silence is signal.</p>
           <div class="hero__buttons">
             <a href="#projects" class="button">查看我的项目</a>
-            <a href="https://gitee.com/YOUR_GITEE_USERNAME" target="_blank" class="button button--ghost">我的 Gitee</a>
-            <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" class="button button--ghost">我的 GitHub</a>
+        
+            <a href="https://github.com/wanfengrenzui/personal-homepage" target="_blank" class="button button--ghost">我的 GitHub</a>
           </div>
         </div>
         <div class="hero__image">
@@ -75,6 +75,8 @@
         </div>
       </div>
     </section>
+
+
 
  <!-- =========== 第一版的方案 =========== -->
 <!-- =========== About Me =========== -->
@@ -738,6 +740,29 @@
 
 
 
+<!-- 项目：Three-Player Chess -->
+<div class="project-card" data-category="project">
+  <a href="projects/chess.html">
+    <img src="assets/images/chess.png"
+         alt="Three-player battle chess"
+         class="project-card__img">
+  </a>
+
+  <div class="project-card__content">
+    <h3 class="project-card__title">
+      <a href="projects/chess.html">三方对弈棋局 · Chess</a>
+    </h3>
+
+    <p class="project-card__description">
+      Three-player battle —— 一款探索多方策略与博弈机制的三人棋局设计实验。
+    </p>
+
+    <a href="projects/chess.html" class="project-card__link">
+      查看详情 &rarr;
+    </a>
+  </div>
+</div>
+
 
 <!-- 项目：全季候模块清洁车 -->
 <div class="project-card" data-category="project">
@@ -808,66 +833,28 @@
 </div>
 
 
+<!-- 项目：Glasses -->
+<div class="project-card" data-category="project">
+  <a href="projects/glasses.html">
+    <img src="assets/images/glasses.png"
+         alt="SwiftView Versatile Module Glasses"
+         class="project-card__img">
+  </a>
 
+  <div class="project-card__content">
+    <h3 class="project-card__title">
+      <a href="projects/glasses.html">Glasses · 模块化眼镜</a>
+    </h3>
 
+    <p class="project-card__description">
+      SwiftView —— Versatile Module Glasses，探索模块化镜片与智能视野扩展交互。
+    </p>
 
-
-
-
-
-  <!-- 项目 1：智能座舱人机交互 -->
-  <div class="project-card" data-category="project">
-    <a href="projects/seat-hmi.html">
-      <img src="assets/images/seat-hmi-cover.webp" alt="智能座舱人机交互">
-
+    <a href="projects/glasses.html" class="project-card__link">
+      查看详情 &rarr;
     </a>
-    <div class="project-card__content">
-      <h3 class="project-card__title">
-        <a href="projects/seat-hmi.html">智能座舱人机交互</a>
-      </h3>
-      <p class="project-card__description">
-        基于 FSS/触觉反馈的座舱交互探索：信息分层、手势映射、低分心设计与验证。
-      </p>
-      <a href="projects/seat-hmi.html" class="project-card__link">点击查看详情 &rarr;</a>
-    </div>
   </div>
-
-
-
-
-  <!-- 项目 2：实时语音翻译体验 -->
-  <div class="project-card" data-category="project">
-    <a href="projects/voice-translate.html">
-      <img src="assets/images/voice-translate-cover.webp" alt="实时语音翻译体验" class="project-card__img">
-    </a>
-    <div class="project-card__content">
-      <h3 class="project-card__title">
-        <a href="projects/voice-translate.html">实时语音翻译体验</a>
-      </h3>
-      <p class="project-card__description">
-        旅行场景下的端侧/云端翻译方案对比与交互流程：输入延迟、可懂度、容错与隐私。
-      </p>
-      <a href="projects/voice-translate.html" class="project-card__link">查看详情 &rarr;</a>
-    </div>
-  </div>
-
-
-  <!-- 项目 3：儿童阅读 APP（Share 模块） -->
-  <div class="project-card" data-category="project">
-    <a href="projects/kids-reading.html">
-      <img src="assets/images/kids-reading-cover.webp" alt="儿童阅读 App Share 模块" class="project-card__img">
-    </a>
-    <div class="project-card__content">
-      <h3 class="project-card__title">
-        <a href="projects/kids-reading.html">儿童阅读 App · Share 模块</a>
-      </h3>
-      <p class="project-card__description">
-        家长-孩子共读的分享闭环：激励反馈、内容安全、社交平台适配与增长策略。
-      </p>
-      <a href="projects/kids-reading.html" class="project-card__link">查看详情 &rarr;</a>
-    </div>
-  </div>
-
+</div>
 </div>
 
 
@@ -892,24 +879,29 @@
   </p>
 
 <!-- ==== MINI NOTES LIST  ==== -->
+<!-- ==== MINI NOTES LIST  ==== -->
 <div class="notes-mini-list">
 
-  <a href="notes/fss-ai-note.html" class="notes-mini-item">
-    <span class="notes-mini-title">Fiber Speckle Sensing × AI：从信号到智能感知</span>
-    <span class="notes-mini-status status-active">进行中</span>
+  <!-- Note 01：GA4 调研和实操 demo -->
+  <a href="notes/ga4-demo.html" class="notes-mini-item">
+    <span class="notes-mini-title">GA4 调研和实操 demo</span>
+    <span class="notes-mini-status status-active">已完成</span>
   </a>
 
-  <a href="notes/ux-flow-latency.html" class="notes-mini-item">
-    <span class="notes-mini-title">实时语音翻译体验：延迟与可懂度</span>
-    <span class="notes-mini-status status-draft">草稿</span>
+  <!-- Note 02：美国社交 App 分享机制拆解 -->
+  <a href="notes/us-social-share.html" class="notes-mini-item">
+    <span class="notes-mini-title">美国社交 App 分享机制拆解</span>
+    <span class="notes-mini-status status-active">已完成</span>
   </a>
 
-  <a href="notes/seat-gesture-dataflow.html" class="notes-mini-item">
-    <span class="notes-mini-title">座舱手势识别：数据流结构探索</span>
-    <span class="notes-mini-status status-planning">计划中</span>
+  <!-- Note 03：实时语音翻译体验（延迟 × 可懂度 × 用户心智） -->
+  <a href="notes/voice-translate-experience.html" class="notes-mini-item">
+    <span class="notes-mini-title">实时语音翻译体验：延迟、可懂度与用户心智模型</span>
+    <span class="notes-mini-status status-active">已完成</span>
   </a>
 
 </div>
+
 
 
 
@@ -955,7 +947,7 @@
 
   <header class="note-card__header">
     <h3 class="note-card__title">美国社交 App 分享机制拆解</h3>
-    <span class="note-card__status status--draft">已完成</span>
+    <span class="note-card__status status--done">已完成</span>
     <!-- 如果你觉得已经完善，可以改成 已完成，并去掉 status--draft -->
     <!-- <span class="note-card__status">已完成</span> -->
   </header>
@@ -967,7 +959,7 @@
 
   <footer class="note-card__footer">
     <div class="note-card__meta">
-      分享机制调研 · 草稿中
+      分享机制调研 · 已完成
     </div>
     <div class="note-card__tags">
       <span class="note-card__tag">Social</span>
@@ -986,7 +978,7 @@
 
       <header class="note-card__header">
         <h3 class="note-card__title">实时语音翻译体验：延迟、可懂度与用户心智模型</h3>
-        <span class="note-card__status status--draft">草稿</span>
+        <span class="note-card__status status--done">已完成</span>
       </header>
 
       <p class="note-card__summary">
@@ -1013,66 +1005,94 @@
 
 
 
-    <!-- =========== Skills =========== -->
-    <section id="skills" class="skills section">
-      <h2 class="section__title">我的技能</h2>
-      <div class="skills__container container">
-        <div class="skill-item"><i class="fab fa-python"></i><span>Python</span></div>
-        <div class="skill-item"><i class="fas fa-cogs"></i><span>FFmpeg</span></div>
-        <div class="skill-item"><i class="fab fa-java"></i><span>Java</span></div>
-        <div class="skill-item"><i class="fas fa-superscript"></i><span>LaTeX</span></div>
-        <div class="skill-item"><i class="fas fa-cube"></i><span>MATLAB</span></div>
-        <div class="skill-item"><i class="fab fa-docker"></i><span>Docker</span></div>
-        <div class="skill-item"><i class="fas fa-brain"></i><span>AI/LLM 工具链</span></div>
-        <div class="skill-item"><i class="fab fa-git-alt"></i><span>Git</span></div>
-      </div>
-    </section>
+<!-- =========== Skills =========== -->
+<section id="skills" class="skills section">
+  <h2 class="section__title">我的技能</h2>
+
+  <div class="skills__container container">
+
+    <div class="skill-item"><i class="fab fa-python"></i><span>Python</span></div>
+    <div class="skill-item"><i class="fab fa-html5"></i><span>HTML</span></div>
+    <div class="skill-item"><i class="fas fa-square-root-alt"></i><span>LaTeX</span></div>
+    <div class="skill-item"><i class="fas fa-database"></i><span>MySQL</span></div>
+
+    <div class="skill-item"><i class="fab fa-figma"></i><span>Figma</span></div>
+    <div class="skill-item"><i class="fas fa-cube"></i><span>Rhino</span></div>
+    <div class="skill-item"><i class="fas fa-camera"></i><span>KeyShot</span></div>
+
+    <div class="skill-item"><i class="fas fa-image"></i><span>PS</span></div>
+    <div class="skill-item"><i class="fas fa-pen-nib"></i><span>AI</span></div>
+    <div class="skill-item"><i class="fab fa-github"></i><span>GitHub</span></div>
+
+  </div>
+</section>
 
 
 
 
-    <!-- =========== Contact =========== -->
-    <section id="contact" class="contact section">
-      <h2 class="section__title">联系我</h2>
-      <div class="contact__container container">
-        <p>欢迎交流产品、数学与开发相关话题。</p>
-        <div class="contact__buttons">
-          <!-- 把邮箱改成你的 -->
-          <a href="mailto:YOUR_EMAIL@example.com" class="button"><i class="fas fa-envelope"></i> 发送邮件</a>
-          <button class="button" id="wechat-btn"><i class="fab fa-weixin"></i> 添加微信</button>
-          <button class="button" id="qq-btn"><i class="fab fa-qq"></i> 添加QQ</button>
-        </div>
-      </div>
-    </section>
-  </main>
 
-  <!-- =========== Footer =========== -->
-  <footer class="footer">
-    <div class="footer__container container">
-      <p>&copy; 2025 Asta. All Rights Reserved.</p>
-    </div>
-  </footer>
+<!-- =========== Contact =========== -->
+<section id="contact" class="contact section">
+  <h2 class="section__title">联系我</h2>
 
-  <!-- =========== Modals =========== -->
-  <div class="modal" id="wechat-modal">
-    <div class="modal__content">
-      <span class="modal__close">&times;</span>
-      <h3>微信二维码</h3>
-      <img src="assets/images/wechat_qr.png" alt="WeChat QR Code">
-      <p>扫一扫添加我的微信</p>
+  <div class="contact__container container">
+    <p class="contact__subtitle">
+      欢迎交流产品、设计与AI相关话题。
+    </p>
+
+    <div class="contact__buttons">
+      <!-- 邮件 -->
+      <a href="mailto:2044186078@qq.com" class="button contact-btn">
+        <i class="fas fa-envelope"></i>
+        <span>发送邮件</span>
+      </a>
+
+      <!-- 微信 -->
+      <button class="button contact-btn" id="wechat-btn" type="button">
+        <i class="fab fa-weixin"></i>
+        <span>添加微信</span>
+      </button>
+
+      <!-- QQ -->
+      <button class="button contact-btn" id="qq-btn" type="button">
+        <i class="fab fa-qq"></i>
+        <span>添加QQ</span>
+      </button>
     </div>
   </div>
+</section>
 
-  <div class="modal" id="qq-modal">
-    <div class="modal__content">
-      <span class="modal__close">&times;</span>
-      <h3>QQ二维码</h3>
-      <img src="assets/images/qq_qr.png" alt="QQ QR Code">
-      <p>扫一扫添加我的QQ</p>
-    </div>
+<!-- =========== Footer =========== -->
+<footer class="footer">
+  <div class="footer__container container">
+    <p>&copy; 2025 Asta. All Rights Reserved.</p>
   </div>
+</footer>
 
-  <!-- 主脚本文件 -->
-  <script src="assets/js/main.js"></script>
+<!-- =========== Modals =========== -->
+
+<!-- 微信二维码弹窗 -->
+<div class="modal" id="wechat-modal">
+  <div class="modal__content">
+    <span class="modal__close">&times;</span>
+    <h3>微信二维码</h3>
+    <img src="assets/images/wechat_qr.png" alt="WeChat QR Code">
+    <p>扫一扫添加我的微信</p>
+  </div>
+</div>
+
+<!-- QQ 二维码弹窗 -->
+<div class="modal" id="qq-modal">
+  <div class="modal__content">
+    <span class="modal__close">&times;</span>
+    <h3>QQ 二维码</h3>
+    <img src="assets/images/qq_qr.png" alt="QQ QR Code">
+    <p>扫一扫添加我的 QQ</p>
+  </div>
+</div>
+
+<!-- 主脚本文件 -->
+<script src="assets/js/main.js"></script>
 </body>
 </html>
+

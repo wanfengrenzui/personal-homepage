@@ -107,41 +107,68 @@
     0 0 0 1px rgba(129, 140, 248, 0.9);
 }
 
-/* 头部信息：日期 + badge */
+/* ========== 头部：时间 + 岗位 badge ========== */
+
 .internship-card__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: .6rem;
-  gap: .75rem;
+  margin-bottom: 0.6rem;
+  gap: 0.75rem;
 }
 
 .internship-card__date {
-  font-size: 0.84rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
   color: rgba(148, 163, 184, 0.95);
 }
 
+/* 强化版岗位 Badge（更亮、更有层级） */
 .internship-card__badge {
-  font-size: 0.78rem;
-  padding: 0.2rem 0.8rem;
-  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  padding: 0.28rem 1rem;
+  border-radius: 12px;
 
   border: 1px solid rgba(86, 174, 255, 0.9);
-  background: radial-gradient(circle at top left,
-    rgba(56, 189, 248, 0.4),
-    rgba(15, 23, 42, 1)
-  );
-  color: #e5edff;
+  background: linear-gradient(
+      135deg,
+      rgba(86, 174, 255, 0.35) 0%,
+      rgba(40, 80, 160, 0.35) 100%
+    ),
+    rgba(15, 23, 42, 0.95);
+
+  color: #e8f2ff;
+  letter-spacing: 0.02em;
   white-space: nowrap;
+
+  box-shadow:
+    0 0 8px rgba(86, 174, 255, 0.45),
+    0 0 0 1px rgba(86, 174, 255, 0.65);
+  transition: 0.25s ease-out;
 }
 
-/* 标题 + 内容 */
+.internship-card__badge:hover {
+  border-color: rgba(191, 219, 254, 1);
+  color: #ffffff;
+  box-shadow:
+    0 0 12px rgba(86, 174, 255, 0.75),
+    0 0 0 1px rgba(129, 140, 248, 1);
+  transform: translateY(-1px);
+}
+
+/* ========== 公司主标题 ========== */
+/* 上海敏开科技有限公司 · 产品经理实习 / 南京宜家 · 市场部实习生 */
+
 .internship-card__title {
-  font-size: 1.02rem;
-  margin-bottom: 0.4rem;
-  color: #f9fafb;
+  font-size: 2.2rem;         /* 主标题明显放大 */
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.9rem;
 }
 
+/* 总结段落（项目背景文本） */
 .internship-card__summary {
   font-size: 0.9rem;
   line-height: 1.7;
@@ -168,10 +195,111 @@
   color: rgba(226, 232, 240, 0.9);
 }
 
-/* Hover tag 轻微反馈 */
 .internship-card__tag:hover {
   border-color: rgba(191, 219, 254, 0.95);
   color: #f9fafb;
+}
+
+/* ============================================
+   子项目卡片（ReadTogether / Gensmo / 优势星球 / 宜家）
+   ============================================ */
+
+/* 改为纵向一列往下排 */
+.internship-card__projects {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  margin-top: 1.5rem;
+}
+
+/* 每个小项目卡片 */
+.internship-project {
+  background: var(--container-bg-color);
+  border-radius: 0.9rem;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--box-shadow);
+  padding: 1.25rem 1.4rem;
+  transition: 0.25s ease;
+}
+
+.internship-project:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+/* 子项目标题高亮：
+   Read Together · Share & Login 模块
+   Gensmo · AI 试穿产品（QA 测试）
+   🧭 优势星球 · 用户访谈与需求洞察
+   南京宜家 · 市场部实习生
+*/
+.internship-project__title {
+  font-size: 1.35rem;        /* 比正文明显大一档 */
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: #a8cfff;            /* 清亮蓝色，和整体风格贴合 */
+}
+
+/* 子项目简介文本 */
+.internship-project__summary {
+  font-size: 0.9rem;
+  color: var(--text-color-light);
+  line-height: 1.6;
+  margin-bottom: 0.6rem;
+}
+
+/* 有序步骤：1. 标题 + 解释 */
+.internship-steps {
+  margin: 0;
+  padding-left: 1.6rem;    /* 给数字留空间 */
+  list-style: decimal;
+}
+
+.internship-step {
+  margin-bottom: 0.9rem;
+}
+
+/* 数字序号：蓝色加粗 */
+.internship-steps li::marker {
+  color: #7cc0ff;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+/* 上面一行：步骤标题（重点句） */
+.internship-step__title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #e5f1ff;
+}
+
+/* 下面一行：解释文本 */
+.internship-step__desc {
+  margin-top: 0.2rem;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-color-light);
+}
+
+/* ===== “项目背景 / 我的工作” 小标签 ===== */
+
+.internship-section {
+  margin-top: 0.6rem;
+  margin-bottom: 1.1rem;
+}
+
+.internship-section__label {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(124, 192, 255, 0.1);
+  color: #7cc0ff;
+  margin-bottom: 0.35rem;
 }
 
 /* ============================================
@@ -211,231 +339,12 @@
     flex-direction: column;
     align-items: flex-start;
   }
-}
-/* ===== 强化版岗位 Badge（更大、更亮、更突出） ===== */
 
-.internship-card__badge {
-  font-size: 0.92rem;                      /* 原来 0.78，现在更显眼 */
-  font-weight: 600;                        /* 字体更有力量 */
-  padding: 0.28rem 1rem;
-  border-radius: 12px;
-
-  border: 1px solid rgba(86, 174, 255, 0.9);
-
-  /* 更有层次感的渐变（科技蓝） */
-  background: linear-gradient(
-      135deg,
-      rgba(86, 174, 255, 0.35) 0%,
-      rgba(40, 80, 160, 0.35) 100%
-    ),
-    rgba(15, 23, 42, 0.95);
-
-  color: #e8f2ff;
-  letter-spacing: 0.02em;
-  white-space: nowrap;
-
-  /* 轻微光晕效果 */
-  box-shadow:
-    0 0 8px rgba(86, 174, 255, 0.45),
-    0 0 0 1px rgba(86, 174, 255, 0.65);
-
-  transition: 0.25s ease-out;
-}
-
-/* Hover 效果：更亮、更有层次 */
-.internship-card__badge:hover {
-  border-color: rgba(191, 219, 254, 1);
-  color: #ffffff;
-  box-shadow:
-    0 0 12px rgba(86, 174, 255, 0.75),
-    0 0 0 1px rgba(129, 140, 248, 1);
-  transform: translateY(-1px);
-}
-
-/* ===============================
-   Internships – Sub Project Cards
-   小项目卡片（ReadTogether / Gensmo / 优势星球）
-   =============================== */
-
-.internship-card__projects {
-  display: grid;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-/* 平板：两列 */
-@media (min-width: 768px) {
-  .internship-card__projects {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .internship-card__title {
+    font-size: 1.8rem;   /* 移动端适当缩一点，防止换行太多 */
   }
-}
 
-/* 桌面：三列 */
-@media (min-width: 1024px) {
-  .internship-card__projects {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .internship-project__title {
+    font-size: 1.2rem;
   }
-}
-
-.internship-project {
-  background: var(--container-bg-color);
-  border-radius: 0.9rem;
-  border: 1px solid var(--border-color);
-  box-shadow: var(--box-shadow);
-  padding: 1.25rem 1.4rem;
-  transition: 0.25s ease;
-}
-
-.internship-project:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-}
-
-.internship-project__title {
-  font-size: 1rem;
-  font-weight: 700;
-  margin-bottom: 0.4rem;
-}
-
-.internship-project__summary {
-  font-size: 0.9rem;
-  color: var(--text-color-light);
-  line-height: 1.6;
-  margin-bottom: 0.6rem;
-}
-
-.internship-project__list {
-  padding-left: 1.1rem;
-  margin: 0;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-.internship-project__list li + li {
-  margin-top: 0.2rem;
-}
-/* ===== Internships – 子项目改为纵向排列 ===== */
-
-.internship-card__projects {
-  display: flex;
-  flex-direction: column;   /* 一列往下排 */
-  gap: 1.75rem;
-  margin-top: 1.5rem;
-}
-
-/* ===== 每个子项目卡片维持之前样式（如果你已有就不用重复） ===== */
-/* 这里只是确保有基础外观，没有的话可以补上 */
-
-.internship-project {
-  background: var(--container-bg-color);
-  border-radius: 0.9rem;
-  border: 1px solid var(--border-color);
-  box-shadow: var(--box-shadow);
-  padding: 1.25rem 1.4rem;
-}
-
-/* ===== 有序步骤列表：1. 标题 + 下面解释 ===== */
-
-.internship-steps {
-  margin: 0;
-  padding-left: 1.6rem;    /* 给数字留一点空间 */
-  list-style: decimal;
-}
-
-.internship-step {
-  margin-bottom: 0.9rem;
-}
-
-/* 把“1.”这个序号染成蓝色、加粗 */
-.internship-steps li::marker {
-  color: var(--primary-color);
-  font-weight: 600;
-  font-size: 1.05rem;
-}
-
-/* 上面一行：标题（重点） */
-.internship-step__title {
-  font-weight: 600;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: var(--title-color);
-}
-
-/* 下面一行：解释（略浅一点） */
-.internship-step__desc {
-  margin-top: 0.2rem;
-  font-size: 0.9rem;
-  line-height: 1.7;
-  color: var(--text-color-light);
-}
-/* ===== 公司 + 职位强化层级 ===== */
-.internship-card__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.6rem;
-}
-
-.internship-card__date {
-  font-size: 0.9rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--text-color-light);
-}
-
-.internship-card__badge {
-  padding: 0.25rem 0.8rem;
-  border-radius: 999px;
-  border: 1px solid rgba(124, 192, 255, 0.5);
-  background: rgba(124, 192, 255, 0.08);
-  color: #7cc0ff;
-  font-size: 0.85rem;
-  font-weight: 600;
-}
-
-/* 公司名称标题更大、更重 */
-.internship-card__title {
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
-}
-
-/* ===== 项目背景 / 我的工作 标签块 ===== */
-.internship-section {
-  margin-top: 0.6rem;
-  margin-bottom: 1.1rem;
-}
-
-.internship-section__label {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.15rem 0.6rem;
-  border-radius: 999px;
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  background: rgba(124, 192, 255, 0.1);   /* 浅浅蓝底 */
-  color: #7cc0ff;
-  margin-bottom: 0.35rem;
-}
-
-.internship-card__summary,
-.internship-project__summary {
-  font-size: 0.9rem;
-  line-height: 1.7;
-  color: var(--text-color-light);
-}
-
-/* 步骤标题再强调一点（和你想要的“重点句”对齐） */
-.internship-step__title {
-  font-weight: 600;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #e5f1ff;
-}
-
-/* 有序列表数字已经是蓝色，如果想更亮 */
-.internship-steps li::marker {
-  color: #7cc0ff;
-  font-weight: 600;
 }
