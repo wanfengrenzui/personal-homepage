@@ -9,9 +9,11 @@
    1) NOTES MINI LIST（简约列表）
    ============================================================ */
 
+/* Notes 顶部 mini list：缩短一点，并水平居中 */
 .notes-mini-list {
-  margin-top: 1.4rem;
-  margin-bottom: 1.8rem;
+  max-width: 1200px;                /* 控制整体长度：比全屏短，但比卡片略窄就行 */
+  margin: 1.4rem auto 1.8rem;       /* 上下间距保持，左右 auto 居中 */
+
   border-radius: 22px;
   overflow: hidden;
 
@@ -21,6 +23,7 @@
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 }
+
 
 /* 单行 */
 .notes-mini-item {
@@ -625,4 +628,10 @@
     0 20px 40px rgba(15, 23, 42, 0.9),
     0 0 0 1px rgba(15, 23, 42, 0.9);
   width: 100%;
+}
+/* 只针对 NOTES 区域的副标题做居中和宽度限制 */
+#notes .section__subtitle {
+  max-width: 720px;                 /* 文案不要太长，读起来舒服 */
+  margin: 0.75rem auto 1.5rem;      /* 上下间距 + 左右居中 */
+  text-align: center;
 }
