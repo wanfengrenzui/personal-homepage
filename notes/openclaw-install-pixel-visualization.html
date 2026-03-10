@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OpenClaw 安装与像素风可视化实践 · Notes</title>
+
+  <!-- 字体 & 图标 & 全局样式 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="icon" href="../assets/images/favicon.ico" />
+</head>
+
+<body>
+  <!-- =========== Header（跟首页统一） =========== -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="../index.html" class="nav__logo">Asta</a>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="../index.html#hero" class="nav__link">首页</a></li>
+          <li class="nav__item"><a href="../index.html#about" class="nav__link">关于我</a></li>
+          <li class="nav__item"><a href="../index.html#projects" class="nav__link">项目</a></li>
+          <li class="nav__item"><a href="../index.html#skills" class="nav__link">技能</a></li>
+          <li class="nav__item"><a href="../index.html#contact" class="nav__link">联系</a></li>
+        </ul>
+      </div>
+
+      <div class="nav__actions">
+        <i class="fas fa-moon theme-switcher" id="theme-button"></i>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- =========== 主内容 =========== -->
+  <main>
+    <section class="note-detail section">
+      <div class="note-detail__container container">
+
+        <!-- 顶部返回按钮 -->
+        <a href="../index.html#notes" class="note-detail__back">← 返回 Notes 列表</a>
+
+        <!-- 主卡片 -->
+        <article class="note-detail__card">
+
+          <!-- Header -->
+          <header class="note-detail__header">
+            <div class="note-detail__title-block">
+              <h1 class="note-detail__title">
+                OpenClaw 安装与像素风可视化实践
+              </h1>
+              <p class="note-detail__subtitle">
+                记录 OpenClaw 在 macOS 环境的安装流程、常见问题排查，以及基于像素风表现的可视化要点整理。
+              </p>
+            </div>
+
+            <span class="note-detail__status">已完成</span>
+          </header>
+
+          <!-- Meta 信息 -->
+          <section class="note-detail__meta">
+            <div class="note-detail__meta-group">
+              <span class="note-detail__meta-label">笔记类型</span>
+              <span class="note-detail__meta-value">技术文档 · OpenClaw / Pixel Visualization</span>
+            </div>
+
+            <div class="note-detail__meta-group">
+              <span class="note-detail__meta-label">创建时间</span>
+              <span class="note-detail__meta-value">2026-03</span>
+            </div>
+
+            <div class="note-detail__meta-group">
+              <span class="note-detail__meta-label">最后更新</span>
+              <span class="note-detail__meta-value">2026-03</span>
+            </div>
+
+            <div class="note-detail__tags">
+              <span class="note-detail__tag">OpenClaw</span>
+              <span class="note-detail__tag">Installation</span>
+              <span class="note-detail__tag">Pixel Art</span>
+              <span class="note-detail__tag">Visualization</span>
+            </div>
+          </section>
+
+          <!-- 正文 -->
+          <section class="note-detail__content">
+            <h2>安装时常见困难（实战记录）</h2>
+            <p>
+              在 macOS 环境里，OpenClaw 安装阶段最容易卡在 4 个点：
+              1）命令能执行但路径不在 PATH；
+              2）API Key 已创建但没有 export 到当前 shell；
+              3）代理 / 网络导致首次拉取资源超时；
+              4）可视化窗口能开但像素边缘发糊（默认缩放和过滤导致）。
+            </p>
+            <p>
+              建议先做环境体检再安装，优先验证「命令是否可见」「环境变量是否生效」「CLI 帮助是否可读」，
+              这样后续问题排查成本最低。
+            </p>
+
+            <h2>操作指南（推荐安装顺序）</h2>
+            <p>
+              以下顺序用于减少返工。具体安装命令请以你当前 OpenClaw 版本文档为准。
+            </p>
+            <ol>
+              <li>检查基础环境：终端、网络、权限、可执行路径。</li>
+              <li>安装 OpenClaw CLI（按官方发布方式安装）。</li>
+              <li>用 <code>--help</code> 验证子命令是否可用。</li>
+              <li>配置 API（临时 export 或写入 shell 配置文件）。</li>
+              <li>启动 <code>openclaw tui</code> 并进行可视化参数设置。</li>
+            </ol>
+
+            <p>安装完成后的基础验证：</p>
+            <pre><code>openclaw --help
+openclaw tui --help
+which openclaw</code></pre>
+
+            <h2>API 配置分支（你提到的两种模式）</h2>
+            <p><strong>模式 A：没有提前配置环境变量</strong>，每次开新终端都需要手动 export：</p>
+            <pre><code>export OPENCLAW_API_KEY="your_api_key"
+export OPENCLAW_BASE_URL="https://your-api-endpoint"
+
+# 可选：确认是否已注入当前 shell
+echo "$OPENCLAW_API_KEY"
+
+openclaw tui</code></pre>
+
+            <p><strong>模式 B：已经写入 shell 配置</strong>（例如 <code>~/.zshrc</code>），直接启动：</p>
+            <pre><code>openclaw tui</code></pre>
+
+            <p>如果你希望长期生效，可写入 shell 配置文件后重载：</p>
+            <pre><code>echo 'export OPENCLAW_API_KEY="your_api_key"' >> ~/.zshrc
+echo 'export OPENCLAW_BASE_URL="https://your-api-endpoint"' >> ~/.zshrc
+source ~/.zshrc</code></pre>
+
+            <h2>像素风可视化操作（TUI 内外两层）</h2>
+            <p>
+              目标是保证像素边缘清晰、缩放不抖动、不同分辨率下观感一致。实践中优先遵循：
+              整数倍缩放（2x/3x/4x）→ 关闭线性过滤（Nearest）→ 固定基准分辨率。
+            </p>
+            <p>命令层建议先查看当前版本支持的可视化参数：</p>
+            <pre><code>openclaw tui --help
+openclaw viz --help</code></pre>
+
+            <p>若你的版本支持可视化参数，可按下面思路设置（示例，按实际参数名替换）：</p>
+            <pre><code># 示例：优先整数缩放 + nearest 过滤 + 固定帧率
+openclaw tui --scale 3 --filter nearest --fps 60</code></pre>
+
+            <p>
+              若你的版本采用 TUI 内部配置界面，建议在 Visualization / Render 设置里依次检查：
+              Scale、Filtering、Grid/Overlay、Frame Limit、VSync。保存配置后再重启 TUI 验证是否生效。
+            </p>
+
+            <h2>排障速查</h2>
+            <pre><code># 1) 命令找不到
+which openclaw
+
+# 2) Key 未注入
+echo "$OPENCLAW_API_KEY"
+
+# 3) 启动失败时先看帮助和版本
+openclaw --help
+openclaw --version</code></pre>
+
+            <h2>文档替换说明（等你新文件）</h2>
+            <p>
+              你重新提供的新文档发来后，我会直接替换下方内嵌 PDF 文件，不改页面结构和入口排序。
+            </p>
+
+            <h2>PDF 在线阅读</h2>
+            <p>下面内嵌完整 PDF，可直接滚动阅读：</p>
+
+            <div class="note-detail__pdf">
+              <iframe
+                src="../assets/pdf/openclaw-install-troubleshooting-and-visualization.pdf#toolbar=0"
+                width="100%"
+                height="900"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </section>
+
+          <!-- 关联信息 -->
+          <section class="note-detail__related">
+            <div class="note-detail__related-block">
+              <h3>关联方向</h3>
+              <ul>
+                <li>经典游戏复刻与运行环境配置</li>
+                <li>像素风 UI/场景渲染规范整理</li>
+              </ul>
+            </div>
+          </section>
+
+        </article>
+
+        <!-- 底部导航条 -->
+        <div class="note-detail__nav">
+          <a href="../index.html#notes" class="note-detail__nav-link">← 返回 Notes 列表</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__container container">
+      <p>&copy; 2025 Asta. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Main JS -->
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
