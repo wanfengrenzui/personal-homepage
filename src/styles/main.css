@@ -1,0 +1,284 @@
+/* ===============================================
+   ALBERT'S HOMEPAGE - MAIN STYLESHEET V3 (ELEGANT BLUE + PHOTO BG)
+   CLEAN VERSION (Education & Notes REMOVED)
+   ===============================================
+   1. IMPORTS
+   2. CSS VARIABLES (THEME)
+   3. BASE & RESET
+   4. REUSABLE COMPONENTS
+   5. MODAL
+   =============================================== */
+
+/* ===============================================
+   1. IMPORTS
+   =============================================== */
+
+/* 组件级样式（都在 assets/css/components/ 下面） */
+/* 1. IMPORTS */
+
+@import url('components/_header.css');
+@import url('components/_hero.css');
+@import url('components/_about.css');
+@import url('components/_projects.css');
+@import url('components/_socials.css');
+@import url('components/_skills.css');
+@import url('components/_contact.css');
+@import url('components/_footer.css');
+@import url('components/_internships.css');
+@import url('components/_project-detail.css');
+
+/* 这两行现在要改成这样 ↓ */
+@import url('components/education.css');
+@import url('components/notes.css');
+
+
+
+/* ===============================================
+   2. CSS VARIABLES (NEW ELEGANT BLUE THEME)
+   =============================================== */
+:root {
+    /* 直接复制 dark 的变量进来 */
+    --primary-color: #56aeff;
+    --primary-color-alt: #80bfff;
+    --highlight-color: #007bff;
+    --title-color: #f8f9fa;
+    --text-color: #adb5bd;
+    --text-color-light: #6c757d;
+    --body-bg-color: #121212;
+    --container-bg-color: rgba(23, 29, 41, 0.8);
+    --border-color: #343a40;
+    --box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    --bg-overlay-color: rgba(0, 0, 0, 0.6);
+    --font-primary: 'Noto Sans SC', 'Poppins', sans-serif;
+    --header-height: 4.5rem;
+    --section-padding: 5rem 0;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --h1-font-size: 3.25rem;
+    --h2-font-size: 2rem;
+    --h3-font-size: 1.35rem;
+    --border-radius: 16px;
+    --transition: all 0.3s ease;
+}
+
+
+/* ===============================================
+   3. BASE & RESET STYLES
+   =============================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding-top: var(--header-height);
+    transition: background-color 0.3s, color 0.3s;
+
+    background-image: url('/assets/images/background.webp');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 0;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: var(--bg-overlay-color);
+    z-index: -1;
+    transition: var(--transition);
+}
+
+h1, h2, h3 {
+    color: var(--title-color);
+    font-weight: 700;
+}
+
+ul { list-style: none; }
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+a:hover { color: var(--primary-color-alt); }
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+main {
+    display: block;
+}
+
+/* ===============================================
+   4. REUSABLE COMPONENTS & UTILITIES
+   =============================================== */
+.section {
+    padding: var(--section-padding);
+}
+
+.section__title {
+    font-size: var(--h2-font-size);
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+.section__title::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.section__subtitle {
+    max-width: 720px;
+    margin: -1.5rem auto 0;
+    text-align: center;
+    color: rgba(226, 232, 240, 0.82);
+}
+
+.container {
+    max-width: 1120px;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.button {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.9rem 2rem;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    border: 2px solid transparent;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.nav__actions {
+    display: flex;
+    align-items: center;
+}
+.button:hover {
+    background: var(--primary-color-alt);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.button--ghost {
+    background: transparent;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.button--ghost:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+/* ===============================================
+   5. MODAL STYLES
+   =============================================== */
+.modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+}
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal__content {
+    background-color: var(--container-bg-color);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    position: relative;
+    transform: scale(0.9);
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.modal.active .modal__content {
+    transform: scale(1);
+}
+
+.modal__content h3 {
+    margin-bottom: 1rem;
+    font-size: var(--h3-font-size);
+}
+
+.modal__content img {
+    max-width: 250px;
+    margin-bottom: 1rem;
+}
+
+.modal__close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--text-color-light);
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+}
+
+
+/* === 全局 Section 间距加大，使排版更呼吸 === */
+.section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.notes-index-page .section__title {
+    margin-bottom: 1rem;
+}
+
+.notes-index__header {
+    margin-bottom: 2rem;
+}
+

@@ -1,0 +1,60 @@
+/* Contact Section Styles */
+.contact__container {
+  max-width: 700px;
+  text-align: center;
+}
+
+.contact__container p {
+  margin-bottom: 2rem;
+}
+
+/* 按钮外层容器：只保留一个 class 名 */
+.contact__buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+/* Contact 按钮（调整圆角） */
+.button.contact-btn {
+  border-radius: 24px;   /* 🔥 圆角从 48px 改为 24px */
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 1.1rem 2.6rem;
+  transition: 0.3s ease;
+}
+
+/* Contact 按钮：空心圆角 + 蓝色边框（小圆角版本） */
+.button.contact-btn {
+  border-radius: 20px;                          /* ← 圆角缩小到 20px */
+  padding: 1.1rem 2.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  background: transparent;
+  border: 2px solid rgba(124, 176, 255, 0.9);
+  color: #ffffff;
+
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: 0.25s ease;
+}
+
+/* 图标 */
+.button.contact-btn i {
+  font-size: 1.2rem;
+}
+
+/* Hover 态 */
+.button.contact-btn:hover {
+  background: rgba(124, 176, 255, 0.15);
+  box-shadow: 0 10px 24px rgba(110, 160, 255, 0.35);
+  transform: translateY(-6px);
+}
