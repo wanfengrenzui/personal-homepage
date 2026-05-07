@@ -35,7 +35,7 @@ export const aboutData = {
       detail: "南京工程学院 艺术与设计学院 工业设计专业",
     },
   ],
-  tags: ["产品设计", "AI/数据分析", "人机交互", "UI设计"],
+  tags: ["产品设计", "AI coding", "人机交互", "UI设计"],
 };
 
 export const internshipCards = [
@@ -431,7 +431,14 @@ openclaw --version</code></pre>
       updatedAt: "2025-04",
       footer: "产品经理实习笔记 · 已完成",
     },
-    tags: ["GA4", "Analytics", "Tracking", "FSS / AI 关联"],
+    tags: [
+      "GA4",
+      "Analytics",
+      "Tracking",
+      "Wearable Devices",
+      "User Research",
+      "Computer Vision",
+    ],
     contentHtml: `
       <h2>概要说明</h2>
       <p>本页主要用于集中存放《GA 调研和实操 demo》这份 PDF，方便随时在线浏览；后续如果有新的追踪方案、事件设计或实验记录，也可以继续在这里补充文字小结。</p>

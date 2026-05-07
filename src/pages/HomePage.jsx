@@ -67,7 +67,7 @@ function HomePage() {
                 </div>
               </div>
               <div className="hero__image">
-                <img src={heroData.avatar} alt="Asta Avatar" />
+                <img src={heroData.avatar} alt="Asta Avatar" loading="eager" fetchPriority="high" decoding="async" />
               </div>
             </div>
           </section>
@@ -187,7 +187,13 @@ function HomePage() {
                   <article className="education-card">
                     <header className="education-card__header">
                       <div className="education-card__icon">
-                        <img src={card.logo} alt={card.logoAlt} className="education-card__logo" />
+                        <img
+                          src={card.logo}
+                          alt={card.logoAlt}
+                          className="education-card__logo"
+                          loading="lazy"
+                          decoding="async"
+                        />
                       </div>
                       <div className="education-card__meta">
                         <h3 className="education-card__school">{card.school}</h3>
@@ -297,7 +303,13 @@ function HomePage() {
                   visibleProjects.map((project) => (
                     <div className="project-card" key={project.slug}>
                       <Link to={`/projects/${project.slug}`}>
-                        <img src={project.cover} alt={project.coverAlt} className="project-card__img" />
+                        <img
+                          src={project.cover}
+                          alt={project.coverAlt}
+                          className="project-card__img"
+                          loading="lazy"
+                          decoding="async"
+                        />
                       </Link>
 
                       <div className="project-card__content">

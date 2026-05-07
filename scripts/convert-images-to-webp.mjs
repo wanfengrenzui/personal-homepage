@@ -4,6 +4,8 @@ import sharp from "sharp";
 
 const ROOTS = ["assets/images", "public/assets/images"];
 const CONVERT_EXTENSIONS = new Set([".png", ".jpg", ".jpeg"]);
+const MAX_WIDTH = 1800;
+const WEBP_QUALITY = 82;
 
 async function walk(dir) {
   const entries = await fs.readdir(dir, { withFileTypes: true });
@@ -26,7 +28,10 @@ async function convertImage(filePath) {
   }
 
   const outputPath = filePath.replace(/\.(png|jpg|jpeg)$/i, ".webp");
-  await sharp(filePath).webp({ quality: 88 }).toFile(outputPath);
+  await sharp(filePath)
+    .resize({ width: MAX_WIDTH, withoutEnlargement: true, fit: "inside" })
+    .webp({ quality: WEBP_QUALITY })
+    .toFile(outputPath);
   return outputPath;
 }
 

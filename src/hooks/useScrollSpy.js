@@ -10,29 +10,39 @@ export function useScrollSpy(enabled = true) {
       return undefined;
     }
 
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      let current = "hero";
+    const sections = HOME_SECTION_IDS
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
 
-      HOME_SECTION_IDS.forEach((id) => {
-        const section = document.getElementById(id);
-        if (!section) {
-          return;
+    if (!sections.length) {
+      return undefined;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        let nextActiveId = null;
+
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            nextActiveId = entry.target.id;
+            break;
+          }
         }
 
-        const sectionTop = section.offsetTop - 96;
-        const sectionBottom = sectionTop + section.offsetHeight;
-        if (scrollY >= sectionTop && scrollY < sectionBottom) {
-          current = id;
+        if (nextActiveId) {
+          setActiveId(nextActiveId);
         }
-      });
+      },
+      {
+        root: null,
+        rootMargin: "-96px 0px -55% 0px",
+        threshold: 0.01,
+      },
+    );
 
-      setActiveId(current);
-    };
+    sections.forEach((section) => observer.observe(section));
 
-    handleScroll();
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => observer.disconnect();
   }, [enabled]);
 
   return activeId;

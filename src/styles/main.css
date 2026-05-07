@@ -94,6 +94,12 @@ body {
     z-index: 0;
 }
 
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+    }
+}
+
 body::before {
     content: '';
     position: fixed;

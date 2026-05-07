@@ -10,7 +10,7 @@
 
 **[➡️ 在线地址](https://asta.net.cn/)**
 
-> 如需展示预览图，可自行在 `assets/images/screenshot.png` 放一张截图后在 README 中引用。
+> 如需展示预览图，可自行在 `assets/images/screenshot.webp` 放一张截图后在 README 中引用。
 
 ---
 
@@ -51,7 +51,7 @@ cd personal-homepage
 ## 🎨 Customize
 
 - 文案：编辑 `index.html` 中各区块（Hero、关于、实习、学习经历、项目&笔记、技能、联系）。
-- 图片：替换 `assets/images/` 下的 `avatar.webp`、背景 `background.jpg`、各项目封面、微信/QQ 二维码。
+- 图片：替换 `assets/images/` 下的 `avatar.webp`、背景 `background.webp`、各项目封面、微信/QQ 二维码。
 - 样式：在 `assets/css/main.css` 顶部修改 CSS 变量；组件样式在 `assets/css/components/`。
 - 互动：`assets/js/main.js` 负责导航、模态、筛选与 GA4 事件；如不需要统计，移除 `gtag` 脚本及相关代码。
 - 域名：更换自定义域名时更新 `CNAME`。
