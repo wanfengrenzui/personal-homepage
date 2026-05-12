@@ -278,7 +278,7 @@ export const projects = [
     category: "design-project",
     title: "Starry Sleep Project",
     subtitle: "Let Darkness No Longer Be Alone.",
-    cover: "/assets/images/starry-sleep-project.webp",
+    cover: "/assets/images/thumbs/starry-sleep-project.webp",
     coverAlt: "Starry Sleep Project",
     description:
       "Let Darkness No Longer Be Alone —— 围绕夜间黑暗与睡眠体验的情绪光环境设计实验。",
@@ -292,7 +292,7 @@ export const projects = [
     category: "design-project",
     title: "三方对弈棋局 · Chess",
     subtitle: "Three-player battle —— 多方博弈机制与策略空间探索",
-    cover: "/assets/images/chess.webp",
+    cover: "/assets/images/thumbs/chess.webp",
     coverAlt: "Three-player battle chess",
     description: "Three-player battle —— 一款探索多方策略与博弈机制的三人棋局设计实验。",
     images: [
@@ -306,7 +306,7 @@ export const projects = [
     title: "Glasses · 模块化眼镜",
     subtitle:
       "SwiftView Versatile Module Glasses —— 模块化镜片、可拓展视野与交互体验研究",
-    cover: "/assets/images/glasses.webp",
+    cover: "/assets/images/thumbs/glasses.webp",
     coverAlt: "SwiftView Versatile Module Glasses",
     description:
       "SwiftView —— Versatile Module Glasses，探索模块化镜片与智能视野扩展交互。",
@@ -321,7 +321,7 @@ export const projects = [
     category: "design-project",
     title: "全季候模块清洁车",
     subtitle: "基于 AHP 法与模糊综合评价的全季候城市环卫问题综合治理系统研究",
-    cover: "/assets/images/all-weather-cleaning-vehicle.webp",
+    cover: "/assets/images/thumbs/all-weather-cleaning-vehicle.webp",
     coverAlt: "全季候模块清洁车",
     description:
       "基于 AHP 法和模糊综合评价的全季候城市环卫问题综合治理系统研究。",
@@ -332,7 +332,7 @@ export const projects = [
     category: "design-project",
     title: "火星基地设计 · 重黎号",
     subtitle: "基于 4D 打印技术的火星栖居结构与任务支持系统设计",
-    cover: "/assets/images/mars-base.webp",
+    cover: "/assets/images/thumbs/mars-base.webp",
     coverAlt: "火星基地设计 - 重黎号",
     description:
       "重黎号——基于 4D 打印技术的火星基地设计，探索极端环境下可重构栖居单元与任务支持系统。",
@@ -343,7 +343,7 @@ export const projects = [
     category: "design-project",
     title: "模块化宜家机器人",
     subtitle: "面向生活场景与家具生态的创新设计系统研究",
-    cover: "/assets/images/IKEA-robots.webp",
+    cover: "/assets/images/thumbs/IKEA-robots.webp",
     coverAlt: "模块化宜家机器人",
     description: "模块化宜家机器人：面向生活场景与家具生态的创新设计系统研究。",
     images: imageRange("IKEA-robots", 39, 63),
