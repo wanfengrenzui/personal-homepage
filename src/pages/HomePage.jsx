@@ -317,9 +317,21 @@ function HomePage() {
                           <Link to={`/projects/${project.slug}`}>{project.title}</Link>
                         </h3>
                         <p className="project-card__description">{project.description}</p>
-                        <Link to={`/projects/${project.slug}`} className="project-card__link">
-                          查看详情 &rarr;
-                        </Link>
+                        <div className="project-card__actions">
+                          <Link to={`/projects/${project.slug}`} className="project-card__link">
+                            查看详情 &rarr;
+                          </Link>
+                          {project.github ? (
+                            <a
+                              href={project.github}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="project-card__github"
+                            >
+                              GitHub
+                            </a>
+                          ) : null}
+                        </div>
                       </div>
                     </div>
                   ))
