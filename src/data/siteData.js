@@ -392,6 +392,7 @@ export const projects = [
     description:
       "构建面向卒中患者相关研究资料的 Agentic RAG 平台，支持本地 PDF 知识库、向量检索、问答生成与研究辅助分析。",
     github: "https://github.com/wanfengrenzui/Agentic-rag-platform-for-stroke-patients",
+    prdSource: "/assets/docs/agentic-rag-prd-v1.md",
     meta: [
       { label: "项目类型", value: "Agentic RAG / Healthcare AI" },
       { label: "技术栈", value: "FastAPI, React/Vite, FAISS, DeepSeek" },

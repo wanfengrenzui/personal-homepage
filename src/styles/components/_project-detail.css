@@ -173,6 +173,138 @@
   font-weight: 700;
 }
 
+.project-detail__panel--prd {
+  border-color: rgba(86, 174, 255, 0.3);
+}
+
+.project-detail__prd-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.project-detail__prd-header h2 {
+  margin-bottom: 0;
+}
+
+.project-detail__prd-header a {
+  flex-shrink: 0;
+  color: #d7ecff;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.project-detail__markdown {
+  display: grid;
+  gap: 1rem;
+  max-height: 820px;
+  overflow: auto;
+  padding: 1.05rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(2, 6, 23, 0.72);
+}
+
+.project-detail__markdown h2,
+.project-detail__markdown h3,
+.project-detail__markdown h4,
+.project-detail__markdown h5 {
+  margin: 0.4rem 0 0.1rem;
+  color: #f8fafc;
+  line-height: 1.35;
+}
+
+.project-detail__markdown h2 {
+  font-size: 1.35rem;
+}
+
+.project-detail__markdown h3 {
+  font-size: 1.15rem;
+}
+
+.project-detail__markdown h4,
+.project-detail__markdown h5 {
+  font-size: 1rem;
+}
+
+.project-detail__markdown p,
+.project-detail__markdown li {
+  color: rgba(226, 232, 240, 0.86);
+  line-height: 1.8;
+}
+
+.project-detail__markdown ul,
+.project-detail__markdown ol {
+  display: grid;
+  gap: 0.45rem;
+  padding-left: 1.35rem;
+}
+
+.project-detail__markdown ul {
+  list-style: disc;
+}
+
+.project-detail__markdown ol {
+  list-style: decimal;
+}
+
+.project-detail__markdown code {
+  padding: 0.1rem 0.35rem;
+  border-radius: 5px;
+  background: rgba(86, 174, 255, 0.13);
+  color: #d7ecff;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 0.9em;
+}
+
+.project-detail__markdown-code {
+  overflow: auto;
+  margin: 0;
+  padding: 0.9rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(15, 23, 42, 0.95);
+  color: rgba(226, 232, 240, 0.9);
+  font-size: 0.84rem;
+  line-height: 1.65;
+}
+
+.project-detail__markdown-code code {
+  padding: 0;
+  background: transparent;
+  color: inherit;
+}
+
+.project-detail__markdown-table-wrap {
+  overflow-x: auto;
+}
+
+.project-detail__markdown table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.project-detail__markdown th,
+.project-detail__markdown td {
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(226, 232, 240, 0.86);
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.6;
+}
+
+.project-detail__markdown th {
+  background: rgba(86, 174, 255, 0.16);
+  color: #f8fafc;
+  font-weight: 800;
+}
+
 /* ===== 图片区域：统一风格的“图墙” ===== */
 
 .project-detail__images {
