@@ -226,8 +226,18 @@ export default function ProjectDetailPage() {
     };
   }, [project?.prdSource]);
 
+  useEffect(() => {
+    if (project?.externalUrl) {
+      window.location.replace(project.externalUrl);
+    }
+  }, [project?.externalUrl]);
+
   if (!project) {
     return <Navigate to="/" replace />;
+  }
+
+  if (project.externalUrl) {
+    return null;
   }
 
   return (

@@ -33,6 +33,24 @@ function HomePage() {
     return [];
   }, [projectFilter]);
 
+  const renderProjectLink = (project, children, className) => {
+    const href = project.externalUrl ?? `/projects/${project.slug}`;
+
+    if (project.externalUrl) {
+      return (
+        <a href={href} className={className}>
+          {children}
+        </a>
+      );
+    }
+
+    return (
+      <Link to={href} className={className}>
+        {children}
+      </Link>
+    );
+  };
+
   const handleFilterClick = (value) => {
     if (value === "notes") {
       const notesSection = document.getElementById("notes");
@@ -302,25 +320,25 @@ function HomePage() {
                 {visibleProjects.length ? (
                   visibleProjects.map((project) => (
                     <div className="project-card" key={project.slug}>
-                      <Link to={`/projects/${project.slug}`}>
+                      {renderProjectLink(
+                        project,
                         <img
                           src={project.cover}
                           alt={project.coverAlt}
                           className="project-card__img"
                           loading="lazy"
                           decoding="async"
-                        />
-                      </Link>
+                        />,
+                        undefined,
+                      )}
 
                       <div className="project-card__content">
                         <h3 className="project-card__title">
-                          <Link to={`/projects/${project.slug}`}>{project.title}</Link>
+                          {renderProjectLink(project, project.title)}
                         </h3>
                         <p className="project-card__description">{project.description}</p>
                         <div className="project-card__actions">
-                          <Link to={`/projects/${project.slug}`} className="project-card__link">
-                            查看详情 &rarr;
-                          </Link>
+                          {renderProjectLink(project, <>查看详情 &rarr;</>, "project-card__link")}
                           {project.github ? (
                             <a
                               href={project.github}

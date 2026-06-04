@@ -42,58 +42,54 @@ export const internshipCards = [
   {
     date: "2024.03 – 2025.09",
     badge: "AI产品经理",
-    title: "上海敏开科技有限公司 · AI产品经理实习",
+    title: "上海敏开科技有限公司",
     summary:
-      "期间参与儿童 AI 阅读学习产品与 Gensmo AI 试穿产品，围绕 OCR 文本提取、TTS 朗读、AI 伴读互动、Quiz 反馈、Avatar 生成与 Try on 效果展示等模块，完成需求分析、体验验证、产品链路设计、PRD 输出、测试用例编写与迭代跟进。",
+      "参与 Gensmo AI Fashion Agent 评测体系构建与增长活动上线验证，同时推进 AI 儿童英文阅读伴读产品的 0-1 设计，覆盖评测集构建、Bad Case 回归、体验验证、Prompt 规则与 Quiz 反馈闭环等内容。",
     tags: ["AI 产品", "教育产品", "AI 试穿", "PRD", "体验验证"],
     projects: [
       {
-        title: "📘 儿童 AI 阅读学习产品",
+        title: "【项目一】Gensmo AI Fashion Agent 评测体系构建与增长活动上线验证",
         summary:
-          "面向儿童数字阅读与英语启蒙场景，设计 AI 阅读学习产品。用户上传或扫描儿童读物后，系统通过 OCR 提取文本并使用 TTS 朗读，同时引入 AI 伴读精灵，在阅读过程中提供单词 / 短语讲解、内容问答与情绪反馈；阅读结束后结合 Quiz 答题与错误讲解，形成“内容转化 - 伴读互动 - 理解检测 - 学习反馈”的完整学习闭环。",
+          "参与 Gensmo AI Fashion Agent 产品评测与增长活动，负责 AI Try-on 评测集构建、Bad Case 回归测试及母亲节活动上线验证。参与虚拟试穿生成质量优化与闭环机制搭建，推动产品迭代与体验提升。",
         steps: [
           {
-            title: "用户体验验证与功能定义：",
-            desc: "设计首本儿童读物体验流程，阅读结束后弹窗征询用户是否需要 AI 伴读功能，收集用户选择与反馈，为 AI 功能优先级和个性化参数优化提供依据；埋点关键行为数据，包括伴读触发次数、答题正确率与互动时长，用于功能迭代。",
+            title: "搭建产品测试与评测 Case 体系：",
+            desc: "针对 AI Try-on 产品模块复杂、AI 生成链路与传统产品链路交叉的特点，梳理电商运营场景里的商品详情页、Avatar 生成、Try On、收藏列表、登录注册等 7 个核心模块，拆解测评流程、生成、收集、注册转化等 4 类核心用户路径，搭建 300+ 条评测 Case，覆盖传统产品链路与 AI 生成场景，为后续人工评测构建、Bad Case 回归与版本验证提供测试基线。",
           },
           {
-            title: "AI 阅读学习链路设计：",
-            desc: "规划“儿童读物上传 - OCR 文本提取 - TTS 朗读 - AI 伴读互动 - Quiz 答题 - 反馈讲解”完整链路，定义 AI 输入 / 输出、用户路径、异常处理和兜底流程，同时设计数据埋点指标用于监控生成内容和伴读效果。",
+            title: "构建 AI Try-on 人工评测集：",
+            desc: "针对虚拟试穿结果存在商品偏移、服装错位、人体畸变、风格不匹配等生成不稳定问题，参与构建 AI Try-on 人工评测集，整理 Avatar 生成、虚拟试穿、异步生成、账号切换、多入口触发、同商品跨页面一致性等 6 类评测场景，累计评估 1500+ 组 AI Try-on 生成结果，并围绕商品还原度、服装贴合度、人体结构合理性、风格匹配度与生成异常开展人工评测。",
           },
           {
-            title: "AI 伴读与 Quiz 反馈设计：",
-            desc: "设计伴读精灵触发机制、对话入口和任务类型，覆盖单词 / 短语讲解、段落解释、内容问答、答题鼓励、错误讲解与情绪反馈，提升儿童阅读过程中的互动性和个性化学习体验。",
+            title: "建立 Bad Case 回归与版本验证机制：",
+            desc: "针对 AI 生成问题存在难以一次修复、版本迭代后容易复现的问题，沉淀 80+ 条 Bad Case 回归集，归纳生成失败、商品偏移、服装错位、人体畸变、状态异常等核心问题，并复用于 3 轮版本回归测试；基于回归样本跟踪问题修复情况，验证核心 Bad Case 回归通过率达到 60%，支持回归样本口径下 AI Try-on 生成结果可用率由 30% 提升至 64%。",
           },
           {
-            title: "Login 模块与产品文档：",
-            desc: "负责登录方式选型及注册 / 登录 / 找回密码流程设计，输出 PRD、用户流程图、交互原型、异常状态说明和验收标准，协同研发推进需求评审与迭代。",
+            title: "支持母亲节 AI Try-on 增长活动上线：",
+            desc: "针对新用户注册前无法直接感知 AI Try-on 产品价值、访问到注册环节存在转化流失的问题，参与验证“免登录一次 Try-on + 预设场景服装”的轻量化拉新方案，通过预设服装与场景降低用户首次体验成本，围绕活动入口、Try-on 生成、结果页展示、登录引导与转化路径优化体验，搭建 60+ 条活动测试 Case 与上线测试口径，以活动页访问 UV → 注册成功 UV 为核心追踪访问-注册转化率，支持该指标较活动前基线上提升 32%。",
           },
         ],
       },
       {
-        title: "👗 Gensmo · AI 试穿产品",
+        title: "【项目二】AI 儿童英文阅读伴读产品（0-1 产品设计）",
         summary:
-          "Gensmo 是一款面向时尚电商场景的 AI 试穿产品，基于 AI 与计算机视觉技术，为用户提供线上服装试穿、Avatar 生成、Try on 效果展示、智能夸赞反馈与场景融合能力，帮助用户更直观地感知服装上身效果，提升线上购物决策效率与互动体验。",
+          "面向儿童英文阅读场景，参与 0-1 设计 AI 伴读产品，围绕“儿童阅读—语音/点击触发—AI 伴读反馈—Quiz 测评—家长端学习管理”的核心交互链路，完成 AI 伴读精灵、阅读测验、错题讲解与家长端学习管理等功能设计。",
         steps: [
           {
-            title: "AI 试穿需求分析：",
-            desc: "参与 AI 试穿 App 需求收集、整理与优先级梳理，围绕 Avatar 生成、Try on 效果展示、Login、交互操作等模块拆解用户路径、功能边界与异常场景，协助明确版本迭代范围。",
+            title: "0-1 AI 伴读产品全链路设计：",
+            desc: "针对儿童英文阅读中理解门槛高、即时反馈不足、家长反馈与孩子学习管理的问题，设计“阅读进入—TTS 朗读—语音/点击触发—AI 反馈—Quiz 测评—家长端记录”的核心交互链路，儿童端以 AI 伴读精灵为常驻入口，家长端承接学习报告、阅读记录、进度管理与权限管控，输出 PRD、产品架构图、核心流程图与重点方案。",
           },
           {
-            title: "AI 试穿链路设计：",
-            desc: "参与规划“用户 / Avatar 生成 - 商品选择 - Try on 融合展示 - 结果页反馈 - 场景融合”的核心体验链路，梳理图像生成任务的输入输出、等待状态、结果承接方式与失败兜底逻辑。",
+            title: "搭建童书识别与任务路由规则：",
+            desc: "拆解儿童阅读中的 6 类典型需求，包括书单识别、句子解释、内容问答、陪伴激励、测验生成和错题反馈，设计针对应用场景的任务路由逻辑、前端反馈方式与异常兜底策略，降低低龄用户操作门槛、无关回答和功能触发风险。",
           },
           {
-            title: "Avatar 异步生成优化：",
-            desc: "针对用户反馈 Avatar 生成等待 1-2 分钟影响体验的问题，推动将生成任务异步化处理，设计前端无阻塞流程与 Feed 消息提醒机制，降低用户等待感并提升任务完成后的触达效率。",
+            title: "设计 AI 伴读 Prompt 规则：",
+            desc: "基于 RISEN 框架设计 AI 伴读 Prompt 模板，明确模型角色、任务指令、书籍上下文、输出目标与生成约束，覆盖单词讲解、句子解释、故事问答、Quiz 生成和错题解析等场景，提升生成内容的稳定性、儿童友好度与与文本原文一致性。",
           },
           {
-            title: "Try on 结果页优化：",
-            desc: "针对试穿结果页互动性与情绪反馈不足的问题，新增智能夸赞与场景融合能力，根据试穿服装风格生成个性化正向反馈，并支持将试穿效果一键融入不同生活场景，增强结果页可分享性与体验沉浸感。",
-          },
-          {
-            title: "PRD 与测试闭环：",
-            desc: "撰写 AI 试穿 App 相关 PRD，覆盖需求范围、页面命名规则、交互说明、产品架构与流程图；编写并执行测试用例，覆盖 Avatar 生成、Login、Try on 效果和交互操作等功能点，输出测试报告并跟进 Bug 修复与回归验证。",
+            title: "设计 AI Quiz 与错题讲解闭环：",
+            desc: "针对阅读完成后理解效果难评估的问题，设计基于书籍内容的 AI Quiz 生成机制，将题型拆分为词汇理解、文本事实与情节推理三类；在儿童答错后，定义 AI 结合原文进行儿童友好型讲解的反馈规则，形成阅读理解、测评与反馈闭环。",
           },
         ],
       },
@@ -238,6 +234,48 @@ function imageRange(folder, start, end, ext = "webp") {
 }
 
 export const projects = [
+  {
+    slug: "wangzhe-coding-demo",
+    category: "ai-product",
+    title: "王者 Coding Demo",
+    subtitle: "个人开发的王者 Coding 演示项目，点击后直达独立站点",
+    cover: "/assets/images/ai-projects/wangzhe-coding-demo.svg",
+    coverAlt: "王者 Coding Demo project cover",
+    description:
+      "我个人完成的王者 Coding 演示项目，展示页在个人域名站点直接打开，便于快速浏览和对外分享。",
+    github: "https://github.com/wanfengrenzui/wangzhe-coding-demo",
+    externalUrl: "https://wangzhe.asta.net.cn/",
+    meta: [
+      { label: "项目类型", value: "AI Product / Personal Demo" },
+      { label: "访问方式", value: "点击卡片直接跳转独立站点" },
+      { label: "角色", value: "产品定义 / 交互实现 / 发布上线" },
+      { label: "状态", value: "已上线：wangzhe.asta.net.cn" },
+    ],
+    overview:
+      "该项目是我个人开发并发布的演示项目，首页卡片点击后直接进入独立域名站点，方便在求职和作品集场景中快速展示完整体验。",
+    stack: ["React", "Vite", "Deployment", "Personal Domain"],
+  },
+  {
+    slug: "meeting-loop-ai",
+    category: "ai-product",
+    title: "Meeting Loop AI",
+    subtitle: "会议协作类 AI 产品，点击后跳转到独立演示站点",
+    cover: "/assets/images/ai-projects/meeting-loop-ai.svg",
+    coverAlt: "Meeting Loop AI project cover",
+    description:
+      "基于 Meeting Loop AI 项目构建的个人作品展示入口，卡片点击后直接跳转到在线演示站点。",
+    github: "https://github.com/wanfengrenzui/Meeting-Loop-AI-",
+    externalUrl: "https://wanfengrenzui.github.io/Meeting-Loop-AI-/",
+    meta: [
+      { label: "项目类型", value: "AI Product / Meeting Collaboration" },
+      { label: "访问方式", value: "点击卡片直接跳转 GitHub Pages" },
+      { label: "角色", value: "产品展示 / 内容整理 / 发布上线" },
+      { label: "状态", value: "已上线：GitHub Pages" },
+    ],
+    overview:
+      "这是我整理进个人网站的会议协作类 AI 产品项目，点击卡片可直接打开在线演示，适合在作品集中快速访问。",
+    stack: ["AI Product", "GitHub Pages", "Product Demo"],
+  },
   {
     slug: "vibe-coding-personal-homepage",
     category: "ai-product",
