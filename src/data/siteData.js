@@ -239,7 +239,7 @@ export const projects = [
     category: "ai-product",
     title: "王者 Coding Demo",
     subtitle: "个人开发的王者 Coding 演示项目，点击后直达独立站点",
-    cover: "/assets/images/ai-projects/wangzhe-coding-demo.svg",
+    cover: "/assets/images/ai-projects/wangzhe-coding-demo.webp",
     coverAlt: "王者 Coding Demo project cover",
     description:
       "我个人完成的王者 Coding 演示项目，展示页在个人域名站点直接打开，便于快速浏览和对外分享。",
@@ -260,7 +260,7 @@ export const projects = [
     category: "ai-product",
     title: "Meeting Loop AI",
     subtitle: "会议协作类 AI 产品，点击后跳转到独立演示站点",
-    cover: "/assets/images/ai-projects/meeting-loop-ai.svg",
+    cover: "/assets/images/ai-projects/meeting-loop-ai.webp",
     coverAlt: "Meeting Loop AI project cover",
     description:
       "基于 Meeting Loop AI 项目构建的个人作品展示入口，卡片点击后直接跳转到在线演示站点。",

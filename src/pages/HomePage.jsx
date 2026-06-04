@@ -339,14 +339,14 @@ function HomePage() {
                         <p className="project-card__description">{project.description}</p>
                         <div className="project-card__actions">
                           {renderProjectLink(project, <>查看详情 &rarr;</>, "project-card__link")}
-                          {project.github ? (
+                          {project.externalUrl || project.github ? (
                             <a
-                              href={project.github}
+                              href={project.externalUrl ?? project.github}
                               target="_blank"
                               rel="noreferrer"
                               className="project-card__github"
                             >
-                              GitHub
+                              {project.externalUrl ? "网页" : "GitHub"}
                             </a>
                           ) : null}
                         </div>
