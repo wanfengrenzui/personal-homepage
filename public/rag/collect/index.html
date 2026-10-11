@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KPL 战队/选手 RAG 知识库采集工具</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="logo">⚔️</span>
+    <div>
+      <h1>KPL 战队 / 选手 RAG 知识库采集工具</h1>
+      <p class="sub">每日自动更新的知识库 · 按条件检索并导出「王者RAG」知识块</p>
+    </div>
+  </div>
+<nav class="tabs"><a class="tab" href="../">知识库浏览</a><a class="tab active" href="./">表格检索</a></nav>
+</header>
+
+<main>
+  <!-- ============ 检索采集 ============ -->
+  <section id="tab-query" class="tabpane active">
+    <div class="panel query-panel">
+      <h2>检索条件</h2>
+      <div class="grid">
+        <label>赛季
+          <select id="seasonid">
+            <option value="KPL2026S2">2026 夏季赛 (KPL2026S2)</option>
+            <option value="KPL2026S1">2026 春季赛 (KPL2026S1)</option>
+            <option value="KPL2025S3">2025 年度总决赛 (KPL2025S3)</option>
+            <option value="KPL2025S2">2025 夏季赛 (KPL2025S2)</option>
+            <option value="KPL2025S1">2025 春季赛 (KPL2025S1)</option>
+          </select>
+        </label>
+        <label>开始日期 <input type="date" id="date_from"></label>
+        <label>结束日期 <input type="date" id="date_to"></label>
+      </div>
+      <div class="grid">
+        <label>战队 A（或单选战队）
+          <input list="teamlist" id="team_a" placeholder="如：成都AG超玩会">
+        </label>
+        <label>战队 B（对阵模式填，可留空）
+          <input list="teamlist" id="team_b" placeholder="如：重庆狼队">
+        </label>
+        <label>选手（可选，精确到某选手）
+          <input id="player" placeholder="如：一诺">
+        </label>
+        <datalist id="teamlist"></datalist>
+      </div>
+<div class="checks">
+<label class="chk"><input type="checkbox" checked disabled> 官方赛果 / 最近对局英雄池（每日自动采集）</label>
+<label class="chk"><input type="checkbox" checked disabled> 历史战队 / 选手知识库（保留原始时效）</label>
+<label class="chk"><input type="checkbox" disabled> 官方发言 / 背景检索（仅本地采集版支持）</label>
+<label class="chk"><input type="checkbox" disabled> 微博发言 / KPL 官方微博（需在本地扫码登录）</label>
+<p class="hint">在线版检索已采集数据，每天北京时间 09:17 计划更新。选择日期时，仅纳入有完整日期的记录。</p>
+</div>      <div class="actions">
+        <button id="run_btn" class="primary">🚀 开始检索</button>
+        <span id="run_hint" class="hint"></span>
+      </div>
+    </div>
+
+    <div class="panel result-panel">
+      <div class="result-head">
+        <h2>采集结果 <span id="result_count" class="count">0 条</span></h2>
+        <div class="result-tools">
+          <span id="stats" class="stats"></span>
+          <button id="copy_btn" class="ghost">📋 复制表格</button>
+          <button id="export_btn" class="ghost">⬇️ 导出 Excel</button>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table id="result_table">
+          <thead><tr id="thead_row"></tr></thead>
+          <tbody id="tbody"></tbody>
+        </table>
+        <div id="empty" class="empty">填写条件后点击「开始检索」，结果会以王者RAG格式呈现在这里。</div>
+      </div>
+    </div>
+  </section>
+
+</main><div id="toast" class="toast"></div><script src="xlsx.js"></script><script src="collect.js"></script></body></html>
