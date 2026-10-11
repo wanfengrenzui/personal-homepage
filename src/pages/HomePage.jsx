@@ -13,6 +13,9 @@ import {
 } from "../data/siteData";
 import { useScrollSpy } from "../hooks/useScrollSpy";
 
+// 保留笔记内容与详情页，暂时隐藏首页展示入口。
+const showNotes = false;
+
 function HomePage() {
   const [projectFilter, setProjectFilter] = useState("all");
   const activeId = useScrollSpy(true);
@@ -307,13 +310,13 @@ function HomePage() {
                 >
                   设计项目
                 </button>
-                <button
+                {showNotes && <button
                   type="button"
                   className="filter-button"
                   onClick={() => handleFilterClick("notes")}
                 >
                   学习笔记
-                </button>
+                </button>}
               </div>
 
               <div className="projects__grid grid">
@@ -365,7 +368,7 @@ function HomePage() {
             </div>
           </section>
 
-          <section id="notes" className="notes section">
+          {showNotes && <section id="notes" className="notes section">
             <h2 className="section__title">NOTES · 笔记与碎片</h2>
             <p className="section__subtitle">
               一些研究随笔、产品思考和方法论草稿。点击进入可查看详情。
@@ -407,6 +410,8 @@ function HomePage() {
               </Link>
             </div>
           </section>
+
+          }
 
           <section id="skills" className="skills section">
             <h2 className="section__title">我的技能</h2>
