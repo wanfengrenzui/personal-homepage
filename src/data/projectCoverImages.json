@@ -1,0 +1,68 @@
+{
+  "xinyu-mood-journal": {
+    "src": "/assets/images/project-covers/xinyu-mood-journal-900.webp",
+    "srcSet": "/assets/images/project-covers/xinyu-mood-journal-480.webp 480w, /assets/images/project-covers/xinyu-mood-journal-900.webp 900w, /assets/images/project-covers/xinyu-mood-journal-1200.webp 1200w",
+    "width": 900,
+    "height": 386
+  },
+  "wangzhe-coding-demo": {
+    "src": "/assets/images/project-covers/wangzhe-coding-demo-900.webp",
+    "srcSet": "/assets/images/project-covers/wangzhe-coding-demo-480.webp 480w, /assets/images/project-covers/wangzhe-coding-demo-900.webp 900w, /assets/images/project-covers/wangzhe-coding-demo-1200.webp 1200w",
+    "width": 900,
+    "height": 450
+  },
+  "meeting-loop-ai": {
+    "src": "/assets/images/project-covers/meeting-loop-ai-900.webp",
+    "srcSet": "/assets/images/project-covers/meeting-loop-ai-480.webp 480w, /assets/images/project-covers/meeting-loop-ai-900.webp 900w, /assets/images/project-covers/meeting-loop-ai-1200.webp 1200w",
+    "width": 900,
+    "height": 505
+  },
+  "vibe-coding-personal-homepage": {
+    "src": "/assets/images/project-covers/vibe-coding-personal-homepage-900.webp",
+    "srcSet": "/assets/images/project-covers/vibe-coding-personal-homepage-480.webp 480w, /assets/images/project-covers/vibe-coding-personal-homepage-900.webp 900w, /assets/images/project-covers/vibe-coding-personal-homepage-1200.webp 1200w",
+    "width": 900,
+    "height": 386
+  },
+  "agentic-rag-stroke-platform": {
+    "src": "/assets/images/project-covers/agentic-rag-stroke-platform-900.webp",
+    "srcSet": "/assets/images/project-covers/agentic-rag-stroke-platform-480.webp 480w, /assets/images/project-covers/agentic-rag-stroke-platform-900.webp 900w, /assets/images/project-covers/agentic-rag-stroke-platform-1200.webp 1200w",
+    "width": 900,
+    "height": 386
+  },
+  "starry-sleep-project": {
+    "src": "/assets/images/project-covers/starry-sleep-project-900.webp",
+    "srcSet": "/assets/images/project-covers/starry-sleep-project-480.webp 480w, /assets/images/project-covers/starry-sleep-project-900.webp 900w",
+    "width": 900,
+    "height": 636
+  },
+  "chess": {
+    "src": "/assets/images/project-covers/chess-900.webp",
+    "srcSet": "/assets/images/project-covers/chess-480.webp 480w, /assets/images/project-covers/chess-900.webp 900w",
+    "width": 900,
+    "height": 649
+  },
+  "glasses": {
+    "src": "/assets/images/project-covers/glasses-900.webp",
+    "srcSet": "/assets/images/project-covers/glasses-480.webp 480w, /assets/images/project-covers/glasses-900.webp 900w",
+    "width": 900,
+    "height": 636
+  },
+  "all-weather-cleaning-vehicle": {
+    "src": "/assets/images/project-covers/all-weather-cleaning-vehicle-900.webp",
+    "srcSet": "/assets/images/project-covers/all-weather-cleaning-vehicle-480.webp 480w, /assets/images/project-covers/all-weather-cleaning-vehicle-900.webp 900w",
+    "width": 900,
+    "height": 506
+  },
+  "mars-base": {
+    "src": "/assets/images/project-covers/mars-base-900.webp",
+    "srcSet": "/assets/images/project-covers/mars-base-480.webp 480w, /assets/images/project-covers/mars-base-900.webp 900w",
+    "width": 900,
+    "height": 506
+  },
+  "ikea-robots": {
+    "src": "/assets/images/project-covers/ikea-robots-900.webp",
+    "srcSet": "/assets/images/project-covers/ikea-robots-480.webp 480w, /assets/images/project-covers/ikea-robots-900.webp 900w",
+    "width": 900,
+    "height": 506
+  }
+}

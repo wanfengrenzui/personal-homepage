@@ -334,7 +334,7 @@ export const projects = [
     category: "ai-product",
     title: "Vibe Coding · 个人作品集网站",
     subtitle: "用 AI 协作完成个人主页的信息架构、前端实现、性能优化与上线部署",
-    cover: "/assets/images/ai-projects/vibe-coding-homepage.webp",
+    cover: "/assets/images/ai-projects/personal_homepage.webp",
     coverAlt: "Vibe Coding personal homepage project cover",
     description:
       "基于 React + Vite 搭建个人作品集网站，通过 Vibe Coding 完成需求拆解、组件开发、内容结构化、图片性能优化与 GitHub Pages 部署。",

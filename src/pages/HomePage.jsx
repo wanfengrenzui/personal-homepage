@@ -12,6 +12,7 @@ import {
   skills,
 } from "../data/siteData";
 import { useScrollSpy } from "../hooks/useScrollSpy";
+import projectCoverImages from "../data/projectCoverImages.json";
 
 // 保留笔记内容与详情页，暂时隐藏首页展示入口。
 const showNotes = false;
@@ -326,7 +327,11 @@ function HomePage() {
                       {renderProjectLink(
                         project,
                         <img
-                          src={project.cover}
+                          src={projectCoverImages[project.slug]?.src ?? project.cover}
+                          srcSet={projectCoverImages[project.slug]?.srcSet}
+                          sizes="(max-width: 840px) calc(100vw - 48px), (max-width: 1120px) calc((100vw - 80px) / 2), 520px"
+                          width={projectCoverImages[project.slug]?.width}
+                          height={projectCoverImages[project.slug]?.height}
                           alt={project.coverAlt}
                           className="project-card__img"
                           loading="lazy"
