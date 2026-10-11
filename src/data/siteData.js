@@ -279,7 +279,7 @@ export const projects = [
     category: "ai-product",
     title: "心屿 · 个人关怀实验室",
     subtitle: "用情绪记录、七日微实验与策略证据地图，探索适合自己的关怀方法",
-    cover: "/assets/images/ai-projects/xinyu-mood-journal.svg",
+    cover: "/assets/images/ai-projects/xinyu.webp",
     coverAlt: "心屿个人关怀实验室：情绪记录、七日微实验与策略证据地图",
     description:
       "我个人开发的情绪记录与自我关怀产品，通过可解释的情绪洞察、七日微实验和反馈证据，帮助用户探索适合自己的关怀方法。数据保存在当前设备，点击即可体验。",
