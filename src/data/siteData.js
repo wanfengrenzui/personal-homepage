@@ -478,7 +478,7 @@ export const projects = [
     category: "ai-product",
     title: "Agentic RAG · 卒中患者研究平台",
     subtitle: "面向卒中、步态分析、IMU/EMG 与临床决策支持文献的本地 RAG Web MVP",
-    cover: "/assets/images/ai-projects/agentic-rag-stroke.webp",
+    cover: "/assets/images/ai-projects/kangfu.webp",
     coverAlt: "Agentic RAG platform for stroke patients project cover",
     description:
       "构建面向卒中患者相关研究资料的 Agentic RAG 平台，支持本地 PDF 知识库、向量检索、问答生成与研究辅助分析。",
