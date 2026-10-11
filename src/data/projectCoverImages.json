@@ -1,4 +1,10 @@
 {
+  "kpl-rag-knowledge-base": {
+    "src": "/assets/images/project-covers/kpl-rag-knowledge-base-900.webp",
+    "srcSet": "/assets/images/project-covers/kpl-rag-knowledge-base-480.webp 480w, /assets/images/project-covers/kpl-rag-knowledge-base-900.webp 900w, /assets/images/project-covers/kpl-rag-knowledge-base-1200.webp 1200w",
+    "width": 900,
+    "height": 386
+  },
   "xinyu-mood-journal": {
     "src": "/assets/images/project-covers/xinyu-mood-journal-900.webp",
     "srcSet": "/assets/images/project-covers/xinyu-mood-journal-480.webp 480w, /assets/images/project-covers/xinyu-mood-journal-900.webp 900w, /assets/images/project-covers/xinyu-mood-journal-1200.webp 1200w",

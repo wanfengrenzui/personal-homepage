@@ -275,6 +275,19 @@ function imageRange(folder, start, end, ext = "webp") {
 
 export const projects = [
   {
+    slug: "kpl-rag-knowledge-base",
+    category: "ai-product",
+    title: "王者 RAG · 自动化知识库",
+    subtitle: "面向 KPL 战队、选手与赛事知识的自动采集和检索展示",
+    cover: "/assets/images/ai-projects/auto_rag.webp",
+    coverAlt: "王者 RAG 自动化知识库：定时采集、自动更新、来源可溯",
+    description:
+      "围绕 KPL 战队、选手与赛事知识，搭建定时采集与自动更新的知识库，支持关键词检索、类型筛选、来源追溯及 Excel / CSV 导出。点击即可访问在线知识库。",
+    github: "https://github.com/wanfengrenzui/kpl-rag-knowledge-base",
+    externalUrl: "https://asta.net.cn/rag/",
+    stack: ["Python", "JavaScript", "GitHub Actions", "GitHub Pages"],
+  },
+  {
     slug: "xinyu-mood-journal",
     category: "ai-product",
     title: "心屿 · 个人关怀实验室",
