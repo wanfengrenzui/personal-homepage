@@ -275,6 +275,17 @@ function imageRange(folder, start, end, ext = "webp") {
 
 export const projects = [
   {
+    slug: "wangzhe-commentary-scoring",
+    category: "ai-product",
+    title: "王者解说 · 自动评分平台",
+    subtitle: "面向游戏解说的文本与 TTS 评估、问题定位及人工复核",
+    cover: "/assets/images/ai-projects/zidongpingfen.webp",
+    coverAlt: "王者解说自动评分平台：文本与 TTS 评估、问题定位、人工复核",
+    description:
+      "面向王者解说质量评估，围绕视频片段开展文本与 TTS 评分、问题标注和人工复核，支持评分统计与结果导出。点击即可访问在线展示版。",
+    externalUrl: "https://scoring.asta.net.cn/",
+  },
+  {
     slug: "kpl-rag-knowledge-base",
     category: "ai-product",
     title: "王者 RAG · 自动化知识库",
